@@ -90,7 +90,7 @@ public class Variable  {
                 if(rh.getType() == VarType.tInt)
                     return new Variable(this.intData + rh.getIntData());
                 if ( rh.getType() == VarType.tDouble)
-                    return new Variable(this.intData + rh.getDblData());
+                    return new Variable((this.intData + rh.getDblData().intValue()));
                 return null;
             }
             case tDouble:{

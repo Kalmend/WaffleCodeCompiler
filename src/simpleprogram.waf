@@ -20,7 +20,7 @@ println(a);
 println(b);
 println(c);
 
-a = a + 1.6;
+a = a + 2.9;
 b = b + 2;
 
 println("Testing other type add on int and double: \n");
