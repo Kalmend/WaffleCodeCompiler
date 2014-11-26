@@ -187,7 +187,7 @@ public class WaffleStation extends WaffleBaseVisitor<Object> {
             if(callExps.size() != 1)
                ERROR("Parameter count does not match declaration: " + funcName + "[" + ctx.getStart().getLine() + "]");
 
-            System.out.println(mem.get(callExps.get(0).getText()).getData());
+            System.out.println(visit(callExps.get(0)));
 
         } else if (funcName.equals("print"))
         {
