@@ -1,0 +1,8 @@
+test<Int> = 69;
+test = 70;
+test = 70 + 1;
+joke<Int> = test;
+test = 4 + 34 +2;
+joke = joke + joke;
+println(test);
+println(joke);

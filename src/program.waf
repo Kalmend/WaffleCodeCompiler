@@ -1,0 +1,60 @@
+/* PASS BY VALUE
+  VERSION */
+  copter<Int> = 69;
+
+  sub bubbleSort(IN alist<Array<Int>>)<Array<Int>>
+
+      for passnum<Int> in len(alist)-1 -> 0:
+
+          for i<Int> in 0 -> passnum:
+              if alist[i]>alist[i+1]:
+                  temp<Int> = alist[i];
+                  alist[i] = alist[i+1];
+                  alist[i+1] = temp;
+              end if;
+          end loop;
+      end loop;
+      return alist;
+  end;
+
+  //Reference version
+  sub bubbleSortRef(OUT alist<Array<Int>>)
+
+      for passnum<Int> in len(alist)-1 -> 0:
+
+          for i<Int> in 0 -> passnum:
+              if (alist[i]>(alist[i+1])):
+                  temp<Int> = alist[i];
+                  alist[i] = alist[i+1];
+                  alist[i+1] = temp;
+              end if;
+          end loop;
+      end loop;
+  end;
+
+
+  sub bottles99()
+      for quant<Int> in 99 -> 0:
+         if quant > 1:
+            println(quant + " bottles of beer on the wall," + quant + " bottles of beer.");
+            if quant > 2:
+               suffix = (quant - 1) + " bottles of beer on the wall.";
+            else:
+               suffix = "1 bottle of beer on the wall.";
+            end if;
+         elif quant == 1:
+            println("1 bottle of beer on the wall, 1 bottle of beer.");
+            suffix = "no more beer on the wall!";
+         end if;
+         println("Take one down, pass it around," + suffix);
+         println("--");
+      end loop;
+  end;
+
+  alist<Array<Int>> = [54,26,93,17,77,31,44,55,20];
+  bubbleSortRef(alist);
+  blist<Array<Int>> = [54,26,93,17,77,31,44,55,20];
+
+  print(alist);
+  print(bubbleSort(blist));
+  //bubblesort(rofl<Int> = 3, bool asc = true);
