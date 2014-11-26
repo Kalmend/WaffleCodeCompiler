@@ -89,7 +89,8 @@ variable_expression : variable
 indexed_expression : variable '[' expression ']';
 
 literal_expression : string_literal
-                   | numeric_literal;
+                   | numeric_literal
+                   | boolean_literal;
 
 list_expression : '[' (expression (',' expression)*)? ']';
 
@@ -100,14 +101,18 @@ numeric_literal  : integer
                  | dooble
                  ;
 
+boolean_literal : buulean ;
+
 variable : VAR;
 integer  : INT;
 dooble   : DBL;
 string   : STR;
+buulean  : BOOL;
 
 //------------------------LEXER-----------------------//
 INT:  [0-9]+;
 DBL:  [0-9]+('.')[0-9]+;
+BOOL: ('true'|'false');
 STR:  '"' ( '\\'. | ~('\\'|'"') )* '"';
 COMMENT: ('/*'.*?'*/' | '//'.*?'\n') -> skip;
 WS : [ \t\n\r]+ -> skip;

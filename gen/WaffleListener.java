@@ -1,4 +1,4 @@
-// Generated from C:/Users/Oliver/IdeaProjects/Wafflecode/src\Waffle.g4 by ANTLR 4.4.1-dev
+// Generated from C:/Users/Oliver/Documents/Java/IdeaProjects/WaffleCodeCompiler/src\Waffle.g4 by ANTLR 4.4.1-dev
 import org.antlr.v4.runtime.misc.NotNull;
 import org.antlr.v4.runtime.tree.ParseTreeListener;
 
@@ -27,6 +27,26 @@ public interface WaffleListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitString(@NotNull WaffleParser.StringContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link WaffleParser#buulean}.
+	 * @param ctx the parse tree
+	 */
+	void enterBuulean(@NotNull WaffleParser.BuuleanContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link WaffleParser#buulean}.
+	 * @param ctx the parse tree
+	 */
+	void exitBuulean(@NotNull WaffleParser.BuuleanContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link WaffleParser#boolean_literal}.
+	 * @param ctx the parse tree
+	 */
+	void enterBoolean_literal(@NotNull WaffleParser.Boolean_literalContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link WaffleParser#boolean_literal}.
+	 * @param ctx the parse tree
+	 */
+	void exitBoolean_literal(@NotNull WaffleParser.Boolean_literalContext ctx);
 	/**
 	 * Enter a parse tree produced by the {@code expIndexed}
 	 * labeled alternative in {@link WaffleParser#expression}.

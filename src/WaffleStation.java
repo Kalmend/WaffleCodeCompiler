@@ -64,13 +64,17 @@ public class WaffleStation extends WaffleBaseVisitor<Object> {
             args = "());";
         } else
         {
-            String lol = ctx.getText();
-            if(lol.contains("Int"))
+            String typ = ctx.getText();
+            if(typ.equals("Int"))
                 args = "(0));";
-            else if (lol.contains("Double"))
+            else if (typ.equals("Double"))
                 args = "(0.0));";
-            else if (lol.contains("Boolean"))
+            else if (typ.equals("Boolean"))
                 args = "(false));";
+            else if (typ.equals("String"))
+                args = "(\"\"));";
+            else
+                ERROR("Unrecognized type: " + typ + "[" + ctx.getStart().getLine() + "]");
         }
 
 
@@ -121,7 +125,7 @@ public class WaffleStation extends WaffleBaseVisitor<Object> {
     @Override
     public Object visitExpList(@NotNull WaffleParser.ExpListContext ctx) {
 
-        List<Variable> listObject = new ArrayList<Variable>();
+        ArrayList<Variable> listObject = new ArrayList<Variable>();
 
         Variable firstObj = null;
         for(WaffleParser.ExpressionContext con : ctx.list_expression().expression()) {
@@ -139,7 +143,7 @@ public class WaffleStation extends WaffleBaseVisitor<Object> {
                 System.exit(-1);
             }
         }
-        return listObject;
+        return new Variable(listObject);
     }
 
     @Override
@@ -153,6 +157,11 @@ public class WaffleStation extends WaffleBaseVisitor<Object> {
     @Override
     public Object visitString_literal(@NotNull WaffleParser.String_literalContext ctx) {
         return new Variable(ctx.getText().replace("\"",""));
+    }
+
+    @Override
+    public Object visitBoolean_literal(@NotNull WaffleParser.Boolean_literalContext ctx) {
+        return new Variable(Boolean.parseBoolean(ctx.getText()));
     }
 
     @Override
@@ -177,6 +186,7 @@ public class WaffleStation extends WaffleBaseVisitor<Object> {
 
             if(callExps.size() != 1)
                ERROR("Parameter count does not match declaration: " + funcName + "[" + ctx.getStart().getLine() + "]");
+
             System.out.println(mem.get(callExps.get(0).getText()).getData());
 
         } else if (funcName.equals("print"))

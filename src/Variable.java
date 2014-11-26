@@ -182,6 +182,20 @@ public class Variable  {
 
     }
 
+    @Override
+    public String toString() {
+        switch(type)
+        {
+            case NULL: return "null";
+            case tArray: return arrData.toString();
+            case tInt: return intData.toString();
+            case tDouble: return dblData.toString();
+            case tBoolean: return boolData.toString();
+            case tString: return strData.toString();
+            default: return "ERROR";
+
+        }
+    }
 
 
 

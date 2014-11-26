@@ -1,8 +1,35 @@
-test<Int> = 69;
-test = 70;
-test = 70 + 1;
-joke<Int> = test;
-test = 4 + 34 +2;
-joke = joke + joke;
-println(test);
-println(joke);
+a<Int> = 1;
+b<Double> = 1.1;
+c<String> = "test ";
+d<Boolean> = true;
+list<Array<Int>> = [54,26,93,17,77,31,44,55,20];
+
+println("Testing print variables: \n");
+println(a);
+println(b);
+println(c);
+println(d);
+println(list);
+
+a  = a + 1;
+b = b + 1.1;
+c = c + "added ";
+
+println("Testing normal adds: \n");
+println(a);
+println(b);
+println(c);
+
+a = a + 1.6;
+b = b + 2;
+
+println("Testing other type add on int and double: \n");
+println(a);
+println(b);
+
+println("Testing string add int, double bool and list \n");
+println(c + a);
+println(c + b);
+println(c + d);
+println(c + list);
+

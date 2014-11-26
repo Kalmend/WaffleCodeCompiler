@@ -1,4 +1,4 @@
-// Generated from C:/Users/Oliver/IdeaProjects/Wafflecode/src\Waffle.g4 by ANTLR 4.4.1-dev
+// Generated from C:/Users/Oliver/Documents/Java/IdeaProjects/WaffleCodeCompiler/src\Waffle.g4 by ANTLR 4.4.1-dev
 import org.antlr.v4.runtime.misc.NotNull;
 import org.antlr.v4.runtime.tree.ParseTreeVisitor;
 
@@ -22,6 +22,18 @@ public interface WaffleVisitor<T> extends ParseTreeVisitor<T> {
 	 * @return the visitor result
 	 */
 	T visitString(@NotNull WaffleParser.StringContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link WaffleParser#buulean}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitBuulean(@NotNull WaffleParser.BuuleanContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link WaffleParser#boolean_literal}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitBoolean_literal(@NotNull WaffleParser.Boolean_literalContext ctx);
 	/**
 	 * Visit a parse tree produced by the {@code expIndexed}
 	 * labeled alternative in {@link WaffleParser#expression}.
