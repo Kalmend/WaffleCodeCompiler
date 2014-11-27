@@ -113,12 +113,16 @@ public class WaffleStation extends WaffleBaseVisitor<Object> {
     public Object visitExpBinary(@NotNull WaffleParser.ExpBinaryContext ctx) {
         Variable leftside = (Variable) visit(ctx.left);
         Variable rightside =(Variable) visit(ctx.right);
-
+        Variable result = null;
          if (ctx.operator.getText().equals("+")) {
-             return leftside.add(rightside);
+             result = leftside.add(rightside);
 
         }
-        return null;
+
+        if(result == null) {
+            ERROR("Ivalid operation : " + leftside.getType() + " " + ctx.operator.getText() +  " " + rightside.getType()+ " [" + ctx.getStart().getLine() + "]");
+        }
+        return result;
 
     }
 
@@ -127,21 +131,12 @@ public class WaffleStation extends WaffleBaseVisitor<Object> {
 
         ArrayList<Variable> listObject = new ArrayList<Variable>();
 
-        Variable firstObj = null;
+
         for(WaffleParser.ExpressionContext con : ctx.list_expression().expression()) {
             Variable obj = (Variable)visit(con);
 
-            if(firstObj == null)
-            {
-                firstObj = obj;
-            }
-            if(obj.getType() == firstObj.getType())
                 listObject.add(obj);
-            else {
 
-                System.err.println("Trying to add multiple object types to array");
-                System.exit(-1);
-            }
         }
         return new Variable(listObject);
     }
@@ -156,7 +151,7 @@ public class WaffleStation extends WaffleBaseVisitor<Object> {
 
     @Override
     public Object visitString_literal(@NotNull WaffleParser.String_literalContext ctx) {
-        return new Variable(ctx.getText().replace("\"",""));
+        return new Variable(ctx.getText().replace("\"","").replace("\\n","\n").replace("\\t","\t"));
     }
 
     @Override
@@ -191,7 +186,7 @@ public class WaffleStation extends WaffleBaseVisitor<Object> {
 
         } else if (funcName.equals("print"))
         {
-            System.out.print("whatever it says tere");
+            System.out.print(visit(callExps.get(0)));
 
         } else if (funcName.equals("len"))
         {
@@ -251,8 +246,16 @@ public class WaffleStation extends WaffleBaseVisitor<Object> {
             return mem.get(left.variable().getText());
         } else {
                 Variable arrayVar =   mem.get(left.indexed_expression().variable().getText());
-                int index = (Integer)(visit(left.indexed_expression().expression()));
-                return arrayVar.getArrData().get(index);
+                int index = ((Variable)(visit(left.indexed_expression().expression()))).getIntData();
+                Variable var = null;
+            try{
+                var = arrayVar.getArrData().get(index);
+
+            } catch(Exception e) {
+                ERROR("Array index out of bounds " + left.indexed_expression().variable().getText() + " size is  " + arrayVar.getArrData().size() + ". [" + left.getStart().getLine() + "]");
+            }
+
+            return var;
 
         }
 
