@@ -151,7 +151,7 @@ public class WaffleStation extends WaffleBaseVisitor<Object> {
 
     @Override
     public Object visitString_literal(@NotNull WaffleParser.String_literalContext ctx) {
-        return new Variable(ctx.getText().replace("\"","").replace("\\n","\n").replace("\\t","\t"));
+        return new Variable(ctx.getText().replace("\\\"","_QUOTE_").replace("\"","").replace("_QUOTE_","\"").replace("\\n","\n").replace("\\t","\t"));
     }
 
     @Override
@@ -168,13 +168,12 @@ public class WaffleStation extends WaffleBaseVisitor<Object> {
         if(functions.containsKey(funcName))
         {
 
-            SubWaffleStation subStation = new SubWaffleStation(this, functions.get(funcName));
+            SubWaffleStation subStation = new SubWaffleStation(this, functions.get(funcName), ctx);
 
+            return subStation.call();
 
-            if(!checkParamTypes(callExps,subStation))
-            {
-                ERROR("Parameter count does not match declaration: " + funcName + "[" +  ctx.getStart().getLine() + "]");
-            }
+           // subStation.visit(functions.get(funcName).body());
+            //System.out.println(subStation.mem);
 
         } else if (funcName.equals("println"))
         {
@@ -190,7 +189,10 @@ public class WaffleStation extends WaffleBaseVisitor<Object> {
 
         } else if (funcName.equals("len"))
         {
-            System.out.println("length");
+            Variable var = ((Variable) visit(callExps.get(0))).getLength();
+            if (var == null)
+                ERROR("len functions only accepts String or Array type: " + funcName + "[" + ctx.getStart().getLine() + "]");
+            return var;
         } else
         {
             ERROR("Could not find function: " + funcName + "[" + ctx.getStart().getLine() + "]");
@@ -199,25 +201,7 @@ public class WaffleStation extends WaffleBaseVisitor<Object> {
         return null;
     }
 
-    private boolean checkParamTypes(List<WaffleParser.ExpressionContext> callExps, SubWaffleStation subStation) {
-        subStation.visitSubroutine_header(subStation.subRoot.subroutine_header());     //crazy code
 
-        if(callExps.size() != subStation.mem.size())
-        {
-            return false;
-        }
-
-        int i = 0;
-
-        for (Map.Entry<String, Variable> entry : subStation.mem.entrySet())
-        {
-            if(entry.getValue().getType() != mem.get(callExps.get(i).getText()).getType())
-                return false;
-            i++;
-        }
-        return true;
-
-    }
 
     void ERROR(String txt)
     {

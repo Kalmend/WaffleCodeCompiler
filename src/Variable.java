@@ -28,6 +28,20 @@ public class Variable  {
         }
     }
 
+    public Variable getLength() {
+        switch(type)
+        {
+            case NULL: return null;
+            case tArray: return new Variable(this.arrData.size());
+            case tInt: return null;
+            case tDouble: return null;
+            case tBoolean: return null;
+            case tString: return new Variable(this.strData.length());
+            default: return null;
+
+        }
+    }
+
 
     public enum VarType {NULL,tInt, tDouble, tBoolean, tString, tArray};
 

@@ -314,9 +314,6 @@ public class WaffleParser extends Parser {
 		public Routine_nameContext routine_name() {
 			return getRuleContext(Routine_nameContext.class,0);
 		}
-		public Type_declContext type_decl() {
-			return getRuleContext(Type_declContext.class,0);
-		}
 		public ParamContext param(int i) {
 			return getRuleContext(ParamContext.class,i);
 		}
@@ -349,28 +346,22 @@ public class WaffleParser extends Parser {
 			setState(97); match(SUB);
 			setState(98); routine_name();
 			setState(99); match(T__7);
-			setState(103);
+			setState(100); param();
+			setState(105);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
-			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << IN) | (1L << OUT) | (1L << VAR))) != 0)) {
+			while (_la==T__2) {
 				{
 				{
-				setState(100); param();
+				setState(101); match(T__2);
+				setState(102); param();
 				}
 				}
-				setState(105);
+				setState(107);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
-			setState(106); match(T__6);
-			setState(108);
-			_la = _input.LA(1);
-			if (_la==LT) {
-				{
-				setState(107); type_decl();
-				}
-			}
-
+			setState(108); match(T__6);
 			}
 		}
 		catch (RecognitionException re) {
@@ -678,7 +669,7 @@ public class WaffleParser extends Parser {
 		enterRule(_localctx, 20, RULE_var_decl);
 		try {
 			setState(139);
-			switch ( getInterpreter().adaptivePredict(_input,7,_ctx) ) {
+			switch ( getInterpreter().adaptivePredict(_input,6,_ctx) ) {
 			case 1:
 				enterOuterAlt(_localctx, 1);
 				{
@@ -751,7 +742,7 @@ public class WaffleParser extends Parser {
 		enterRule(_localctx, 22, RULE_statement);
 		try {
 			setState(147);
-			switch ( getInterpreter().adaptivePredict(_input,8,_ctx) ) {
+			switch ( getInterpreter().adaptivePredict(_input,7,_ctx) ) {
 			case 1:
 				enterOuterAlt(_localctx, 1);
 				{
@@ -1526,7 +1517,7 @@ public class WaffleParser extends Parser {
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(216);
-			switch ( getInterpreter().adaptivePredict(_input,12,_ctx) ) {
+			switch ( getInterpreter().adaptivePredict(_input,11,_ctx) ) {
 			case 1:
 				{
 				_localctx = new ExpUnaryContext(_localctx);
@@ -1597,7 +1588,7 @@ public class WaffleParser extends Parser {
 			_ctx.stop = _input.LT(-1);
 			setState(223);
 			_errHandler.sync(this);
-			_alt = getInterpreter().adaptivePredict(_input,13,_ctx);
+			_alt = getInterpreter().adaptivePredict(_input,12,_ctx);
 			while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
 				if ( _alt==1 ) {
 					if ( _parseListeners!=null ) triggerExitRuleEvent();
@@ -1622,7 +1613,7 @@ public class WaffleParser extends Parser {
 				}
 				setState(225);
 				_errHandler.sync(this);
-				_alt = getInterpreter().adaptivePredict(_input,13,_ctx);
+				_alt = getInterpreter().adaptivePredict(_input,12,_ctx);
 			}
 			}
 		}
@@ -1744,7 +1735,7 @@ public class WaffleParser extends Parser {
 		enterRule(_localctx, 48, RULE_variable_expression);
 		try {
 			setState(240);
-			switch ( getInterpreter().adaptivePredict(_input,15,_ctx) ) {
+			switch ( getInterpreter().adaptivePredict(_input,14,_ctx) ) {
 			case 1:
 				enterOuterAlt(_localctx, 1);
 				{
@@ -2329,11 +2320,11 @@ public class WaffleParser extends Parser {
 		"\4\32\t\32\4\33\t\33\4\34\t\34\4\35\t\35\4\36\t\36\4\37\t\37\4 \t \4!"+
 		"\t!\4\"\t\"\4#\t#\4$\t$\4%\t%\3\2\7\2L\n\2\f\2\16\2O\13\2\3\3\3\3\3\3"+
 		"\6\3T\n\3\r\3\16\3U\3\4\3\4\3\4\3\4\3\4\3\4\5\4^\n\4\3\5\3\5\3\5\3\5\3"+
-		"\6\3\6\3\6\3\6\7\6h\n\6\f\6\16\6k\13\6\3\6\3\6\5\6o\n\6\3\7\3\7\3\b\3"+
-		"\b\3\b\3\b\3\t\3\t\3\t\3\t\3\t\3\t\5\t}\n\t\3\n\3\n\3\13\5\13\u0082\n"+
-		"\13\3\13\3\13\3\f\3\f\3\f\3\f\3\f\3\f\3\f\3\f\5\f\u008e\n\f\3\r\3\r\3"+
-		"\r\3\r\3\r\3\r\5\r\u0096\n\r\3\16\3\16\3\16\3\16\3\16\3\16\3\16\3\16\3"+
-		"\16\3\16\7\16\u00a2\n\16\f\16\16\16\u00a5\13\16\3\16\3\16\3\16\5\16\u00aa"+
+		"\6\3\6\3\6\3\6\3\6\3\6\7\6j\n\6\f\6\16\6m\13\6\3\6\3\6\3\7\3\7\3\b\3\b"+
+		"\3\b\3\b\3\t\3\t\3\t\3\t\3\t\3\t\5\t}\n\t\3\n\3\n\3\13\5\13\u0082\n\13"+
+		"\3\13\3\13\3\f\3\f\3\f\3\f\3\f\3\f\3\f\3\f\5\f\u008e\n\f\3\r\3\r\3\r\3"+
+		"\r\3\r\3\r\5\r\u0096\n\r\3\16\3\16\3\16\3\16\3\16\3\16\3\16\3\16\3\16"+
+		"\3\16\7\16\u00a2\n\16\f\16\16\16\u00a5\13\16\3\16\3\16\3\16\5\16\u00aa"+
 		"\n\16\3\16\3\16\3\16\5\16\u00af\n\16\3\17\3\17\3\20\3\20\3\20\3\20\3\20"+
 		"\3\21\3\21\3\21\3\21\3\21\3\21\3\22\3\22\3\22\3\22\3\23\3\23\3\24\3\24"+
 		"\3\24\3\24\3\25\3\25\3\26\3\26\3\26\3\27\3\27\3\30\3\30\3\30\3\30\3\30"+
@@ -2344,7 +2335,7 @@ public class WaffleParser extends Parser {
 		"\7\35\u0103\n\35\f\35\16\35\u0106\13\35\5\35\u0108\n\35\3\35\3\35\3\36"+
 		"\3\36\3\37\3\37\5\37\u0110\n\37\3 \3 \3!\3!\3\"\3\"\3#\3#\3$\3$\3%\3%"+
 		"\3%\2\3.&\2\4\6\b\n\f\16\20\22\24\26\30\32\34\36 \"$&(*,.\60\62\64\66"+
-		"8:<>@BDFH\2\6\3\2\36!\3\2%&\4\2\30\30\33\34\3\2\22\32\u0117\2M\3\2\2\2"+
+		"8:<>@BDFH\2\6\3\2\36!\3\2%&\4\2\30\30\33\34\3\2\22\32\u0116\2M\3\2\2\2"+
 		"\4S\3\2\2\2\6]\3\2\2\2\b_\3\2\2\2\nc\3\2\2\2\fp\3\2\2\2\16r\3\2\2\2\20"+
 		"|\3\2\2\2\22~\3\2\2\2\24\u0081\3\2\2\2\26\u008d\3\2\2\2\30\u0095\3\2\2"+
 		"\2\32\u00ae\3\2\2\2\34\u00b0\3\2\2\2\36\u00b2\3\2\2\2 \u00b7\3\2\2\2\""+
@@ -2356,23 +2347,23 @@ public class WaffleParser extends Parser {
 		"\2\2N\3\3\2\2\2OM\3\2\2\2PQ\5\30\r\2QR\7\b\2\2RT\3\2\2\2SP\3\2\2\2TU\3"+
 		"\2\2\2US\3\2\2\2UV\3\2\2\2V\5\3\2\2\2WX\5\30\r\2XY\7\b\2\2Y^\3\2\2\2Z"+
 		"[\5\b\5\2[\\\7\b\2\2\\^\3\2\2\2]W\3\2\2\2]Z\3\2\2\2^\7\3\2\2\2_`\5\n\6"+
-		"\2`a\5\4\3\2ab\7\"\2\2b\t\3\2\2\2cd\7\'\2\2de\5\f\7\2ei\7\4\2\2fh\5\24"+
-		"\13\2gf\3\2\2\2hk\3\2\2\2ig\3\2\2\2ij\3\2\2\2jl\3\2\2\2ki\3\2\2\2ln\7"+
-		"\5\2\2mo\5\16\b\2nm\3\2\2\2no\3\2\2\2o\13\3\2\2\2pq\7-\2\2q\r\3\2\2\2"+
-		"rs\7\24\2\2st\5\20\t\2tu\7\22\2\2u\17\3\2\2\2v}\5\22\n\2wx\7\3\2\2xy\7"+
-		"\24\2\2yz\5\20\t\2z{\7\22\2\2{}\3\2\2\2|v\3\2\2\2|w\3\2\2\2}\21\3\2\2"+
-		"\2~\177\t\2\2\2\177\23\3\2\2\2\u0080\u0082\t\3\2\2\u0081\u0080\3\2\2\2"+
-		"\u0081\u0082\3\2\2\2\u0082\u0083\3\2\2\2\u0083\u0084\5\26\f\2\u0084\25"+
-		"\3\2\2\2\u0085\u0086\5@!\2\u0086\u0087\5\16\b\2\u0087\u008e\3\2\2\2\u0088"+
-		"\u0089\5@!\2\u0089\u008a\5\16\b\2\u008a\u008b\7\13\2\2\u008b\u008c\5."+
-		"\30\2\u008c\u008e\3\2\2\2\u008d\u0085\3\2\2\2\u008d\u0088\3\2\2\2\u008e"+
-		"\27\3\2\2\2\u008f\u0096\5&\24\2\u0090\u0096\5\36\20\2\u0091\u0096\5\32"+
-		"\16\2\u0092\u0096\5*\26\2\u0093\u0096\5,\27\2\u0094\u0096\5(\25\2\u0095"+
-		"\u008f\3\2\2\2\u0095\u0090\3\2\2\2\u0095\u0091\3\2\2\2\u0095\u0092\3\2"+
-		"\2\2\u0095\u0093\3\2\2\2\u0095\u0094\3\2\2\2\u0096\31\3\2\2\2\u0097\u00af"+
-		"\3\2\2\2\u0098\u0099\7(\2\2\u0099\u009a\5\34\17\2\u009a\u009b\7\6\2\2"+
-		"\u009b\u00a3\5\4\3\2\u009c\u009d\7)\2\2\u009d\u009e\5\34\17\2\u009e\u009f"+
-		"\7\6\2\2\u009f\u00a0\5\4\3\2\u00a0\u00a2\3\2\2\2\u00a1\u009c\3\2\2\2\u00a2"+
+		"\2`a\5\4\3\2ab\7\"\2\2b\t\3\2\2\2cd\7\'\2\2de\5\f\7\2ef\7\4\2\2fk\5\24"+
+		"\13\2gh\7\t\2\2hj\5\24\13\2ig\3\2\2\2jm\3\2\2\2ki\3\2\2\2kl\3\2\2\2ln"+
+		"\3\2\2\2mk\3\2\2\2no\7\5\2\2o\13\3\2\2\2pq\7-\2\2q\r\3\2\2\2rs\7\24\2"+
+		"\2st\5\20\t\2tu\7\22\2\2u\17\3\2\2\2v}\5\22\n\2wx\7\3\2\2xy\7\24\2\2y"+
+		"z\5\20\t\2z{\7\22\2\2{}\3\2\2\2|v\3\2\2\2|w\3\2\2\2}\21\3\2\2\2~\177\t"+
+		"\2\2\2\177\23\3\2\2\2\u0080\u0082\t\3\2\2\u0081\u0080\3\2\2\2\u0081\u0082"+
+		"\3\2\2\2\u0082\u0083\3\2\2\2\u0083\u0084\5\26\f\2\u0084\25\3\2\2\2\u0085"+
+		"\u0086\5@!\2\u0086\u0087\5\16\b\2\u0087\u008e\3\2\2\2\u0088\u0089\5@!"+
+		"\2\u0089\u008a\5\16\b\2\u008a\u008b\7\13\2\2\u008b\u008c\5.\30\2\u008c"+
+		"\u008e\3\2\2\2\u008d\u0085\3\2\2\2\u008d\u0088\3\2\2\2\u008e\27\3\2\2"+
+		"\2\u008f\u0096\5&\24\2\u0090\u0096\5\36\20\2\u0091\u0096\5\32\16\2\u0092"+
+		"\u0096\5*\26\2\u0093\u0096\5,\27\2\u0094\u0096\5(\25\2\u0095\u008f\3\2"+
+		"\2\2\u0095\u0090\3\2\2\2\u0095\u0091\3\2\2\2\u0095\u0092\3\2\2\2\u0095"+
+		"\u0093\3\2\2\2\u0095\u0094\3\2\2\2\u0096\31\3\2\2\2\u0097\u00af\3\2\2"+
+		"\2\u0098\u0099\7(\2\2\u0099\u009a\5\34\17\2\u009a\u009b\7\6\2\2\u009b"+
+		"\u00a3\5\4\3\2\u009c\u009d\7)\2\2\u009d\u009e\5\34\17\2\u009e\u009f\7"+
+		"\6\2\2\u009f\u00a0\5\4\3\2\u00a0\u00a2\3\2\2\2\u00a1\u009c\3\2\2\2\u00a2"+
 		"\u00a5\3\2\2\2\u00a3\u00a1\3\2\2\2\u00a3\u00a4\3\2\2\2\u00a4\u00a9\3\2"+
 		"\2\2\u00a5\u00a3\3\2\2\2\u00a6\u00a7\7*\2\2\u00a7\u00a8\7\6\2\2\u00a8"+
 		"\u00aa\5\4\3\2\u00a9\u00a6\3\2\2\2\u00a9\u00aa\3\2\2\2\u00aa\u00ab\3\2"+
@@ -2411,8 +2402,8 @@ public class WaffleParser extends Parser {
 		"\2\2\2\u0111\u0112\5H%\2\u0112?\3\2\2\2\u0113\u0114\7-\2\2\u0114A\3\2"+
 		"\2\2\u0115\u0116\7\f\2\2\u0116C\3\2\2\2\u0117\u0118\7\r\2\2\u0118E\3\2"+
 		"\2\2\u0119\u011a\7\17\2\2\u011aG\3\2\2\2\u011b\u011c\7\16\2\2\u011cI\3"+
-		"\2\2\2\26MU]in|\u0081\u008d\u0095\u00a3\u00a9\u00ae\u00da\u00e1\u00eb"+
-		"\u00f2\u00fc\u0104\u0107\u010f";
+		"\2\2\2\25MU]k|\u0081\u008d\u0095\u00a3\u00a9\u00ae\u00da\u00e1\u00eb\u00f2"+
+		"\u00fc\u0104\u0107\u010f";
 	public static final ATN _ATN =
 		new ATNDeserializer().deserialize(_serializedATN.toCharArray());
 	static {

@@ -10,7 +10,7 @@ code_block : (statement ';')
 
 
 subroutine : subroutine_header body END;
-subroutine_header : SUB routine_name '(' param* ')' type_decl? ;
+subroutine_header : SUB routine_name '(' param (',' param)* ')';
 routine_name : VAR;
 
 type_decl : '<' type '>';
