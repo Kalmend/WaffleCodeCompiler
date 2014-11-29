@@ -55,7 +55,7 @@ range_exp : expression ARROW expression;
 assign_statement : left=variable_expression '=' right=expression ;
 decl_statement : var_decl;
 
-return_statement : RETURN expression;
+return_statement : RETURN expression? ;
 
 call_statement : call_expression;
 

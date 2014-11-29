@@ -182,6 +182,11 @@ public class WaffleStation extends WaffleBaseVisitor<Object> {
 
             SubWaffleStation subStation = new SubWaffleStation(this, functions.get(funcName), ctx);
 
+            Variable retVal = subStation.call();
+            if( retVal.getType() == Variable.VarType.NULL)
+            {
+                ERROR("Function does not return value: " + funcName + "[" + ctx.getStart().getLine() + "]");
+            }
             return subStation.call();
 
            // subStation.visit(functions.get(funcName).body());

@@ -1,4 +1,4 @@
-// Generated from C:/Users/Viljar/IdeaProjects/WaffleCodeCompiler/src\Waffle.g4 by ANTLR 4.4.1-dev
+// Generated from C:/Users/Oliver/Documents/Java/IdeaProjects/WaffleCodeCompiler/src\Waffle.g4 by ANTLR 4.4.1-dev
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.*;
@@ -1214,11 +1214,19 @@ public class WaffleParser extends Parser {
 	public final Return_statementContext return_statement() throws RecognitionException {
 		Return_statementContext _localctx = new Return_statementContext(_ctx, getState());
 		enterRule(_localctx, 38, RULE_return_statement);
+		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(199); match(RETURN);
-			setState(200); expression(0);
+			setState(201);
+			_la = _input.LA(1);
+			if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__7) | (1L << T__4) | (1L << INT) | (1L << DBL) | (1L << BOOL) | (1L << STR) | (1L << MINUS) | (1L << NOT) | (1L << HASH) | (1L << VAR))) != 0)) {
+				{
+				setState(200); expression(0);
+				}
+			}
+
 			}
 		}
 		catch (RecognitionException re) {
@@ -1261,7 +1269,7 @@ public class WaffleParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(202); call_expression();
+			setState(203); call_expression();
 			}
 		}
 		catch (RecognitionException re) {
@@ -1448,16 +1456,16 @@ public class WaffleParser extends Parser {
 			int _alt;
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(216);
-			switch ( getInterpreter().adaptivePredict(_input,11,_ctx) ) {
+			setState(217);
+			switch ( getInterpreter().adaptivePredict(_input,12,_ctx) ) {
 			case 1:
 				{
 				_localctx = new ExpUnaryContext(_localctx);
 				_ctx = _localctx;
 				_prevctx = _localctx;
 
-				setState(205); ((ExpUnaryContext)_localctx).operator = un_op();
-				setState(206); expression(3);
+				setState(206); ((ExpUnaryContext)_localctx).operator = un_op();
+				setState(207); expression(3);
 				}
 				break;
 			case 2:
@@ -1465,9 +1473,9 @@ public class WaffleParser extends Parser {
 				_localctx = new ExpParenthesisContext(_localctx);
 				_ctx = _localctx;
 				_prevctx = _localctx;
-				setState(208); match(T__7);
-				setState(209); expression(0);
-				setState(210); match(T__6);
+				setState(209); match(T__7);
+				setState(210); expression(0);
+				setState(211); match(T__6);
 				}
 				break;
 			case 3:
@@ -1475,7 +1483,7 @@ public class WaffleParser extends Parser {
 				_localctx = new ExpLiteralContext(_localctx);
 				_ctx = _localctx;
 				_prevctx = _localctx;
-				setState(212); literal_expression();
+				setState(213); literal_expression();
 				}
 				break;
 			case 4:
@@ -1483,7 +1491,7 @@ public class WaffleParser extends Parser {
 				_localctx = new ExpVariableContext(_localctx);
 				_ctx = _localctx;
 				_prevctx = _localctx;
-				setState(213); variable_expression();
+				setState(214); variable_expression();
 				}
 				break;
 			case 5:
@@ -1491,7 +1499,7 @@ public class WaffleParser extends Parser {
 				_localctx = new NOTIMPLEMENTED1Context(_localctx);
 				_ctx = _localctx;
 				_prevctx = _localctx;
-				setState(214); call_expression();
+				setState(215); call_expression();
 				}
 				break;
 			case 6:
@@ -1499,14 +1507,14 @@ public class WaffleParser extends Parser {
 				_localctx = new ExpListContext(_localctx);
 				_ctx = _localctx;
 				_prevctx = _localctx;
-				setState(215); list_expression();
+				setState(216); list_expression();
 				}
 				break;
 			}
 			_ctx.stop = _input.LT(-1);
-			setState(224);
+			setState(225);
 			_errHandler.sync(this);
-			_alt = getInterpreter().adaptivePredict(_input,12,_ctx);
+			_alt = getInterpreter().adaptivePredict(_input,13,_ctx);
 			while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
 				if ( _alt==1 ) {
 					if ( _parseListeners!=null ) triggerExitRuleEvent();
@@ -1516,16 +1524,16 @@ public class WaffleParser extends Parser {
 					_localctx = new ExpBinaryContext(new ExpressionContext(_parentctx, _parentState));
 					((ExpBinaryContext)_localctx).left = _prevctx;
 					pushNewRecursionContext(_localctx, _startState, RULE_expression);
-					setState(218);
+					setState(219);
 					if (!(precpred(_ctx, 6))) throw new FailedPredicateException(this, "precpred(_ctx, 6)");
-					setState(219); ((ExpBinaryContext)_localctx).operator = bin_op();
-					setState(220); ((ExpBinaryContext)_localctx).right = expression(7);
+					setState(220); ((ExpBinaryContext)_localctx).operator = bin_op();
+					setState(221); ((ExpBinaryContext)_localctx).right = expression(7);
 					}
 					} 
 				}
-				setState(226);
+				setState(227);
 				_errHandler.sync(this);
-				_alt = getInterpreter().adaptivePredict(_input,12,_ctx);
+				_alt = getInterpreter().adaptivePredict(_input,13,_ctx);
 			}
 			}
 		}
@@ -1585,24 +1593,24 @@ public class WaffleParser extends Parser {
 			_localctx = new ExpCallContext(_localctx);
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(227); variable();
-			setState(228); match(T__7);
-			setState(229); expression(0);
-			setState(234);
+			setState(228); variable();
+			setState(229); match(T__7);
+			setState(230); expression(0);
+			setState(235);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			while (_la==T__2) {
 				{
 				{
-				setState(230); match(T__2);
-				setState(231); expression(0);
+				setState(231); match(T__2);
+				setState(232); expression(0);
 				}
 				}
-				setState(236);
+				setState(237);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
-			setState(237); match(T__6);
+			setState(238); match(T__6);
 			}
 		}
 		catch (RecognitionException re) {
@@ -1652,7 +1660,7 @@ public class WaffleParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(239);
+			setState(240);
 			_la = _input.LA(1);
 			if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << GT) | (1L << GTE) | (1L << LT) | (1L << LTE) | (1L << EQ) | (1L << PLUS) | (1L << MINUS) | (1L << MUL) | (1L << DIV))) != 0)) ) {
 			_errHandler.recoverInline(this);
@@ -1701,7 +1709,7 @@ public class WaffleParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(241);
+			setState(242);
 			_la = _input.LA(1);
 			if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << MINUS) | (1L << NOT) | (1L << HASH))) != 0)) ) {
 			_errHandler.recoverInline(this);
@@ -1750,18 +1758,18 @@ public class WaffleParser extends Parser {
 		Variable_expressionContext _localctx = new Variable_expressionContext(_ctx, getState());
 		enterRule(_localctx, 50, RULE_variable_expression);
 		try {
-			setState(245);
-			switch ( getInterpreter().adaptivePredict(_input,14,_ctx) ) {
+			setState(246);
+			switch ( getInterpreter().adaptivePredict(_input,15,_ctx) ) {
 			case 1:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(243); variable();
+				setState(244); variable();
 				}
 				break;
 			case 2:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(244); indexed_expression();
+				setState(245); indexed_expression();
 				}
 				break;
 			}
@@ -1809,10 +1817,10 @@ public class WaffleParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(247); variable();
-			setState(248); match(T__4);
-			setState(249); expression(0);
-			setState(250); match(T__1);
+			setState(248); variable();
+			setState(249); match(T__4);
+			setState(250); expression(0);
+			setState(251); match(T__1);
 			}
 		}
 		catch (RecognitionException re) {
@@ -1859,25 +1867,25 @@ public class WaffleParser extends Parser {
 		Literal_expressionContext _localctx = new Literal_expressionContext(_ctx, getState());
 		enterRule(_localctx, 54, RULE_literal_expression);
 		try {
-			setState(255);
+			setState(256);
 			switch (_input.LA(1)) {
 			case STR:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(252); string_literal();
+				setState(253); string_literal();
 				}
 				break;
 			case INT:
 			case DBL:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(253); numeric_literal();
+				setState(254); numeric_literal();
 				}
 				break;
 			case BOOL:
 				enterOuterAlt(_localctx, 3);
 				{
-				setState(254); boolean_literal();
+				setState(255); boolean_literal();
 				}
 				break;
 			default:
@@ -1928,30 +1936,30 @@ public class WaffleParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(257); match(T__4);
-			setState(266);
+			setState(258); match(T__4);
+			setState(267);
 			_la = _input.LA(1);
 			if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__7) | (1L << T__4) | (1L << INT) | (1L << DBL) | (1L << BOOL) | (1L << STR) | (1L << MINUS) | (1L << NOT) | (1L << HASH) | (1L << VAR))) != 0)) {
 				{
-				setState(258); expression(0);
-				setState(263);
+				setState(259); expression(0);
+				setState(264);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 				while (_la==T__2) {
 					{
 					{
-					setState(259); match(T__2);
-					setState(260); expression(0);
+					setState(260); match(T__2);
+					setState(261); expression(0);
 					}
 					}
-					setState(265);
+					setState(266);
 					_errHandler.sync(this);
 					_la = _input.LA(1);
 				}
 				}
 			}
 
-			setState(268); match(T__1);
+			setState(269); match(T__1);
 			}
 		}
 		catch (RecognitionException re) {
@@ -1994,7 +2002,7 @@ public class WaffleParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(270); string();
+			setState(271); string();
 			}
 		}
 		catch (RecognitionException re) {
@@ -2038,18 +2046,18 @@ public class WaffleParser extends Parser {
 		Numeric_literalContext _localctx = new Numeric_literalContext(_ctx, getState());
 		enterRule(_localctx, 60, RULE_numeric_literal);
 		try {
-			setState(274);
+			setState(275);
 			switch (_input.LA(1)) {
 			case INT:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(272); integer();
+				setState(273); integer();
 				}
 				break;
 			case DBL:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(273); dooble();
+				setState(274); dooble();
 				}
 				break;
 			default:
@@ -2096,7 +2104,7 @@ public class WaffleParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(276); buulean();
+			setState(277); buulean();
 			}
 		}
 		catch (RecognitionException re) {
@@ -2137,7 +2145,7 @@ public class WaffleParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(278); match(VAR);
+			setState(279); match(VAR);
 			}
 		}
 		catch (RecognitionException re) {
@@ -2178,7 +2186,7 @@ public class WaffleParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(280); match(INT);
+			setState(281); match(INT);
 			}
 		}
 		catch (RecognitionException re) {
@@ -2219,7 +2227,7 @@ public class WaffleParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(282); match(DBL);
+			setState(283); match(DBL);
 			}
 		}
 		catch (RecognitionException re) {
@@ -2260,7 +2268,7 @@ public class WaffleParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(284); match(STR);
+			setState(285); match(STR);
 			}
 		}
 		catch (RecognitionException re) {
@@ -2301,7 +2309,7 @@ public class WaffleParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(286); match(BOOL);
+			setState(287); match(BOOL);
 			}
 		}
 		catch (RecognitionException re) {
@@ -2329,7 +2337,7 @@ public class WaffleParser extends Parser {
 	}
 
 	public static final String _serializedATN =
-		"\3\u0430\ud6d1\u8206\uad2d\u4417\uaef1\u8d80\uaadd\3-\u0123\4\2\t\2\4"+
+		"\3\u0430\ud6d1\u8206\uad2d\u4417\uaef1\u8d80\uaadd\3-\u0124\4\2\t\2\4"+
 		"\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7\4\b\t\b\4\t\t\t\4\n\t\n\4\13\t"+
 		"\13\4\f\t\f\4\r\t\r\4\16\t\16\4\17\t\17\4\20\t\20\4\21\t\21\4\22\t\22"+
 		"\4\23\t\23\4\24\t\24\4\25\t\25\4\26\t\26\4\27\t\27\4\30\t\30\4\31\t\31"+
@@ -2343,84 +2351,85 @@ public class WaffleParser extends Parser {
 		"\3\16\3\16\7\16\u00a4\n\16\f\16\16\16\u00a7\13\16\3\16\3\16\3\16\5\16"+
 		"\u00ac\n\16\3\16\3\16\3\16\5\16\u00b1\n\16\3\17\3\17\3\20\3\20\3\20\3"+
 		"\20\3\20\3\21\3\21\3\21\3\21\3\21\3\21\3\22\3\22\3\22\3\22\3\23\3\23\3"+
-		"\23\3\23\3\24\3\24\3\25\3\25\3\25\3\26\3\26\3\27\3\27\3\27\3\27\3\27\3"+
-		"\27\3\27\3\27\3\27\3\27\3\27\3\27\5\27\u00db\n\27\3\27\3\27\3\27\3\27"+
-		"\7\27\u00e1\n\27\f\27\16\27\u00e4\13\27\3\30\3\30\3\30\3\30\3\30\7\30"+
-		"\u00eb\n\30\f\30\16\30\u00ee\13\30\3\30\3\30\3\31\3\31\3\32\3\32\3\33"+
-		"\3\33\5\33\u00f8\n\33\3\34\3\34\3\34\3\34\3\34\3\35\3\35\3\35\5\35\u0102"+
-		"\n\35\3\36\3\36\3\36\3\36\7\36\u0108\n\36\f\36\16\36\u010b\13\36\5\36"+
-		"\u010d\n\36\3\36\3\36\3\37\3\37\3 \3 \5 \u0115\n \3!\3!\3\"\3\"\3#\3#"+
-		"\3$\3$\3%\3%\3&\3&\3&\2\3,\'\2\4\6\b\n\f\16\20\22\24\26\30\32\34\36 \""+
-		"$&(*,.\60\62\64\668:<>@BDFHJ\2\6\3\2\36!\3\2%&\3\2\22\32\4\2\30\30\33"+
-		"\34\u0119\2O\3\2\2\2\4U\3\2\2\2\6_\3\2\2\2\ba\3\2\2\2\ne\3\2\2\2\fr\3"+
-		"\2\2\2\16t\3\2\2\2\20~\3\2\2\2\22\u0080\3\2\2\2\24\u0083\3\2\2\2\26\u008f"+
-		"\3\2\2\2\30\u0097\3\2\2\2\32\u00b0\3\2\2\2\34\u00b2\3\2\2\2\36\u00b4\3"+
-		"\2\2\2 \u00b9\3\2\2\2\"\u00bf\3\2\2\2$\u00c3\3\2\2\2&\u00c7\3\2\2\2(\u00c9"+
-		"\3\2\2\2*\u00cc\3\2\2\2,\u00da\3\2\2\2.\u00e5\3\2\2\2\60\u00f1\3\2\2\2"+
-		"\62\u00f3\3\2\2\2\64\u00f7\3\2\2\2\66\u00f9\3\2\2\28\u0101\3\2\2\2:\u0103"+
-		"\3\2\2\2<\u0110\3\2\2\2>\u0114\3\2\2\2@\u0116\3\2\2\2B\u0118\3\2\2\2D"+
-		"\u011a\3\2\2\2F\u011c\3\2\2\2H\u011e\3\2\2\2J\u0120\3\2\2\2LN\5\6\4\2"+
-		"ML\3\2\2\2NQ\3\2\2\2OM\3\2\2\2OP\3\2\2\2P\3\3\2\2\2QO\3\2\2\2RS\5\30\r"+
-		"\2ST\7\b\2\2TV\3\2\2\2UR\3\2\2\2VW\3\2\2\2WU\3\2\2\2WX\3\2\2\2X\5\3\2"+
-		"\2\2YZ\5\30\r\2Z[\7\b\2\2[`\3\2\2\2\\]\5\b\5\2]^\7\b\2\2^`\3\2\2\2_Y\3"+
-		"\2\2\2_\\\3\2\2\2`\7\3\2\2\2ab\5\n\6\2bc\5\4\3\2cd\7\"\2\2d\t\3\2\2\2"+
-		"ef\7\'\2\2fg\5\f\7\2gh\7\4\2\2hm\5\24\13\2ij\7\t\2\2jl\5\24\13\2ki\3\2"+
-		"\2\2lo\3\2\2\2mk\3\2\2\2mn\3\2\2\2np\3\2\2\2om\3\2\2\2pq\7\5\2\2q\13\3"+
-		"\2\2\2rs\7-\2\2s\r\3\2\2\2tu\7\24\2\2uv\5\20\t\2vw\7\22\2\2w\17\3\2\2"+
-		"\2x\177\5\22\n\2yz\7\3\2\2z{\7\24\2\2{|\5\20\t\2|}\7\22\2\2}\177\3\2\2"+
-		"\2~x\3\2\2\2~y\3\2\2\2\177\21\3\2\2\2\u0080\u0081\t\2\2\2\u0081\23\3\2"+
-		"\2\2\u0082\u0084\t\3\2\2\u0083\u0082\3\2\2\2\u0083\u0084\3\2\2\2\u0084"+
-		"\u0085\3\2\2\2\u0085\u0086\5\26\f\2\u0086\25\3\2\2\2\u0087\u0088\5B\""+
-		"\2\u0088\u0089\5\16\b\2\u0089\u0090\3\2\2\2\u008a\u008b\5B\"\2\u008b\u008c"+
-		"\5\16\b\2\u008c\u008d\7\13\2\2\u008d\u008e\5,\27\2\u008e\u0090\3\2\2\2"+
-		"\u008f\u0087\3\2\2\2\u008f\u008a\3\2\2\2\u0090\27\3\2\2\2\u0091\u0098"+
-		"\5$\23\2\u0092\u0098\5\36\20\2\u0093\u0098\5\32\16\2\u0094\u0098\5(\25"+
-		"\2\u0095\u0098\5*\26\2\u0096\u0098\5&\24\2\u0097\u0091\3\2\2\2\u0097\u0092"+
-		"\3\2\2\2\u0097\u0093\3\2\2\2\u0097\u0094\3\2\2\2\u0097\u0095\3\2\2\2\u0097"+
-		"\u0096\3\2\2\2\u0098\31\3\2\2\2\u0099\u00b1\3\2\2\2\u009a\u009b\7(\2\2"+
-		"\u009b\u009c\5\34\17\2\u009c\u009d\7\6\2\2\u009d\u00a5\5\4\3\2\u009e\u009f"+
-		"\7)\2\2\u009f\u00a0\5\34\17\2\u00a0\u00a1\7\6\2\2\u00a1\u00a2\5\4\3\2"+
-		"\u00a2\u00a4\3\2\2\2\u00a3\u009e\3\2\2\2\u00a4\u00a7\3\2\2\2\u00a5\u00a3"+
-		"\3\2\2\2\u00a5\u00a6\3\2\2\2\u00a6\u00ab\3\2\2\2\u00a7\u00a5\3\2\2\2\u00a8"+
-		"\u00a9\7*\2\2\u00a9\u00aa\7\6\2\2\u00aa\u00ac\5\4\3\2\u00ab\u00a8\3\2"+
-		"\2\2\u00ab\u00ac\3\2\2\2\u00ac\u00ad\3\2\2\2\u00ad\u00ae\7\"\2\2\u00ae"+
-		"\u00af\7(\2\2\u00af\u00b1\3\2\2\2\u00b0\u0099\3\2\2\2\u00b0\u009a\3\2"+
-		"\2\2\u00b1\33\3\2\2\2\u00b2\u00b3\5,\27\2\u00b3\35\3\2\2\2\u00b4\u00b5"+
-		"\5 \21\2\u00b5\u00b6\5\4\3\2\u00b6\u00b7\7\"\2\2\u00b7\u00b8\7#\2\2\u00b8"+
-		"\37\3\2\2\2\u00b9\u00ba\7$\2\2\u00ba\u00bb\5\26\f\2\u00bb\u00bc\7%\2\2"+
-		"\u00bc\u00bd\5\"\22\2\u00bd\u00be\7\6\2\2\u00be!\3\2\2\2\u00bf\u00c0\5"+
-		",\27\2\u00c0\u00c1\7\35\2\2\u00c1\u00c2\5,\27\2\u00c2#\3\2\2\2\u00c3\u00c4"+
-		"\5\64\33\2\u00c4\u00c5\7\13\2\2\u00c5\u00c6\5,\27\2\u00c6%\3\2\2\2\u00c7"+
-		"\u00c8\5\26\f\2\u00c8\'\3\2\2\2\u00c9\u00ca\7,\2\2\u00ca\u00cb\5,\27\2"+
-		"\u00cb)\3\2\2\2\u00cc\u00cd\5.\30\2\u00cd+\3\2\2\2\u00ce\u00cf\b\27\1"+
-		"\2\u00cf\u00d0\5\62\32\2\u00d0\u00d1\5,\27\5\u00d1\u00db\3\2\2\2\u00d2"+
-		"\u00d3\7\4\2\2\u00d3\u00d4\5,\27\2\u00d4\u00d5\7\5\2\2\u00d5\u00db\3\2"+
-		"\2\2\u00d6\u00db\58\35\2\u00d7\u00db\5\64\33\2\u00d8\u00db\5.\30\2\u00d9"+
-		"\u00db\5:\36\2\u00da\u00ce\3\2\2\2\u00da\u00d2\3\2\2\2\u00da\u00d6\3\2"+
-		"\2\2\u00da\u00d7\3\2\2\2\u00da\u00d8\3\2\2\2\u00da\u00d9\3\2\2\2\u00db"+
-		"\u00e2\3\2\2\2\u00dc\u00dd\f\b\2\2\u00dd\u00de\5\60\31\2\u00de\u00df\5"+
-		",\27\t\u00df\u00e1\3\2\2\2\u00e0\u00dc\3\2\2\2\u00e1\u00e4\3\2\2\2\u00e2"+
-		"\u00e0\3\2\2\2\u00e2\u00e3\3\2\2\2\u00e3-\3\2\2\2\u00e4\u00e2\3\2\2\2"+
-		"\u00e5\u00e6\5B\"\2\u00e6\u00e7\7\4\2\2\u00e7\u00ec\5,\27\2\u00e8\u00e9"+
-		"\7\t\2\2\u00e9\u00eb\5,\27\2\u00ea\u00e8\3\2\2\2\u00eb\u00ee\3\2\2\2\u00ec"+
-		"\u00ea\3\2\2\2\u00ec\u00ed\3\2\2\2\u00ed\u00ef\3\2\2\2\u00ee\u00ec\3\2"+
-		"\2\2\u00ef\u00f0\7\5\2\2\u00f0/\3\2\2\2\u00f1\u00f2\t\4\2\2\u00f2\61\3"+
-		"\2\2\2\u00f3\u00f4\t\5\2\2\u00f4\63\3\2\2\2\u00f5\u00f8\5B\"\2\u00f6\u00f8"+
-		"\5\66\34\2\u00f7\u00f5\3\2\2\2\u00f7\u00f6\3\2\2\2\u00f8\65\3\2\2\2\u00f9"+
-		"\u00fa\5B\"\2\u00fa\u00fb\7\7\2\2\u00fb\u00fc\5,\27\2\u00fc\u00fd\7\n"+
-		"\2\2\u00fd\67\3\2\2\2\u00fe\u0102\5<\37\2\u00ff\u0102\5> \2\u0100\u0102"+
-		"\5@!\2\u0101\u00fe\3\2\2\2\u0101\u00ff\3\2\2\2\u0101\u0100\3\2\2\2\u0102"+
-		"9\3\2\2\2\u0103\u010c\7\7\2\2\u0104\u0109\5,\27\2\u0105\u0106\7\t\2\2"+
-		"\u0106\u0108\5,\27\2\u0107\u0105\3\2\2\2\u0108\u010b\3\2\2\2\u0109\u0107"+
-		"\3\2\2\2\u0109\u010a\3\2\2\2\u010a\u010d\3\2\2\2\u010b\u0109\3\2\2\2\u010c"+
-		"\u0104\3\2\2\2\u010c\u010d\3\2\2\2\u010d\u010e\3\2\2\2\u010e\u010f\7\n"+
-		"\2\2\u010f;\3\2\2\2\u0110\u0111\5H%\2\u0111=\3\2\2\2\u0112\u0115\5D#\2"+
-		"\u0113\u0115\5F$\2\u0114\u0112\3\2\2\2\u0114\u0113\3\2\2\2\u0115?\3\2"+
-		"\2\2\u0116\u0117\5J&\2\u0117A\3\2\2\2\u0118\u0119\7-\2\2\u0119C\3\2\2"+
-		"\2\u011a\u011b\7\f\2\2\u011bE\3\2\2\2\u011c\u011d\7\r\2\2\u011dG\3\2\2"+
-		"\2\u011e\u011f\7\17\2\2\u011fI\3\2\2\2\u0120\u0121\7\16\2\2\u0121K\3\2"+
-		"\2\2\25OW_m~\u0083\u008f\u0097\u00a5\u00ab\u00b0\u00da\u00e2\u00ec\u00f7"+
-		"\u0101\u0109\u010c\u0114";
+		"\23\3\23\3\24\3\24\3\25\3\25\5\25\u00cc\n\25\3\26\3\26\3\27\3\27\3\27"+
+		"\3\27\3\27\3\27\3\27\3\27\3\27\3\27\3\27\3\27\5\27\u00dc\n\27\3\27\3\27"+
+		"\3\27\3\27\7\27\u00e2\n\27\f\27\16\27\u00e5\13\27\3\30\3\30\3\30\3\30"+
+		"\3\30\7\30\u00ec\n\30\f\30\16\30\u00ef\13\30\3\30\3\30\3\31\3\31\3\32"+
+		"\3\32\3\33\3\33\5\33\u00f9\n\33\3\34\3\34\3\34\3\34\3\34\3\35\3\35\3\35"+
+		"\5\35\u0103\n\35\3\36\3\36\3\36\3\36\7\36\u0109\n\36\f\36\16\36\u010c"+
+		"\13\36\5\36\u010e\n\36\3\36\3\36\3\37\3\37\3 \3 \5 \u0116\n \3!\3!\3\""+
+		"\3\"\3#\3#\3$\3$\3%\3%\3&\3&\3&\2\3,\'\2\4\6\b\n\f\16\20\22\24\26\30\32"+
+		"\34\36 \"$&(*,.\60\62\64\668:<>@BDFHJ\2\6\3\2\36!\3\2%&\3\2\22\32\4\2"+
+		"\30\30\33\34\u011b\2O\3\2\2\2\4U\3\2\2\2\6_\3\2\2\2\ba\3\2\2\2\ne\3\2"+
+		"\2\2\fr\3\2\2\2\16t\3\2\2\2\20~\3\2\2\2\22\u0080\3\2\2\2\24\u0083\3\2"+
+		"\2\2\26\u008f\3\2\2\2\30\u0097\3\2\2\2\32\u00b0\3\2\2\2\34\u00b2\3\2\2"+
+		"\2\36\u00b4\3\2\2\2 \u00b9\3\2\2\2\"\u00bf\3\2\2\2$\u00c3\3\2\2\2&\u00c7"+
+		"\3\2\2\2(\u00c9\3\2\2\2*\u00cd\3\2\2\2,\u00db\3\2\2\2.\u00e6\3\2\2\2\60"+
+		"\u00f2\3\2\2\2\62\u00f4\3\2\2\2\64\u00f8\3\2\2\2\66\u00fa\3\2\2\28\u0102"+
+		"\3\2\2\2:\u0104\3\2\2\2<\u0111\3\2\2\2>\u0115\3\2\2\2@\u0117\3\2\2\2B"+
+		"\u0119\3\2\2\2D\u011b\3\2\2\2F\u011d\3\2\2\2H\u011f\3\2\2\2J\u0121\3\2"+
+		"\2\2LN\5\6\4\2ML\3\2\2\2NQ\3\2\2\2OM\3\2\2\2OP\3\2\2\2P\3\3\2\2\2QO\3"+
+		"\2\2\2RS\5\30\r\2ST\7\b\2\2TV\3\2\2\2UR\3\2\2\2VW\3\2\2\2WU\3\2\2\2WX"+
+		"\3\2\2\2X\5\3\2\2\2YZ\5\30\r\2Z[\7\b\2\2[`\3\2\2\2\\]\5\b\5\2]^\7\b\2"+
+		"\2^`\3\2\2\2_Y\3\2\2\2_\\\3\2\2\2`\7\3\2\2\2ab\5\n\6\2bc\5\4\3\2cd\7\""+
+		"\2\2d\t\3\2\2\2ef\7\'\2\2fg\5\f\7\2gh\7\4\2\2hm\5\24\13\2ij\7\t\2\2jl"+
+		"\5\24\13\2ki\3\2\2\2lo\3\2\2\2mk\3\2\2\2mn\3\2\2\2np\3\2\2\2om\3\2\2\2"+
+		"pq\7\5\2\2q\13\3\2\2\2rs\7-\2\2s\r\3\2\2\2tu\7\24\2\2uv\5\20\t\2vw\7\22"+
+		"\2\2w\17\3\2\2\2x\177\5\22\n\2yz\7\3\2\2z{\7\24\2\2{|\5\20\t\2|}\7\22"+
+		"\2\2}\177\3\2\2\2~x\3\2\2\2~y\3\2\2\2\177\21\3\2\2\2\u0080\u0081\t\2\2"+
+		"\2\u0081\23\3\2\2\2\u0082\u0084\t\3\2\2\u0083\u0082\3\2\2\2\u0083\u0084"+
+		"\3\2\2\2\u0084\u0085\3\2\2\2\u0085\u0086\5\26\f\2\u0086\25\3\2\2\2\u0087"+
+		"\u0088\5B\"\2\u0088\u0089\5\16\b\2\u0089\u0090\3\2\2\2\u008a\u008b\5B"+
+		"\"\2\u008b\u008c\5\16\b\2\u008c\u008d\7\13\2\2\u008d\u008e\5,\27\2\u008e"+
+		"\u0090\3\2\2\2\u008f\u0087\3\2\2\2\u008f\u008a\3\2\2\2\u0090\27\3\2\2"+
+		"\2\u0091\u0098\5$\23\2\u0092\u0098\5\36\20\2\u0093\u0098\5\32\16\2\u0094"+
+		"\u0098\5(\25\2\u0095\u0098\5*\26\2\u0096\u0098\5&\24\2\u0097\u0091\3\2"+
+		"\2\2\u0097\u0092\3\2\2\2\u0097\u0093\3\2\2\2\u0097\u0094\3\2\2\2\u0097"+
+		"\u0095\3\2\2\2\u0097\u0096\3\2\2\2\u0098\31\3\2\2\2\u0099\u00b1\3\2\2"+
+		"\2\u009a\u009b\7(\2\2\u009b\u009c\5\34\17\2\u009c\u009d\7\6\2\2\u009d"+
+		"\u00a5\5\4\3\2\u009e\u009f\7)\2\2\u009f\u00a0\5\34\17\2\u00a0\u00a1\7"+
+		"\6\2\2\u00a1\u00a2\5\4\3\2\u00a2\u00a4\3\2\2\2\u00a3\u009e\3\2\2\2\u00a4"+
+		"\u00a7\3\2\2\2\u00a5\u00a3\3\2\2\2\u00a5\u00a6\3\2\2\2\u00a6\u00ab\3\2"+
+		"\2\2\u00a7\u00a5\3\2\2\2\u00a8\u00a9\7*\2\2\u00a9\u00aa\7\6\2\2\u00aa"+
+		"\u00ac\5\4\3\2\u00ab\u00a8\3\2\2\2\u00ab\u00ac\3\2\2\2\u00ac\u00ad\3\2"+
+		"\2\2\u00ad\u00ae\7\"\2\2\u00ae\u00af\7(\2\2\u00af\u00b1\3\2\2\2\u00b0"+
+		"\u0099\3\2\2\2\u00b0\u009a\3\2\2\2\u00b1\33\3\2\2\2\u00b2\u00b3\5,\27"+
+		"\2\u00b3\35\3\2\2\2\u00b4\u00b5\5 \21\2\u00b5\u00b6\5\4\3\2\u00b6\u00b7"+
+		"\7\"\2\2\u00b7\u00b8\7#\2\2\u00b8\37\3\2\2\2\u00b9\u00ba\7$\2\2\u00ba"+
+		"\u00bb\5\26\f\2\u00bb\u00bc\7%\2\2\u00bc\u00bd\5\"\22\2\u00bd\u00be\7"+
+		"\6\2\2\u00be!\3\2\2\2\u00bf\u00c0\5,\27\2\u00c0\u00c1\7\35\2\2\u00c1\u00c2"+
+		"\5,\27\2\u00c2#\3\2\2\2\u00c3\u00c4\5\64\33\2\u00c4\u00c5\7\13\2\2\u00c5"+
+		"\u00c6\5,\27\2\u00c6%\3\2\2\2\u00c7\u00c8\5\26\f\2\u00c8\'\3\2\2\2\u00c9"+
+		"\u00cb\7,\2\2\u00ca\u00cc\5,\27\2\u00cb\u00ca\3\2\2\2\u00cb\u00cc\3\2"+
+		"\2\2\u00cc)\3\2\2\2\u00cd\u00ce\5.\30\2\u00ce+\3\2\2\2\u00cf\u00d0\b\27"+
+		"\1\2\u00d0\u00d1\5\62\32\2\u00d1\u00d2\5,\27\5\u00d2\u00dc\3\2\2\2\u00d3"+
+		"\u00d4\7\4\2\2\u00d4\u00d5\5,\27\2\u00d5\u00d6\7\5\2\2\u00d6\u00dc\3\2"+
+		"\2\2\u00d7\u00dc\58\35\2\u00d8\u00dc\5\64\33\2\u00d9\u00dc\5.\30\2\u00da"+
+		"\u00dc\5:\36\2\u00db\u00cf\3\2\2\2\u00db\u00d3\3\2\2\2\u00db\u00d7\3\2"+
+		"\2\2\u00db\u00d8\3\2\2\2\u00db\u00d9\3\2\2\2\u00db\u00da\3\2\2\2\u00dc"+
+		"\u00e3\3\2\2\2\u00dd\u00de\f\b\2\2\u00de\u00df\5\60\31\2\u00df\u00e0\5"+
+		",\27\t\u00e0\u00e2\3\2\2\2\u00e1\u00dd\3\2\2\2\u00e2\u00e5\3\2\2\2\u00e3"+
+		"\u00e1\3\2\2\2\u00e3\u00e4\3\2\2\2\u00e4-\3\2\2\2\u00e5\u00e3\3\2\2\2"+
+		"\u00e6\u00e7\5B\"\2\u00e7\u00e8\7\4\2\2\u00e8\u00ed\5,\27\2\u00e9\u00ea"+
+		"\7\t\2\2\u00ea\u00ec\5,\27\2\u00eb\u00e9\3\2\2\2\u00ec\u00ef\3\2\2\2\u00ed"+
+		"\u00eb\3\2\2\2\u00ed\u00ee\3\2\2\2\u00ee\u00f0\3\2\2\2\u00ef\u00ed\3\2"+
+		"\2\2\u00f0\u00f1\7\5\2\2\u00f1/\3\2\2\2\u00f2\u00f3\t\4\2\2\u00f3\61\3"+
+		"\2\2\2\u00f4\u00f5\t\5\2\2\u00f5\63\3\2\2\2\u00f6\u00f9\5B\"\2\u00f7\u00f9"+
+		"\5\66\34\2\u00f8\u00f6\3\2\2\2\u00f8\u00f7\3\2\2\2\u00f9\65\3\2\2\2\u00fa"+
+		"\u00fb\5B\"\2\u00fb\u00fc\7\7\2\2\u00fc\u00fd\5,\27\2\u00fd\u00fe\7\n"+
+		"\2\2\u00fe\67\3\2\2\2\u00ff\u0103\5<\37\2\u0100\u0103\5> \2\u0101\u0103"+
+		"\5@!\2\u0102\u00ff\3\2\2\2\u0102\u0100\3\2\2\2\u0102\u0101\3\2\2\2\u0103"+
+		"9\3\2\2\2\u0104\u010d\7\7\2\2\u0105\u010a\5,\27\2\u0106\u0107\7\t\2\2"+
+		"\u0107\u0109\5,\27\2\u0108\u0106\3\2\2\2\u0109\u010c\3\2\2\2\u010a\u0108"+
+		"\3\2\2\2\u010a\u010b\3\2\2\2\u010b\u010e\3\2\2\2\u010c\u010a\3\2\2\2\u010d"+
+		"\u0105\3\2\2\2\u010d\u010e\3\2\2\2\u010e\u010f\3\2\2\2\u010f\u0110\7\n"+
+		"\2\2\u0110;\3\2\2\2\u0111\u0112\5H%\2\u0112=\3\2\2\2\u0113\u0116\5D#\2"+
+		"\u0114\u0116\5F$\2\u0115\u0113\3\2\2\2\u0115\u0114\3\2\2\2\u0116?\3\2"+
+		"\2\2\u0117\u0118\5J&\2\u0118A\3\2\2\2\u0119\u011a\7-\2\2\u011aC\3\2\2"+
+		"\2\u011b\u011c\7\f\2\2\u011cE\3\2\2\2\u011d\u011e\7\r\2\2\u011eG\3\2\2"+
+		"\2\u011f\u0120\7\17\2\2\u0120I\3\2\2\2\u0121\u0122\7\16\2\2\u0122K\3\2"+
+		"\2\2\26OW_m~\u0083\u008f\u0097\u00a5\u00ab\u00b0\u00cb\u00db\u00e3\u00ed"+
+		"\u00f8\u0102\u010a\u010d\u0115";
 	public static final ATN _ATN =
 		new ATNDeserializer().deserialize(_serializedATN.toCharArray());
 	static {
