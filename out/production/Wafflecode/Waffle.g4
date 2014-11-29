@@ -49,7 +49,7 @@ condition : expression;
 //-----------------loops------------------//
 for_statement :  for_header body END LOOP;
 for_header : FOR iterator=var_decl  IN range_exp ':';
-range_exp : expression ARROW expression;
+range_exp : start=expression ARROW stop=expression;
 //---------------------------------------//
 
 assign_statement : left=variable_expression '=' right=expression ;
@@ -80,7 +80,7 @@ expression:   '(' expression ')'                                            #exp
 
 call_expression : variable '(' expression (',' expression)* ')'             #expCall;
 
-bin_op : MUL|DIV|PLUS|MINUS|EQ|GT|GTE|LT|LTE;
+bin_op : MUL|DIV|PLUS|MINUS|EQ|NEQ|GT|GTE|LT|LTE;
 un_op : HASH|NOT|MINUS;
 
 variable_expression : variable
@@ -122,6 +122,7 @@ GTE : '>=';
 LT : '<';
 LTE : '<=';
 EQ : '==';
+NEQ : '!=';
 
 PLUS: '+';
 MINUS: '-';

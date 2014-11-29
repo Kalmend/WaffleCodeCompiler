@@ -1,7 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2affb46d-a77f-48d6-9da5-b172019c1cf2" name="Default" comment="" />
+    <list default="true" id="2affb46d-a77f-48d6-9da5-b172019c1cf2" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Wafflecode/Variable.class" afterPath="$PROJECT_DIR$/out/production/Wafflecode/Variable.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Wafflecode/WaffleLexer.class" afterPath="$PROJECT_DIR$/out/production/Wafflecode/WaffleLexer.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$Assign_statementContext.class" afterPath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$Assign_statementContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$Bin_opContext.class" afterPath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$Bin_opContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$Boolean_literalContext.class" afterPath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$Boolean_literalContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$BuuleanContext.class" afterPath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$BuuleanContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$Call_expressionContext.class" afterPath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$Call_expressionContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$Call_statementContext.class" afterPath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$Call_statementContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$Decl_statementContext.class" afterPath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$Decl_statementContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$DoobleContext.class" afterPath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$DoobleContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$ExpBinaryContext.class" afterPath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$ExpBinaryContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$ExpCallContext.class" afterPath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$ExpCallContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$ExpListContext.class" afterPath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$ExpListContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$ExpLiteralContext.class" afterPath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$ExpLiteralContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$ExpParenthesisContext.class" afterPath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$ExpParenthesisContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$ExpUnaryContext.class" afterPath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$ExpUnaryContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$ExpVariableContext.class" afterPath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$ExpVariableContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$ExpressionContext.class" afterPath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$ExpressionContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$For_headerContext.class" afterPath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$For_headerContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$For_statementContext.class" afterPath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$For_statementContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$If_statementContext.class" afterPath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$If_statementContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$Indexed_expressionContext.class" afterPath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$Indexed_expressionContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$IntegerContext.class" afterPath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$IntegerContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$List_expressionContext.class" afterPath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$List_expressionContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$Literal_expressionContext.class" afterPath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$Literal_expressionContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$NOTIMPLEMENTED1Context.class" afterPath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$NOTIMPLEMENTED1Context.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$Numeric_literalContext.class" afterPath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$Numeric_literalContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$ParamContext.class" afterPath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$ParamContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$Range_expContext.class" afterPath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$Range_expContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$Return_statementContext.class" afterPath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$Return_statementContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$Routine_nameContext.class" afterPath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$Routine_nameContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$Scalar_typeContext.class" afterPath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$Scalar_typeContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$StringContext.class" afterPath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$StringContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$String_literalContext.class" afterPath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$String_literalContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$SubroutineContext.class" afterPath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$SubroutineContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$Subroutine_headerContext.class" afterPath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$Subroutine_headerContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$Un_opContext.class" afterPath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$Un_opContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$VariableContext.class" afterPath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$VariableContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$Variable_expressionContext.class" afterPath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$Variable_expressionContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser.class" afterPath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Wafflecode/WaffleStation.class" afterPath="$PROJECT_DIR$/out/production/Wafflecode/WaffleStation.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Variable.java" afterPath="$PROJECT_DIR$/src/Variable.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Wafflecode/Waffle.g4" afterPath="$PROJECT_DIR$/out/production/Wafflecode/Waffle.g4" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Waffle.g4" afterPath="$PROJECT_DIR$/src/Waffle.g4" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/Waffle.tokens" afterPath="$PROJECT_DIR$/gen/Waffle.tokens" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Wafflecode/Waffle.tokens" afterPath="$PROJECT_DIR$/out/production/Wafflecode/Waffle.tokens" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/WaffleBaseListener.java" afterPath="$PROJECT_DIR$/gen/WaffleBaseListener.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/WaffleBaseVisitor.java" afterPath="$PROJECT_DIR$/gen/WaffleBaseVisitor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/WaffleLexer.java" afterPath="$PROJECT_DIR$/gen/WaffleLexer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/WaffleLexer.tokens" afterPath="$PROJECT_DIR$/gen/WaffleLexer.tokens" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Wafflecode/WaffleLexer.tokens" afterPath="$PROJECT_DIR$/out/production/Wafflecode/WaffleLexer.tokens" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/WaffleListener.java" afterPath="$PROJECT_DIR$/gen/WaffleListener.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/WaffleParser.java" afterPath="$PROJECT_DIR$/gen/WaffleParser.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/WaffleStation.java" afterPath="$PROJECT_DIR$/src/WaffleStation.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/WaffleVisitor.java" afterPath="$PROJECT_DIR$/gen/WaffleVisitor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="Wafflecode.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -28,8 +86,8 @@
       <file leaf-file-name="program.waf" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/program.waf">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="1105">
-              <caret line="19" column="42" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="429" max-vertical-offset="1105">
+              <caret line="57" column="27" selection-start-line="57" selection-start-column="27" selection-end-line="57" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -38,28 +96,34 @@
       <file leaf-file-name="WaffleStation.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/WaffleStation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.107143" vertical-offset="2844" max-vertical-offset="4471">
-              <caret line="187" column="53" selection-start-line="187" selection-start-column="53" selection-end-line="187" selection-end-column="53" />
-              <folding />
+            <state vertical-scroll-proportion="-10.75" vertical-offset="4170" max-vertical-offset="5083">
+              <caret line="263" column="42" selection-start-line="263" selection-start-column="42" selection-end-line="263" selection-end-column="42" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#3773#3774#0" expanded="true" />
+                <element signature="e#3820#3821#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SubWaffleStation.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SubWaffleStation.java">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="909" max-vertical-offset="1428">
-              <caret line="76" column="34" selection-start-line="76" selection-start-column="34" selection-end-line="76" selection-end-column="34" />
-              <folding />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1071">
+              <caret line="39" column="25" selection-start-line="39" selection-start-column="25" selection-end-line="39" selection-end-column="25" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="simpleprogram.waf" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/simpleprogram.waf">
+      <file leaf-file-name="Variable.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Variable.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.12781955" vertical-offset="0" max-vertical-offset="532">
-              <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
+            <state vertical-scroll-proportion="0.5135909" vertical-offset="3500" max-vertical-offset="6205">
+              <caret line="251" column="13" selection-start-line="251" selection-start-column="13" selection-end-line="251" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -68,14 +132,17 @@
       <file leaf-file-name="Waffle.g4" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Waffle.g4">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="674" max-vertical-offset="2618">
-              <caret line="52" column="19" selection-start-line="52" selection-start-column="19" selection-end-line="52" selection-end-column="19" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="287" max-vertical-offset="2635">
+              <caret line="72" column="61" selection-start-line="72" selection-start-column="61" selection-end-line="72" selection-end-column="61" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -88,21 +155,21 @@
         <option value="$PROJECT_DIR$/src/tests.waf" />
         <option value="$PROJECT_DIR$/src/program.waf" />
         <option value="$PROJECT_DIR$/src/statement_test.waf" />
-        <option value="$PROJECT_DIR$/src/Variable.java" />
-        <option value="$PROJECT_DIR$/src/Waffle.g4" />
         <option value="$PROJECT_DIR$/src/SubWaffleStation.java" />
-        <option value="$PROJECT_DIR$/src/WaffleStation.java" />
         <option value="$PROJECT_DIR$/src/simpleprogram.waf" />
+        <option value="$PROJECT_DIR$/src/Waffle.g4" />
+        <option value="$PROJECT_DIR$/src/Variable.java" />
+        <option value="$PROJECT_DIR$/src/WaffleStation.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1552" />
-    <option name="height" value="842" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
@@ -125,6 +192,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -157,9 +225,22 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WaffleCodeCompiler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WaffleCodeCompiler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gen" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -177,7 +258,7 @@
     <property name="restartRequiresConfirmation" value="true" />
     <property name="OverrideImplement.combined" value="true" />
     <property name="OverrideImplement.overriding.sorted" value="false" />
-    <property name="options.lastSelected" value="preferences.lookFeel" />
+    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="project.structure.last.edited" value="Project" />
@@ -189,7 +270,7 @@
       <recent name="C:\Users\Oliver\IdeaProjects\Wafflecode\lib" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.simpleProgram">
+  <component name="RunManager" selected="Application.Program">
     <configuration default="false" name="Main" type="Application" factoryName="Application" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="Main" />
@@ -376,6 +457,14 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="Wafflecode" />
       <envs />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
+      <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
     <configuration default="false" name="simpleProgram+Tree " type="Application" factoryName="Application">
@@ -466,7 +555,7 @@
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
   <component name="SvnConfiguration">
-    <configuration />
+    <configuration>C:\Users\Viljar\AppData\Roaming\Subversion</configuration>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -478,30 +567,30 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1552" height="842" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Tool Output" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32867885" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35061392" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Tool Output" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32867885" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35061392" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23601638" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23548046" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23601638" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23548046" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1998698" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1985677" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" x="197" y="158" width="479" height="707" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19947916" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1984375" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" x="197" y="158" width="479" height="707" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39699864" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39598733" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -530,25 +619,25 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Variable.java</url>
-          <line>124</line>
+          <line>128</line>
           <properties />
           <option name="timeStamp" value="68" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/WaffleStation.java</url>
-          <line>182</line>
+          <line>213</line>
           <properties />
           <option name="timeStamp" value="71" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/WaffleStation.java</url>
-          <line>181</line>
+          <line>212</line>
           <properties />
           <option name="timeStamp" value="72" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/WaffleStation.java</url>
-          <line>169</line>
+          <line>200</line>
           <properties />
           <option name="timeStamp" value="73" />
         </line-breakpoint>
@@ -566,19 +655,19 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/SubWaffleStation.java</url>
-          <line>67</line>
+          <line>69</line>
           <properties />
           <option name="timeStamp" value="89" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/WaffleStation.java</url>
-          <line>32</line>
+          <line>48</line>
           <properties />
           <option name="timeStamp" value="90" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/WaffleStation.java</url>
-          <line>31</line>
+          <line>47</line>
           <properties />
           <option name="timeStamp" value="91" />
         </line-breakpoint>
@@ -587,6 +676,12 @@
           <line>29</line>
           <properties />
           <option name="timeStamp" value="93" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/WaffleStation.java</url>
+          <line>125</line>
+          <properties />
+          <option name="timeStamp" value="94" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>jar://$PROJECT_DIR$/lib/antlr-4.4.1-dev-complete.jar!/org/antlr/v4/runtime/tree/AbstractParseTreeVisitor.class</url>
@@ -601,7 +696,7 @@
           <option name="timeStamp" value="27" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="94" />
+      <option name="time" value="95" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -610,6 +705,50 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/program.waf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="1105">
+          <caret line="19" column="42" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/WaffleStation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3043" max-vertical-offset="4114">
+          <caret line="187" column="53" selection-start-line="187" selection-start-column="53" selection-end-line="187" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3773#3774#0" expanded="true" />
+            <element signature="e#3820#3821#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SubWaffleStation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1258" max-vertical-offset="1394">
+          <caret line="76" column="5" selection-start-line="76" selection-start-column="5" selection-end-line="76" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/simpleprogram.waf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Waffle.g4">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="884" max-vertical-offset="2618">
+          <caret line="52" column="19" selection-start-line="52" selection-start-column="19" selection-end-line="52" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Waffle.g4">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="850" max-vertical-offset="2516">
@@ -638,7 +777,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1765" max-vertical-offset="4539">
           <caret line="113" column="47" selection-start-line="113" selection-start-column="47" selection-end-line="113" selection-end-column="47" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3773#3774#0" expanded="true" />
+            <element signature="e#3820#3821#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -653,10 +796,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="765">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#1386#1387#0" expanded="true" />
-            <element signature="e#1416#1417#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -756,13 +896,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gen/WaffleLexer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3128">
-          <caret line="40" column="37" selection-start-line="40" selection-start-column="37" selection-end-line="40" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_25/src.zip!/java/util/HashMap.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="4990" max-vertical-offset="39372">
@@ -775,20 +908,6 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="23520" max-vertical-offset="51952">
           <caret line="1457" column="0" selection-start-line="1457" selection-start-column="0" selection-end-line="1457" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gen/WaffleVisitor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2151" max-vertical-offset="4760">
-          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gen/WaffleBaseListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="9265">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -806,13 +925,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/antlr-4.4.1-dev-complete.jar!/org/antlr/v4/runtime/ParserRuleContext.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="3213" max-vertical-offset="3485">
-          <caret line="211" column="17" selection-start-line="211" selection-start-column="17" selection-end-line="211" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/lib/antlr-4.4.1-dev-complete.jar!/org/antlr/v4/runtime/Token.class">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="238" max-vertical-offset="680">
@@ -820,28 +932,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/statement_test.waf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="748">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/lib/antlr-4.4.1-dev-complete.jar!/JavaParser.class">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.9788868" vertical-offset="0" max-vertical-offset="244358">
           <caret line="46" column="39" selection-start-line="46" selection-start-column="39" selection-end-line="46" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Variable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5169173" vertical-offset="31" max-vertical-offset="4046">
-          <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
-          <folding>
-            <element signature="e#1386#1387#0" expanded="true" />
-            <element signature="e#1416#1417#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -856,97 +950,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="25753" max-vertical-offset="60095">
           <caret line="1606" column="0" selection-start-line="1606" selection-start-column="0" selection-end-line="1606" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/IntelliJ/groovy-2.4.0-beta-3/lib/groovy-2.4.0-beta-3.jar!/org/codehaus/groovy/reflection/stdclasses/CachedSAMClass.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2077" max-vertical-offset="3077">
-          <caret line="157" column="25" selection-start-line="157" selection-start-column="25" selection-end-line="157" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/IntelliJ/groovy-2.4.0-beta-3/lib/groovy-2.4.0-beta-3.jar!/org/codehaus/groovy/util/LazyReference.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="1309">
-          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/IntelliJ/groovy-2.4.0-beta-3/lib/groovy-2.4.0-beta-3.jar!/org/codehaus/groovy/reflection/ClassInfo.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1037" max-vertical-offset="8670">
-          <caret line="112" column="23" selection-start-line="112" selection-start-column="23" selection-end-line="112" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/IntelliJ/groovy-2.4.0-beta-3/lib/groovy-2.4.0-beta-3.jar!/org/codehaus/groovy/reflection/ReflectionCache.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="865" max-vertical-offset="1428">
-          <caret line="69" column="30" selection-start-line="69" selection-start-column="30" selection-end-line="69" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/IntelliJ/groovy-2.4.0-beta-3/lib/groovy-2.4.0-beta-3.jar!/org/codehaus/groovy/reflection/ParameterTypes.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="521" max-vertical-offset="5542">
-          <caret line="51" column="25" selection-start-line="51" selection-start-column="25" selection-end-line="51" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/IntelliJ/groovy-2.4.0-beta-3/lib/groovy-2.4.0-beta-3.jar!/org/codehaus/groovy/reflection/CachedMethod.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="952" max-vertical-offset="4556">
-          <caret line="90" column="15" selection-start-line="90" selection-start-column="15" selection-end-line="90" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/IntelliJ/groovy-2.4.0-beta-3/lib/groovy-2.4.0-beta-3.jar!/org/codehaus/groovy/runtime/m12n/SimpleExtensionModule.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="62" max-vertical-offset="1156">
-          <caret line="26" column="28" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/IntelliJ/groovy-2.4.0-beta-3/lib/groovy-2.4.0-beta-3.jar!/org/codehaus/groovy/runtime/m12n/ExtensionModuleScanner.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3324468" vertical-offset="147" max-vertical-offset="1054">
-          <caret line="27" column="16" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/IntelliJ/groovy-2.4.0-beta-3/lib/groovy-2.4.0-beta-3.jar!/org/codehaus/groovy/runtime/metaclass/MetaClassRegistryImpl.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.875" vertical-offset="351" max-vertical-offset="6987">
-          <caret line="86" column="0" selection-start-line="74" selection-start-column="11" selection-end-line="86" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Waffle.g4">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="674" max-vertical-offset="2618">
-          <caret line="52" column="19" selection-start-line="52" selection-start-column="19" selection-end-line="52" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.589372" vertical-offset="657" max-vertical-offset="1071">
-          <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -954,23 +957,44 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33333334" vertical-offset="1358" max-vertical-offset="2176">
           <caret line="123" column="0" selection-start-line="123" selection-start-column="0" selection-end-line="123" selection-end-column="0" />
-          <folding>
-            <element signature="e#3596#3597#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gen/WaffleParser.java">
+    <entry file="file://$PROJECT_DIR$/src/statement_test.waf">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3324397" vertical-offset="18967" max-vertical-offset="37825">
-          <caret line="1256" column="95" selection-start-line="1256" selection-start-column="85" selection-end-line="1256" selection-end-column="95" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="714">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/simpleprogram.waf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SubWaffleStation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="26" max-vertical-offset="1428">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/antlr-4.4.1-dev-complete.jar!/org/antlr/v4/runtime/ParserRuleContext.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.496994" vertical-offset="2346" max-vertical-offset="3485">
+          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="jar://$PROJECT_DIR$/lib/antlr-4.4.1-dev-complete.jar!/org/antlr/v4/runtime/tree/AbstractParseTreeVisitor.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33161953" vertical-offset="41" max-vertical-offset="731">
+        <state vertical-scroll-proportion="-6.64" vertical-offset="4" max-vertical-offset="731">
           <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
           <folding>
             <element signature="e#588#589#0" expanded="true" />
@@ -979,42 +1003,101 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/program.waf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="429" max-vertical-offset="1105">
+          <caret line="57" column="27" selection-start-line="57" selection-start-column="27" selection-end-line="57" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gen/WaffleBaseListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2" max-vertical-offset="9384">
+          <caret line="2" column="34" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
+          <folding>
+            <element signature="docComment;class#WaffleBaseListener#0" expanded="false" />
+            <element signature="docComment;method#enterCall_statement#0;class#WaffleBaseListener#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/gen/WaffleBaseVisitor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6809651" vertical-offset="5050" max-vertical-offset="5423">
-          <caret line="313" column="36" selection-start-line="313" selection-start-column="31" selection-end-line="313" selection-end-column="36" />
+        <state vertical-scroll-proportion="0.2766272" vertical-offset="0" max-vertical-offset="5423">
+          <caret line="12" column="49" selection-start-line="12" selection-start-column="49" selection-end-line="12" selection-end-column="49" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gen/WaffleVisitor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.24320458" vertical-offset="0" max-vertical-offset="4811">
+          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gen/WaffleLexer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4620887" vertical-offset="0" max-vertical-offset="3230">
+          <caret line="26" column="6" selection-start-line="26" selection-start-column="6" selection-end-line="26" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gen/WaffleParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="30.530613" vertical-offset="0" max-vertical-offset="37944">
+          <caret line="1372" column="0" selection-start-line="1372" selection-start-column="0" selection-end-line="1372" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gen/WaffleLexer.tokens">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1258">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1071">
+          <caret line="39" column="25" selection-start-line="39" selection-start-column="25" selection-end-line="39" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/WaffleStation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.107143" vertical-offset="2844" max-vertical-offset="4471">
-          <caret line="187" column="53" selection-start-line="187" selection-start-column="53" selection-end-line="187" selection-end-column="53" />
+        <state vertical-scroll-proportion="-10.75" vertical-offset="4170" max-vertical-offset="5083">
+          <caret line="263" column="42" selection-start-line="263" selection-start-column="42" selection-end-line="263" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3773#3774#0" expanded="true" />
+            <element signature="e#3820#3821#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Waffle.g4">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="287" max-vertical-offset="2635">
+          <caret line="72" column="61" selection-start-line="72" selection-start-column="61" selection-end-line="72" selection-end-column="61" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/program.waf">
+    <entry file="file://$PROJECT_DIR$/src/Variable.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="1105">
-          <caret line="19" column="42" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SubWaffleStation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="942" max-vertical-offset="1428">
-          <caret line="76" column="34" selection-start-line="76" selection-start-column="34" selection-end-line="76" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/simpleprogram.waf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.12781955" vertical-offset="0" max-vertical-offset="532">
-          <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
+        <state vertical-scroll-proportion="0.5135909" vertical-offset="3500" max-vertical-offset="6205">
+          <caret line="251" column="13" selection-start-line="251" selection-start-column="13" selection-end-line="251" selection-end-column="13" />
           <folding />
         </state>
       </provider>

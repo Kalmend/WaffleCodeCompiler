@@ -128,6 +128,135 @@ public class Variable  {
 
     }
 
+    public Variable sub(Variable rh)
+    {
+        switch(type)
+        {
+            case NULL: return null;
+            case tArray: return null;
+            case tInt:{
+                if(rh.getType() == VarType.tInt)
+                    return new Variable(this.intData - rh.getIntData());
+                if ( rh.getType() == VarType.tDouble)
+                    return new Variable((this.intData - rh.getDblData().intValue()));
+                return null;
+            }
+            case tDouble:{
+                if(rh.getType() == VarType.tInt)
+                    return new Variable(this.dblData - rh.getIntData());
+                if ( rh.getType() == VarType.tDouble)
+                    return new Variable(this.dblData - rh.getDblData());
+                return null;
+            }
+            case tBoolean: return null;
+            case tString: return null;
+            default: return null;
+
+        }
+    }
+
+    public Variable GT(Variable rh)
+    {
+        switch(type)
+        {
+            case NULL: return null;
+            case tArray: return null;
+            case tInt:{
+                if(rh.getType() == VarType.tInt)
+                    return new Variable(this.intData > rh.getIntData());
+                if ( rh.getType() == VarType.tDouble)
+                    return new Variable((this.intData > rh.getDblData().intValue()));
+                return null;
+            }
+            case tDouble:{
+                if(rh.getType() == VarType.tInt)
+                    return new Variable(this.dblData > rh.getIntData());
+                if ( rh.getType() == VarType.tDouble)
+                    return new Variable(this.dblData > rh.getDblData());
+                return null;
+            }
+            case tBoolean: return null;
+            case tString: return null;
+            default: return null;
+
+        }
+    }
+
+    public Variable LT(Variable rh)
+    {
+        switch(type)
+        {
+            case NULL: return null;
+            case tArray: return null;
+            case tInt:{
+                if(rh.getType() == VarType.tInt)
+                    return new Variable(this.intData < rh.getIntData());
+                if ( rh.getType() == VarType.tDouble)
+                    return new Variable((this.intData < rh.getDblData().intValue()));
+                return null;
+            }
+            case tDouble:{
+                if(rh.getType() == VarType.tInt)
+                    return new Variable(this.dblData < rh.getIntData());
+                if ( rh.getType() == VarType.tDouble)
+                    return new Variable(this.dblData < rh.getDblData());
+                return null;
+            }
+            case tBoolean: return null;
+            case tString: return null;
+            default: return null;
+
+        }
+    }
+
+    public Variable EQ(Variable rh)
+    {
+        switch(type)
+        {
+            case NULL: return null;
+            case tArray: return null;
+            case tInt:{
+                if(rh.getType() == VarType.tInt)
+                    return new Variable(this.intData == rh.getIntData());
+                if ( rh.getType() == VarType.tDouble)
+                    return new Variable((this.intData == rh.getDblData().intValue()));
+                return null;
+            }
+            case tDouble:{
+                // Should add casts in this case
+                return null;
+            }
+            case tBoolean: return null;
+            case tString: return null;
+            default: return null;
+
+        }
+    }
+
+    public Variable NEQ(Variable rh)
+    {
+        switch(type)
+        {
+            case NULL: return null;
+            case tArray: return null;
+            case tInt:{
+                if(rh.getType() == VarType.tInt)
+                    return new Variable(this.intData != rh.getIntData());
+                if ( rh.getType() == VarType.tDouble)
+                    return new Variable((this.intData != rh.getDblData().intValue()));
+                return null;
+            }
+            case tDouble:{
+                // Should add casts in this case
+                return null;
+            }
+            case tBoolean: return null;
+            case tString: return null;
+            default: return null;
+
+        }
+    }
+
     public String getTypeString()
     {
         switch(type)

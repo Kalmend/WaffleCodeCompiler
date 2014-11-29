@@ -3,6 +3,7 @@ import groovy.lang.Binding;
 import groovy.lang.GroovyShell;
 import org.antlr.v4.runtime.misc.NotNull;
 import org.antlr.v4.runtime.tree.ParseTree;
+import org.codehaus.groovy.transform.tailrec.VariableAccessReplacer;
 
 import java.util.*;
 
@@ -125,9 +126,18 @@ public class WaffleStation extends WaffleBaseVisitor<Object> {
         Variable leftside = (Variable) visit(ctx.left);
         Variable rightside =(Variable) visit(ctx.right);
         Variable result = null;
-         if (ctx.operator.getText().equals("+")) {
-             result = leftside.add(rightside);
 
+        //TODO: Use tokens instead
+        if (ctx.operator.getText().equals("+")) {
+            result = leftside.add(rightside);
+        }else if (ctx.operator.getText().equals("-")) {
+            result = leftside.sub(rightside);
+        }else if (ctx.operator.getText().equals("==")) {
+            result = leftside.EQ(rightside);
+        }else if (ctx.operator.getText().equals(">")) {
+            result = leftside.GT(rightside);
+        }else if (ctx.operator.getText().equals(">")) {
+            result = leftside.LT(rightside);
         }
 
         if(result == null) {
@@ -238,6 +248,24 @@ public class WaffleStation extends WaffleBaseVisitor<Object> {
             leftside.copy(rightside);
         }
         return leftside;
+    }
+
+    @Override
+    public Object visitFor_statement(@NotNull WaffleParser.For_statementContext ctx) {
+
+        //Create and initialize the iterator
+        Variable iter = (Variable) visit(ctx.for_header().var_decl());
+        iter = (Variable) visit(ctx.for_header().range_exp().start);
+
+        Variable stop = (Variable) visit(ctx.for_header().range_exp().stop);
+        while (iter.NEQ(stop).getBoolData().booleanValue()){
+
+            //TODO: Handle break and return statements
+            //TODO: Handle scope variables
+            visit(ctx.body());
+            iter.add(new Variable(1));
+        }
+        return null;
     }
 
     private Variable getVarByName(WaffleParser.Variable_expressionContext left) {
