@@ -28,7 +28,7 @@ scalar_type : INT_TYPE
 param : (IN | OUT)? var_decl;
 
 var_decl : variable type_decl
-        | variable type_decl '=' expression;
+         | variable type_decl '=' expression;
 
 
 
@@ -48,9 +48,8 @@ condition : expression;
 
 //-----------------loops------------------//
 for_statement :  for_header body END LOOP;
-for_header : FOR iterator IN range_exp ':';
+for_header : FOR iterator=var_decl  IN range_exp ':';
 range_exp : expression ARROW expression;
-iterator : var_decl ;
 //---------------------------------------//
 
 assign_statement : left=variable_expression '=' right=expression ;
@@ -62,12 +61,11 @@ call_statement : call_expression;
 
 //--------------------------------------Expressions----------------------//
 expression:   '(' expression ')'                                            #expParenthesis
-    |  left=expression operator=(MUL|DIV|PLUS|MINUS|EQ|GT|GTE|LT|LTE) right=expression #expBinary
+    |  left=expression operator=bin_op right=expression                     #expBinary
     |  literal_expression                                                   #expLiteral
     |  variable_expression                                                  #expVariable
-    |  operator=(HASH|NOT|MINUS) expression                                 #expUnary
+    |  operator=un_op expression                                            #expUnary
     |  call_expression                                                      #NOTIMPLEMENTED1
-    |  indexed_expression                                                   #expIndexed
     |  list_expression                                                      #expList
   /*|   expr expr                                                           # concat
     |   ID '[' index=expr ']'                                                 # array
@@ -81,6 +79,9 @@ expression:   '(' expression ')'                                            #exp
 ;
 
 call_expression : variable '(' expression (',' expression)* ')'             #expCall;
+
+bin_op : MUL|DIV|PLUS|MINUS|EQ|GT|GTE|LT|LTE;
+un_op : HASH|NOT|MINUS;
 
 variable_expression : variable
                     | indexed_expression

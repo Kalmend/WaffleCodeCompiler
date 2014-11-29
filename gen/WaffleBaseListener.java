@@ -1,4 +1,4 @@
-// Generated from C:/Users/Oliver/Documents/Java/IdeaProjects/WaffleCodeCompiler/src\Waffle.g4 by ANTLR 4.4.1-dev
+// Generated from C:/Users/Viljar/IdeaProjects/WaffleCodeCompiler/src\Waffle.g4 by ANTLR 4.4.1-dev
 
 import org.antlr.v4.runtime.ParserRuleContext;
 import org.antlr.v4.runtime.misc.NotNull;
@@ -59,18 +59,6 @@ public class WaffleBaseListener implements WaffleListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitBoolean_literal(@NotNull WaffleParser.Boolean_literalContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterExpIndexed(@NotNull WaffleParser.ExpIndexedContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitExpIndexed(@NotNull WaffleParser.ExpIndexedContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -167,18 +155,6 @@ public class WaffleBaseListener implements WaffleListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitExpUnary(@NotNull WaffleParser.ExpUnaryContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterIterator(@NotNull WaffleParser.IteratorContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitIterator(@NotNull WaffleParser.IteratorContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -304,6 +280,18 @@ public class WaffleBaseListener implements WaffleListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterUn_op(@NotNull WaffleParser.Un_opContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitUn_op(@NotNull WaffleParser.Un_opContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterIndexed_expression(@NotNull WaffleParser.Indexed_expressionContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -359,6 +347,18 @@ public class WaffleBaseListener implements WaffleListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitScalar_type(@NotNull WaffleParser.Scalar_typeContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterBin_op(@NotNull WaffleParser.Bin_opContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitBin_op(@NotNull WaffleParser.Bin_opContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *

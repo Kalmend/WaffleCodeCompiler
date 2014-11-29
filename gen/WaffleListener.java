@@ -1,4 +1,4 @@
-// Generated from C:/Users/Oliver/Documents/Java/IdeaProjects/WaffleCodeCompiler/src\Waffle.g4 by ANTLR 4.4.1-dev
+// Generated from C:/Users/Viljar/IdeaProjects/WaffleCodeCompiler/src\Waffle.g4 by ANTLR 4.4.1-dev
 import org.antlr.v4.runtime.misc.NotNull;
 import org.antlr.v4.runtime.tree.ParseTreeListener;
 
@@ -47,18 +47,6 @@ public interface WaffleListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitBoolean_literal(@NotNull WaffleParser.Boolean_literalContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code expIndexed}
-	 * labeled alternative in {@link WaffleParser#expression}.
-	 * @param ctx the parse tree
-	 */
-	void enterExpIndexed(@NotNull WaffleParser.ExpIndexedContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code expIndexed}
-	 * labeled alternative in {@link WaffleParser#expression}.
-	 * @param ctx the parse tree
-	 */
-	void exitExpIndexed(@NotNull WaffleParser.ExpIndexedContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link WaffleParser#program}.
 	 * @param ctx the parse tree
@@ -143,16 +131,6 @@ public interface WaffleListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitExpUnary(@NotNull WaffleParser.ExpUnaryContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link WaffleParser#iterator}.
-	 * @param ctx the parse tree
-	 */
-	void enterIterator(@NotNull WaffleParser.IteratorContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link WaffleParser#iterator}.
-	 * @param ctx the parse tree
-	 */
-	void exitIterator(@NotNull WaffleParser.IteratorContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link WaffleParser#param}.
 	 * @param ctx the parse tree
@@ -258,6 +236,16 @@ public interface WaffleListener extends ParseTreeListener {
 	 */
 	void exitNOTIMPLEMENTED1(@NotNull WaffleParser.NOTIMPLEMENTED1Context ctx);
 	/**
+	 * Enter a parse tree produced by {@link WaffleParser#un_op}.
+	 * @param ctx the parse tree
+	 */
+	void enterUn_op(@NotNull WaffleParser.Un_opContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link WaffleParser#un_op}.
+	 * @param ctx the parse tree
+	 */
+	void exitUn_op(@NotNull WaffleParser.Un_opContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link WaffleParser#indexed_expression}.
 	 * @param ctx the parse tree
 	 */
@@ -307,6 +295,16 @@ public interface WaffleListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitScalar_type(@NotNull WaffleParser.Scalar_typeContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link WaffleParser#bin_op}.
+	 * @param ctx the parse tree
+	 */
+	void enterBin_op(@NotNull WaffleParser.Bin_opContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link WaffleParser#bin_op}.
+	 * @param ctx the parse tree
+	 */
+	void exitBin_op(@NotNull WaffleParser.Bin_opContext ctx);
 	/**
 	 * Enter a parse tree produced by the {@code expParenthesis}
 	 * labeled alternative in {@link WaffleParser#expression}.

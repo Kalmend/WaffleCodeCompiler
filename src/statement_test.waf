@@ -1,0 +1,37 @@
+  //Int and Double declaration
+  a<Int> = 1 ;
+  b<Double> = 1.1;
+  println("a: " + a);
+  println("b: " + b);
+
+  //Additions
+  println("\nTesting addition to integer");
+  println("a + 1 = " + (a + 1));
+  println("a + 1.9 = " + (a + 1.9));
+
+  println("\nTesting addition to double");
+  println("b + 1 = " + (b + 1));
+  println("b + 1.9 = " + (b + 1.9));
+
+  println("a + b = " + (a + b));
+
+  println("\nTesting array init with declaration");
+  list<Array<Int>> = [1,2,3,4,5,"tiger","cat",true,false];
+  println("Initialized array: " + list);
+  println("\nTesting array assignment");
+
+  list = [11,22,33,44,55,"Wolf","dog",false,true];
+  //list.add(69) //BROKEN
+  //list.remove("Wolf") //BROKEN
+  println("assigned array: " + list);
+
+  println("\nTesting array element access");
+  println("list[0] = 1000 + list[1]");
+  list[0] = 1000 + list[1];
+  println("array: " + list);
+
+  println("\nTesting multidimensional array");
+  mult<Array<Array<Int>>> = [[1,1],[2,2]];
+  //mult[0][0] = 900; //BROKEN
+  //mult[0].add("test"); //BROKEN
+  println("Multidim array: " + mult);

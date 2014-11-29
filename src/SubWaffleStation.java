@@ -1,3 +1,5 @@
+import org.antlr.v4.runtime.misc.NotNull;
+
 import java.util.*;
 
 /**
@@ -60,6 +62,14 @@ public class SubWaffleStation  extends WaffleStation {
 
     }
 
+    @Override
+    public Object visitReturn_statement(@NotNull WaffleParser.Return_statementContext ctx) {
+
+        returnValue = (Variable) visit(ctx.expression());
+
+        //TODO: implement a way to flag that return statement has been taken and the recursive tree passing should be stopped
+        return null;
+    }
 
     public Variable call() {
         visit(subRoot.body());

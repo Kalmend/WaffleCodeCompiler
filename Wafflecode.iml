@@ -10,5 +10,6 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="antlr-4.4.1-dev-complete" level="project" />
     <orderEntry type="library" name="groovy-2.4.0.beta-3" level="application" />
+    <orderEntry type="library" name="groovy-2.3.7" level="application" />
   </component>
 </module>

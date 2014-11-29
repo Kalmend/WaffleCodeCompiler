@@ -1,7 +1,7 @@
 /* PASS BY VALUE
   VERSION */
 
-  sub bubbleSort(IN alist<Array<Int>>)<Array<Int>>
+  sub bubbleSort(IN alist<Array<Int>>)
 
       for passnum<Int> in len(alist)-1 -> 0:
 

@@ -1,4 +1,4 @@
-// Generated from C:/Users/Oliver/Documents/Java/IdeaProjects/WaffleCodeCompiler/src\Waffle.g4 by ANTLR 4.4.1-dev
+// Generated from C:/Users/Viljar/IdeaProjects/WaffleCodeCompiler/src\Waffle.g4 by ANTLR 4.4.1-dev
 import org.antlr.v4.runtime.misc.NotNull;
 import org.antlr.v4.runtime.tree.ParseTreeVisitor;
 
@@ -34,13 +34,6 @@ public interface WaffleVisitor<T> extends ParseTreeVisitor<T> {
 	 * @return the visitor result
 	 */
 	T visitBoolean_literal(@NotNull WaffleParser.Boolean_literalContext ctx);
-	/**
-	 * Visit a parse tree produced by the {@code expIndexed}
-	 * labeled alternative in {@link WaffleParser#expression}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitExpIndexed(@NotNull WaffleParser.ExpIndexedContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link WaffleParser#program}.
 	 * @param ctx the parse tree
@@ -91,12 +84,6 @@ public interface WaffleVisitor<T> extends ParseTreeVisitor<T> {
 	 * @return the visitor result
 	 */
 	T visitExpUnary(@NotNull WaffleParser.ExpUnaryContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link WaffleParser#iterator}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitIterator(@NotNull WaffleParser.IteratorContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link WaffleParser#param}.
 	 * @param ctx the parse tree
@@ -160,6 +147,12 @@ public interface WaffleVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitNOTIMPLEMENTED1(@NotNull WaffleParser.NOTIMPLEMENTED1Context ctx);
 	/**
+	 * Visit a parse tree produced by {@link WaffleParser#un_op}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitUn_op(@NotNull WaffleParser.Un_opContext ctx);
+	/**
 	 * Visit a parse tree produced by {@link WaffleParser#indexed_expression}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
@@ -189,6 +182,12 @@ public interface WaffleVisitor<T> extends ParseTreeVisitor<T> {
 	 * @return the visitor result
 	 */
 	T visitScalar_type(@NotNull WaffleParser.Scalar_typeContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link WaffleParser#bin_op}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitBin_op(@NotNull WaffleParser.Bin_opContext ctx);
 	/**
 	 * Visit a parse tree produced by the {@code expParenthesis}
 	 * labeled alternative in {@link WaffleParser#expression}.

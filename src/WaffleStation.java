@@ -92,10 +92,6 @@ public class WaffleStation extends WaffleBaseVisitor<Object> {
         return visit(ctx.expression());
     }
 
-    @Override
-    public Object visitExpIndexed(@NotNull WaffleParser.ExpIndexedContext ctx) {
-        return super.visitExpIndexed(ctx);
-    }
 
     @Override
     public Object visitExpVariable(@NotNull WaffleParser.ExpVariableContext ctx) {
