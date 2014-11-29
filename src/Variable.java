@@ -14,6 +14,10 @@ public class Variable  {
 
     private VarType type = VarType.NULL;
 
+    public Variable()
+    {
+
+    }
     public Object getData() {
         switch(type)
         {

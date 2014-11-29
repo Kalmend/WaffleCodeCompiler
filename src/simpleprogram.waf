@@ -1,7 +1,9 @@
   sub addincrement(IN a<Int>, OUT b<Int>)
+
       a = a+1;
       b = b+1;
       return a + b;
+      println("Should not print");
   end;
 
   ain<Int> = 4;

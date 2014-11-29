@@ -16,11 +16,26 @@ public class WaffleStation extends WaffleBaseVisitor<Object> {
 
     Binding binding = new Binding();
 
+
     @Override
     public Object visitSubroutine(@NotNull WaffleParser.SubroutineContext ctx) {
         String funcName = ctx.subroutine_header().routine_name().getText();
         functions.put(funcName,ctx);
-        return null;
+        return new Variable(); // returning empty variable to indicate done
+    }
+
+    @Override
+    public Object visitBody(@NotNull WaffleParser.BodyContext ctx) {
+        Variable result = new Variable();
+        for(WaffleParser.StatementContext statement : ctx.statement())
+        {
+            result = (Variable) visit(statement);
+            if((result) == null)
+                return new Variable(); // returning empty variable to indicate done
+
+
+        }
+        return result;
     }
 
     @Override
@@ -149,6 +164,7 @@ public class WaffleStation extends WaffleBaseVisitor<Object> {
     public Object visitString_literal(@NotNull WaffleParser.String_literalContext ctx) {
         return new Variable(ctx.getText().replace("\\\"","_QUOTE_").replace("\"","").replace("_QUOTE_","\"").replace("\\n","\n").replace("\\t","\t"));
     }
+
 
     @Override
     public Object visitBoolean_literal(@NotNull WaffleParser.Boolean_literalContext ctx) {
