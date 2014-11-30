@@ -14,20 +14,21 @@ public class Variable  {
 
     private VarType type = VarType.NULL;
 
-    public Variable()
+    public Variable(VarType typ)
     {
-
+        type = typ;
     }
+
     public Object getData() {
         switch(type)
         {
-            case NULL: return null;
+            case NULL: return new Variable(VarType.NULL);
             case tArray: return arrData;
             case tInt: return intData;
             case tDouble: return dblData;
             case tBoolean: return boolData;
             case tString: return strData;
-            default: return null;
+            default: return new Variable(VarType.NULL);
 
         }
     }
@@ -35,19 +36,19 @@ public class Variable  {
     public Variable getLength() {
         switch(type)
         {
-            case NULL: return null;
+            case NULL: return new Variable(VarType.NULL);
             case tArray: return new Variable(this.arrData.size());
-            case tInt: return null;
-            case tDouble: return null;
-            case tBoolean: return null;
+            case tInt: return new Variable(VarType.NULL);
+            case tDouble: return new Variable(VarType.NULL);
+            case tBoolean: return new Variable(VarType.NULL);
             case tString: return new Variable(this.strData.length());
-            default: return null;
+            default: return new Variable(VarType.NULL);
 
         }
     }
 
 
-    public enum VarType {NULL,tInt, tDouble, tBoolean, tString, tArray};
+    public enum VarType {NULL,tInt, tDouble, tBoolean, tString, tArray, RETURN, BREAK};
 
     public String getStrData() {
         return strData;
@@ -102,27 +103,31 @@ public class Variable  {
     {
         switch(type)
         {
-            case NULL: return null;
+            case NULL: return new Variable(VarType.NULL);
             case tArray: return new Variable(this.arrData.addAll(rh.getArrData()));
             case tInt:{
                 if(rh.getType() == VarType.tInt)
                     return new Variable(this.intData + rh.getIntData());
                 if ( rh.getType() == VarType.tDouble)
                     return new Variable((this.intData + rh.getDblData().intValue()));
-                return null;
+                if (rh.getType() == VarType.tString)
+                    return new Variable(this.intData.toString() + rh.getStrData());
+                return new Variable(VarType.NULL);
             }
             case tDouble:{
                 if(rh.getType() == VarType.tInt)
                     return new Variable(this.dblData + rh.getIntData());
                 if ( rh.getType() == VarType.tDouble)
                     return new Variable(this.dblData + rh.getDblData());
-                return null;
+                if (rh.getType() == VarType.tString)
+                    return new Variable(this.dblData.toString() + rh.getStrData());
+                return new Variable(VarType.NULL);
             }
-            case tBoolean: return null;
+            case tBoolean: return new Variable(VarType.NULL);
             case tString: {
                     return new Variable(this.strData + rh.getData());
             }
-            default: return null;
+            default: return new Variable(VarType.NULL);
 
         }
 
@@ -132,25 +137,25 @@ public class Variable  {
     {
         switch(type)
         {
-            case NULL: return null;
-            case tArray: return null;
+            case NULL: return new Variable(VarType.NULL);
+            case tArray: return new Variable(VarType.NULL);
             case tInt:{
                 if(rh.getType() == VarType.tInt)
                     return new Variable(this.intData - rh.getIntData());
                 if ( rh.getType() == VarType.tDouble)
                     return new Variable((this.intData - rh.getDblData().intValue()));
-                return null;
+                return new Variable(VarType.NULL);
             }
             case tDouble:{
                 if(rh.getType() == VarType.tInt)
                     return new Variable(this.dblData - rh.getIntData());
                 if ( rh.getType() == VarType.tDouble)
                     return new Variable(this.dblData - rh.getDblData());
-                return null;
+                return new Variable(VarType.NULL);
             }
-            case tBoolean: return null;
-            case tString: return null;
-            default: return null;
+            case tBoolean: return new Variable(VarType.NULL);
+            case tString: return new Variable(VarType.NULL);
+            default: return new Variable(VarType.NULL);
 
         }
     }
@@ -159,25 +164,25 @@ public class Variable  {
     {
         switch(type)
         {
-            case NULL: return null;
-            case tArray: return null;
+            case NULL: return new Variable(VarType.NULL);
+            case tArray: return new Variable(VarType.NULL);
             case tInt:{
                 if(rh.getType() == VarType.tInt)
                     return new Variable(this.intData > rh.getIntData());
                 if ( rh.getType() == VarType.tDouble)
                     return new Variable((this.intData > rh.getDblData().intValue()));
-                return null;
+                return new Variable(VarType.NULL);
             }
             case tDouble:{
                 if(rh.getType() == VarType.tInt)
                     return new Variable(this.dblData > rh.getIntData());
                 if ( rh.getType() == VarType.tDouble)
                     return new Variable(this.dblData > rh.getDblData());
-                return null;
+                return new Variable(VarType.NULL);
             }
-            case tBoolean: return null;
-            case tString: return null;
-            default: return null;
+            case tBoolean: return new Variable(VarType.NULL);
+            case tString: return new Variable(VarType.NULL);
+            default: return new Variable(VarType.NULL);
 
         }
     }
@@ -186,25 +191,25 @@ public class Variable  {
     {
         switch(type)
         {
-            case NULL: return null;
-            case tArray: return null;
+            case NULL: return new Variable(VarType.NULL);
+            case tArray: return new Variable(VarType.NULL);
             case tInt:{
                 if(rh.getType() == VarType.tInt)
                     return new Variable(this.intData < rh.getIntData());
                 if ( rh.getType() == VarType.tDouble)
                     return new Variable((this.intData < rh.getDblData().intValue()));
-                return null;
+                return new Variable(VarType.NULL);
             }
             case tDouble:{
                 if(rh.getType() == VarType.tInt)
                     return new Variable(this.dblData < rh.getIntData());
                 if ( rh.getType() == VarType.tDouble)
                     return new Variable(this.dblData < rh.getDblData());
-                return null;
+                return new Variable(VarType.NULL);
             }
-            case tBoolean: return null;
-            case tString: return null;
-            default: return null;
+            case tBoolean: return new Variable(VarType.NULL);
+            case tString: return new Variable(VarType.NULL);
+            default: return new Variable(VarType.NULL);
 
         }
     }
@@ -213,22 +218,22 @@ public class Variable  {
     {
         switch(type)
         {
-            case NULL: return null;
-            case tArray: return null;
+            case NULL: return new Variable(VarType.NULL);
+            case tArray: return new Variable(VarType.NULL);
             case tInt:{
                 if(rh.getType() == VarType.tInt)
                     return new Variable(this.intData == rh.getIntData());
                 if ( rh.getType() == VarType.tDouble)
                     return new Variable((this.intData == rh.getDblData().intValue()));
-                return null;
+                return new Variable(VarType.NULL);
             }
             case tDouble:{
                 // Should add casts in this case
-                return null;
+                return new Variable(VarType.NULL);
             }
-            case tBoolean: return null;
-            case tString: return null;
-            default: return null;
+            case tBoolean: return new Variable(VarType.NULL);
+            case tString: return new Variable(VarType.NULL);
+            default: return new Variable(VarType.NULL);
 
         }
     }
@@ -237,22 +242,22 @@ public class Variable  {
     {
         switch(type)
         {
-            case NULL: return null;
-            case tArray: return null;
+            case NULL: return new Variable(VarType.NULL);
+            case tArray: return new Variable(VarType.NULL);
             case tInt:{
                 if(rh.getType() == VarType.tInt)
                     return new Variable(this.intData != rh.getIntData());
                 if ( rh.getType() == VarType.tDouble)
                     return new Variable((this.intData != rh.getDblData().intValue()));
-                return null;
+                return new Variable(VarType.NULL);
             }
             case tDouble:{
                 // Should add casts in this case
-                return null;
+                return new Variable(VarType.NULL);
             }
-            case tBoolean: return null;
-            case tString: return null;
-            default: return null;
+            case tBoolean: return new Variable(VarType.NULL);
+            case tString: return new Variable(VarType.NULL);
+            default: return new Variable(VarType.NULL);
 
         }
     }
@@ -261,12 +266,14 @@ public class Variable  {
     {
         switch(type)
         {
-            case NULL: return "null";
+            case NULL: return "NULL";
             case tArray: return "ArrayList<Variable>";
             case tInt: return "Integer";
             case tDouble: return "Double";
             case tBoolean: return "Boolean";
             case tString: return "String";
+            case BREAK: return "Break";
+            case RETURN: return "Return";
             default: return "ERROR";
 
         }
@@ -333,7 +340,7 @@ public class Variable  {
     public String toString() {
         switch(type)
         {
-            case NULL: return "null";
+            case NULL: return "NULL";
             case tArray: return arrData.toString();
             case tInt: return intData.toString();
             case tDouble: return dblData.toString();

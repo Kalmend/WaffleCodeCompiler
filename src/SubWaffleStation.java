@@ -9,7 +9,7 @@ public class SubWaffleStation  extends WaffleStation {
     //public Map<String, Variable> passMem = new HashMap<String, Variable>();
     public WaffleParser.SubroutineContext subRoot;
     private WaffleStation parent;
-    private Variable returnValue = null;
+    private Variable returnValue = new Variable(Variable.VarType.NULL);
 
     public SubWaffleStation(WaffleStation parentWaffle, WaffleParser.SubroutineContext subRoot, WaffleParser.ExpCallContext call_expression)
     {
@@ -68,13 +68,18 @@ public class SubWaffleStation  extends WaffleStation {
         if(ctx.expression() != null)
             returnValue = (Variable) visit(ctx.expression());
 
-        return null;
+        return new Variable(Variable.VarType.RETURN);
+    }
+
+
+
+    @Override
+    public Object visitBreak_statement(@NotNull WaffleParser.Break_statementContext ctx) {
+        return new Variable(Variable.VarType.BREAK);
     }
 
     public Variable call() {
         visit(subRoot.body());
-        if (returnValue == null)
-            return new Variable();
         return new Variable(returnValue);
     }
 }

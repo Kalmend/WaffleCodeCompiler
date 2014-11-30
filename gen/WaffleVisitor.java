@@ -1,4 +1,4 @@
-// Generated from C:/Users/Viljar/IdeaProjects/WaffleCodeCompiler/src\Waffle.g4 by ANTLR 4.4.1-dev
+// Generated from C:/Users/Oliver/Documents/Java/IdeaProjects/WaffleCodeCompiler/src\Waffle.g4 by ANTLR 4.4.1-dev
 import org.antlr.v4.runtime.misc.NotNull;
 import org.antlr.v4.runtime.tree.ParseTreeVisitor;
 
@@ -103,6 +103,12 @@ public interface WaffleVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitFor_header(@NotNull WaffleParser.For_headerContext ctx);
 	/**
+	 * Visit a parse tree produced by {@link WaffleParser#elser}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitElser(@NotNull WaffleParser.ElserContext ctx);
+	/**
 	 * Visit a parse tree produced by {@link WaffleParser#return_statement}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
@@ -182,6 +188,12 @@ public interface WaffleVisitor<T> extends ParseTreeVisitor<T> {
 	 * @return the visitor result
 	 */
 	T visitScalar_type(@NotNull WaffleParser.Scalar_typeContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link WaffleParser#elif}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitElif(@NotNull WaffleParser.ElifContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link WaffleParser#bin_op}.
 	 * @param ctx the parse tree
@@ -263,6 +275,18 @@ public interface WaffleVisitor<T> extends ParseTreeVisitor<T> {
 	 * @return the visitor result
 	 */
 	T visitVar_decl(@NotNull WaffleParser.Var_declContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link WaffleParser#ifer}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitIfer(@NotNull WaffleParser.IferContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link WaffleParser#break_statement}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitBreak_statement(@NotNull WaffleParser.Break_statementContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link WaffleParser#literal_expression}.
 	 * @param ctx the parse tree

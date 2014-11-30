@@ -1,4 +1,4 @@
-// Generated from C:/Users/Viljar/IdeaProjects/WaffleCodeCompiler/src\Waffle.g4 by ANTLR 4.4.1-dev
+// Generated from C:/Users/Oliver/Documents/Java/IdeaProjects/WaffleCodeCompiler/src\Waffle.g4 by ANTLR 4.4.1-dev
 import org.antlr.v4.runtime.misc.NotNull;
 import org.antlr.v4.runtime.tree.ParseTreeListener;
 
@@ -162,6 +162,16 @@ public interface WaffleListener extends ParseTreeListener {
 	 */
 	void exitFor_header(@NotNull WaffleParser.For_headerContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link WaffleParser#elser}.
+	 * @param ctx the parse tree
+	 */
+	void enterElser(@NotNull WaffleParser.ElserContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link WaffleParser#elser}.
+	 * @param ctx the parse tree
+	 */
+	void exitElser(@NotNull WaffleParser.ElserContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link WaffleParser#return_statement}.
 	 * @param ctx the parse tree
 	 */
@@ -295,6 +305,16 @@ public interface WaffleListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitScalar_type(@NotNull WaffleParser.Scalar_typeContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link WaffleParser#elif}.
+	 * @param ctx the parse tree
+	 */
+	void enterElif(@NotNull WaffleParser.ElifContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link WaffleParser#elif}.
+	 * @param ctx the parse tree
+	 */
+	void exitElif(@NotNull WaffleParser.ElifContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link WaffleParser#bin_op}.
 	 * @param ctx the parse tree
@@ -431,6 +451,26 @@ public interface WaffleListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitVar_decl(@NotNull WaffleParser.Var_declContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link WaffleParser#ifer}.
+	 * @param ctx the parse tree
+	 */
+	void enterIfer(@NotNull WaffleParser.IferContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link WaffleParser#ifer}.
+	 * @param ctx the parse tree
+	 */
+	void exitIfer(@NotNull WaffleParser.IferContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link WaffleParser#break_statement}.
+	 * @param ctx the parse tree
+	 */
+	void enterBreak_statement(@NotNull WaffleParser.Break_statementContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link WaffleParser#break_statement}.
+	 * @param ctx the parse tree
+	 */
+	void exitBreak_statement(@NotNull WaffleParser.Break_statementContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link WaffleParser#literal_expression}.
 	 * @param ctx the parse tree

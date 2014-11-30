@@ -22,21 +22,65 @@ public class WaffleStation extends WaffleBaseVisitor<Object> {
     public Object visitSubroutine(@NotNull WaffleParser.SubroutineContext ctx) {
         String funcName = ctx.subroutine_header().routine_name().getText();
         functions.put(funcName,ctx);
-        return new Variable(); // returning empty variable to indicate done
+        return new Variable(Variable.VarType.NULL); // returning NULL variable == returns no info
     }
 
     @Override
     public Object visitBody(@NotNull WaffleParser.BodyContext ctx) {
-        Variable result = new Variable();
-        for(WaffleParser.StatementContext statement : ctx.statement())
+        if(ctx.getParent().getClass().equals(WaffleParser.SubroutineContext.class))
         {
-            result = (Variable) visit(statement);
-            if((result) == null)
-                return new Variable(); // returning empty variable to indicate done
+            Variable result = new Variable(Variable.VarType.NULL);
+            for(WaffleParser.StatementContext statement : ctx.statement())
+            {
+                result  = (Variable) visit(statement);
+                if(result.getType() == Variable.VarType.RETURN)
+                    return new Variable(Variable.VarType.NULL); // returning NULL variable == returns no data
+                else if (result.getType() == Variable.VarType.BREAK)
+                {
+                    ERROR("found break outside of loop. [" + ctx.getStart().getLine() + "]");
+                }
 
 
+            }
+            return result;
+        } else if (ctx.getParent().getClass().equals(WaffleParser.For_statementContext.class)){
+
+            Variable result = new Variable(Variable.VarType.NULL);
+            for (WaffleParser.StatementContext statement : ctx.statement())
+            {
+                result = (Variable) visit(statement);
+                if(result.getType() == Variable.VarType.RETURN)
+                    return new Variable(Variable.VarType.RETURN);
+                else if (result.getType() == Variable.VarType.BREAK)
+                {
+                    return new Variable(Variable.VarType.BREAK);
+                }
+
+
+            }
+            return result;
+        } else {
+            Variable result = new Variable(Variable.VarType.NULL);
+            for (WaffleParser.StatementContext statement : ctx.statement())
+            {
+                result = (Variable) visit(statement);
+            }
+            return result;
         }
-        return result;
+    }
+
+    @Override
+    public Object visitReturn_statement(@NotNull WaffleParser.Return_statementContext ctx) {
+
+        ERROR("found return  outside of function. [" + ctx.getStart().getLine() + "]");
+        return new Variable(Variable.VarType.NULL);
+    }
+
+
+    @Override
+    public Object visitBreak_statement(@NotNull WaffleParser.Break_statementContext ctx) {
+        ERROR("found break outside of loop. [" + ctx.getStart().getLine() + "]");
+        return new Variable(Variable.VarType.NULL);
     }
 
     @Override
@@ -54,10 +98,10 @@ public class WaffleStation extends WaffleBaseVisitor<Object> {
              expValue = (Variable) visit(ctx.expression());
         if(expValue != null && value.getType() == expValue.getType())
         {
-            value = new Variable(expValue);
+            value = expValue; //TODO. make sure this didnt break stuff new Value(expValue);
         } else if (expValue != null)
         {
-            ERROR("Type mismatch while initializing " + varName + ". Expecting " + value.getTypeString() + ". [" + ctx.getStart().getLine() + "]");
+            ERROR("Type mismatch while initializing " + varName + ". Expecting " + value.getTypeString() + " got " +  expValue.getTypeString()+ ". [" + ctx.getStart().getLine() + "]");
 
         }
         mem.put(varName,value);
@@ -110,9 +154,11 @@ public class WaffleStation extends WaffleBaseVisitor<Object> {
 
 
     @Override
-    public Object visitExpVariable(@NotNull WaffleParser.ExpVariableContext ctx) {
-        return getVarByName(ctx.variable_expression());
+    public Object visitVariable_expression(@NotNull WaffleParser.Variable_expressionContext ctx) {
+        return getVarByName(ctx);
     }
+
+
 
     @Override
     public Object visitExpUnary(@NotNull WaffleParser.ExpUnaryContext ctx) {
@@ -140,7 +186,7 @@ public class WaffleStation extends WaffleBaseVisitor<Object> {
             result = leftside.LT(rightside);
         }
 
-        if(result == null) {
+        if(result.getType() == Variable.VarType.NULL) {
             ERROR("Ivalid operation : " + leftside.getType() + " " + ctx.operator.getText() +  " " + rightside.getType()+ " [" + ctx.getStart().getLine() + "]");
         }
         return result;
@@ -193,11 +239,8 @@ public class WaffleStation extends WaffleBaseVisitor<Object> {
             SubWaffleStation subStation = new SubWaffleStation(this, functions.get(funcName), ctx);
 
             Variable retVal = subStation.call();
-            if( retVal.getType() == Variable.VarType.NULL)
-            {
-                ERROR("Function does not return value: " + funcName + "[" + ctx.getStart().getLine() + "]");
-            }
-            return subStation.call();
+
+            return retVal;
 
            // subStation.visit(functions.get(funcName).body());
             //System.out.println(subStation.mem);
@@ -207,25 +250,42 @@ public class WaffleStation extends WaffleBaseVisitor<Object> {
 
             if(callExps.size() != 1)
                ERROR("Parameter count does not match declaration: " + funcName + "[" + ctx.getStart().getLine() + "]");
+            Variable var = (Variable) visit(callExps.get(0));
 
-            System.out.println(visit(callExps.get(0)));
+            if(var.getType().equals(Variable.VarType.NULL))
+            {
+                ERROR("Parameter does not exist: " + funcName + "[" + ctx.getStart().getLine() + "]");
+            }
+            System.out.println(var);
 
         } else if (funcName.equals("print"))
         {
-            System.out.print(visit(callExps.get(0)));
+            Variable var = (Variable) visit(callExps.get(0));
+
+            if(var.getType().equals(Variable.VarType.NULL))
+            {
+                ERROR("Parameter does not exist: " + funcName + "[" + ctx.getStart().getLine() + "]");
+            }
+
+            System.out.print(var);
+
 
         } else if (funcName.equals("len"))
         {
             Variable var = ((Variable) visit(callExps.get(0))).getLength();
-            if (var == null)
+
+            if(var.getType().equals(Variable.VarType.NULL))
+            {
                 ERROR("len functions only accepts String or Array type: " + funcName + "[" + ctx.getStart().getLine() + "]");
+            }
+
             return var;
         } else
         {
-            ERROR("Could not find function: " + funcName + "[" + ctx.getStart().getLine() + "]");
+            ERROR("Could not find function: " + funcName + " [" + ctx.getStart().getLine() + "]");
 
         }
-        return null;
+        return new Variable(Variable.VarType.NULL);
     }
 
 
@@ -241,52 +301,75 @@ public class WaffleStation extends WaffleBaseVisitor<Object> {
     public Object visitAssign_statement(@NotNull WaffleParser.Assign_statementContext ctx) {
 
         Variable rightside = (Variable) visit(ctx.right);
-        Variable leftside =  getVarByName(ctx.left);
+        Variable leftside =  (Variable) visit(ctx.left);
 
         if(leftside.getType() == rightside.getType())
         {
             leftside.copy(rightside);
+        } else
+        {
+            ERROR("Type mismatch while assigning. Expecting " + leftside.getTypeString() + " got " +  rightside.getTypeString()+ ". [" + ctx.getStart().getLine() + "]");
+
         }
+
         return leftside;
     }
 
     @Override
     public Object visitFor_statement(@NotNull WaffleParser.For_statementContext ctx) {
 
-        //Create and initialize the iterator
-        Variable iter = (Variable) visit(ctx.for_header().var_decl());
-        iter = (Variable) visit(ctx.for_header().range_exp().start);
-
-        Variable stop = (Variable) visit(ctx.for_header().range_exp().stop);
-        while (iter.NEQ(stop).getBoolData().booleanValue()){
-
-            //TODO: Handle break and return statements
-            //TODO: Handle scope variables
-            visit(ctx.body());
-            iter.add(new Variable(1));
-        }
-        return null;
+        LoopWaffleStation subStation = new LoopWaffleStation(this, ctx);
+        Variable retVal = subStation.Go();
+        return retVal;
     }
 
-    private Variable getVarByName(WaffleParser.Variable_expressionContext left) {
+    @Override
+    public Object visitIf_statement(@NotNull WaffleParser.If_statementContext ctx) {
+        Variable if_cond = (Variable) visit (ctx.ifer().condition());
+        if (if_cond.getType() != Variable.VarType.tBoolean)
+            ERROR("Type mismatch while evaluating conditional. Expecting tBoolean" + " got " +  if_cond.getTypeString()+ ". [" + ctx.getStart().getLine() + "]");
 
+        if (if_cond.getBoolData()){
+            return visit(ctx.ifer().body());
+        }
+        for (WaffleParser.ElifContext elCode: ctx.elif()){
+            if_cond = (Variable) visit (elCode.condition());
+            if (if_cond.getType() != Variable.VarType.tBoolean)
+                ERROR("Type mismatch while evaluating conditional. Expecting tBoolean" + " got " +  if_cond.getTypeString()+ ". [" + ctx.getStart().getLine() + "]");
+
+            if (if_cond.getBoolData()){
+                return visit(elCode.body());
+            }
+        }
+        if(ctx.elser() != null)
+            return visit(ctx.elser().body());
+        return new Variable(Variable.VarType.NULL);
+
+    }
+
+    protected Variable getVarByName(WaffleParser.Variable_expressionContext left) {
+
+        Variable retVal = (Variable) mem.get(left.variable().getText());
+        if(retVal == null) //Dont remove this == null part here.
+            ERROR("Missing variable declaration for " + left.variable().getText() + ". [" + left.getStart().getLine() + "]");
 
         if(left.indexed_expression() == null) {
-            return mem.get(left.variable().getText());
+            return retVal;
         } else {
-                Variable arrayVar =   mem.get(left.indexed_expression().variable().getText());
-                int index = ((Variable)(visit(left.indexed_expression().expression()))).getIntData();
-                Variable var = null;
+
+            int index = ((Variable)(visit(left.indexed_expression().expression()))).getIntData();
+            Variable var = new Variable(Variable.VarType.NULL);
             try{
-                var = arrayVar.getArrData().get(index);
+                var = retVal.getArrData().get(index);
 
             } catch(Exception e) {
-                ERROR("Array index out of bounds " + left.indexed_expression().variable().getText() + " size is  " + arrayVar.getArrData().size() + ". [" + left.getStart().getLine() + "]");
+                ERROR("Array index out of bounds " + left.indexed_expression().variable().getText() + " size is  " + var.getArrData().size() + ". [" + left.getStart().getLine() + "]");
             }
 
             return var;
 
         }
+
 
     }
 }

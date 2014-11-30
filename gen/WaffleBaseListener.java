@@ -1,4 +1,4 @@
-// Generated from C:/Users/Viljar/IdeaProjects/WaffleCodeCompiler/src\Waffle.g4 by ANTLR 4.4.1-dev
+// Generated from C:/Users/Oliver/Documents/Java/IdeaProjects/WaffleCodeCompiler/src\Waffle.g4 by ANTLR 4.4.1-dev
 
 import org.antlr.v4.runtime.ParserRuleContext;
 import org.antlr.v4.runtime.misc.NotNull;
@@ -196,6 +196,18 @@ public class WaffleBaseListener implements WaffleListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterElser(@NotNull WaffleParser.ElserContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitElser(@NotNull WaffleParser.ElserContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterReturn_statement(@NotNull WaffleParser.Return_statementContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -352,6 +364,18 @@ public class WaffleBaseListener implements WaffleListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterElif(@NotNull WaffleParser.ElifContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitElif(@NotNull WaffleParser.ElifContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterBin_op(@NotNull WaffleParser.Bin_opContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -503,6 +527,30 @@ public class WaffleBaseListener implements WaffleListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitVar_decl(@NotNull WaffleParser.Var_declContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterIfer(@NotNull WaffleParser.IferContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitIfer(@NotNull WaffleParser.IferContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterBreak_statement(@NotNull WaffleParser.Break_statementContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitBreak_statement(@NotNull WaffleParser.Break_statementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *

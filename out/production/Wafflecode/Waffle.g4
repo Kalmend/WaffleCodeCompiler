@@ -10,7 +10,7 @@ code_block : (statement ';')
 
 
 subroutine : subroutine_header body END;
-subroutine_header : SUB routine_name '(' param (',' param)* ')';
+subroutine_header : SUB routine_name '(' param? (',' param)* ')';
 routine_name : VAR;
 
 type_decl : '<' type '>';
@@ -37,13 +37,18 @@ statement  : assign_statement
            | for_statement
            | if_statement
            | return_statement
+           | break_statement
            | call_statement
            | decl_statement
+           //TODO: | null_statement
            ;
 
 //conditional statements
-if_statement : | IF condition ':' body (ELIF condition ':' body)* (ELSE ':' body)?  END IF ;
-
+//if_statement : ifer=(IF condition ':' body) elifs=(ELIF condition ':' body)* elser=(ELSE ':' body)?  END IF ;
+if_statement : ifer elif* elser?  END IF ;
+ifer : IF condition ':' body;
+elif : ELIF condition ':' body;
+elser : ELSE ':' body;
 condition : expression;
 
 //-----------------loops------------------//
@@ -56,6 +61,7 @@ assign_statement : left=variable_expression '=' right=expression ;
 decl_statement : var_decl;
 
 return_statement : RETURN expression? ;
+break_statement : BREAK ;
 
 call_statement : call_expression;
 
@@ -78,7 +84,7 @@ expression:   '(' expression ')'                                            #exp
     |   STRING                                                                # string*/
 ;
 
-call_expression : variable '(' expression (',' expression)* ')'             #expCall;
+call_expression : variable '(' expression? (',' expression)* ')'             #expCall;
 
 bin_op : MUL|DIV|PLUS|MINUS|EQ|NEQ|GT|GTE|LT|LTE;
 un_op : HASH|NOT|MINUS;
@@ -146,4 +152,5 @@ ELIF: 'ELIF' | 'elif';
 ELSE : 'ELSE' | 'else';
 RANGE : 'range' | 'RANGE';
 RETURN : 'return' | 'RETURN';
+BREAK : 'break' | 'BREAK';
 VAR: [A-Za-z][A-Za-z0-9_]*;

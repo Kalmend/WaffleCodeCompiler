@@ -1,4 +1,4 @@
-  sub addincrement(IN a<Int>, OUT b<Int>)
+  /*sub addincrement(IN a<Int>, OUT b<Int>)
 
       a = a+1;
       b = b+1;
@@ -10,7 +10,56 @@
   bin<Int> = 6;
   println("addincrement returned :" + addincrement(ain,bin));
   println("ain is :" + ain);
-  println("bin is :" + bin);
+  println("bin is :" + bin);*/
+
+  // return; TODO. fix this
+
+/*
+  sub countdown()
+
+      count<Int> = 100;
+      for passnum<Int> in 5 -> 10:
+        println(count);
+       end loop;
 
 
+
+      println("should reach on break, but not on return");
+  end;
+
+  x<Int> = 3;
+  countdown();*/
+
+/*
+  sub bottles99()
+        for quant<Int> in 99 -> 1:
+           suffix<String>;
+           if quant > 1:
+              println(quant + " bottles of beer on the wall," + quant + " bottles of beer.");
+              if quant > 2:
+                 suffix = (quant - 1) + " bottles of beer on the wall.";
+              else:
+                 suffix = "1 bottle of beer on the wall.";
+              end if;
+           elif quant == 1:
+              println("1 bottle of beer on the wall, 1 bottle of beer.");
+              suffix = "no more beer on the wall!";
+           else:
+              suffix = "I TOLD U THERE IS NO MORE BEER WHAT R U TAKING THERE?!";
+           end if;
+           println("Take one down, pass it around," + suffix);
+           println("--");
+        end loop;
+    end;
+
+    bottles99();*/
+
+
+
+
+      alist<Array<Int>> = [1 , 3 , 2 , 4, 6 ,5];
+       for passnum<Int> in 1 -> 0:
+                    println(alist[passnum]);
+             end loop;
+      println(bubbleSort(alist));
 
