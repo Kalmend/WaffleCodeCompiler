@@ -155,10 +155,29 @@ public class WaffleStation extends WaffleBaseVisitor<Object> {
 
     @Override
     public Object visitVariable_expression(@NotNull WaffleParser.Variable_expressionContext ctx) {
-        return getVarByName(ctx);
+        return (Variable)visit(ctx.variable());
     }
 
 
+    @Override
+    public Object visitVariable(@NotNull WaffleParser.VariableContext ctx) {
+        return getVarByName(ctx);
+    }
+
+    @Override
+    public Object visitIndexed_expression(@NotNull WaffleParser.Indexed_expressionContext ctx) {
+
+        Variable Var= (Variable)visit(ctx.variable());
+        Variable Idx= (Variable)visit(ctx.index);
+        Variable returnVal = new Variable(Variable.VarType.NULL);
+        try{
+            returnVal =Var.getArrData().get(Idx.getIntData());
+
+        } catch(Exception e) {
+            ERROR("Array index out of bounds " + ctx.index.getText() + " size is  " + Var.getArrData().size() + ". [" + ctx.getStart().getLine() + "]");
+        }
+        return returnVal;
+    }
 
     @Override
     public Object visitExpUnary(@NotNull WaffleParser.ExpUnaryContext ctx) {
@@ -226,6 +245,7 @@ public class WaffleStation extends WaffleBaseVisitor<Object> {
     public Object visitBoolean_literal(@NotNull WaffleParser.Boolean_literalContext ctx) {
         return new Variable(Boolean.parseBoolean(ctx.getText()));
     }
+
 
     @Override
     public Object visitExpCall(@NotNull WaffleParser.ExpCallContext ctx) {
@@ -347,30 +367,13 @@ public class WaffleStation extends WaffleBaseVisitor<Object> {
 
     }
 
-    protected Variable getVarByName(WaffleParser.Variable_expressionContext left) {
+    protected Variable getVarByName(WaffleParser.VariableContext Var) {
 
-        Variable retVal = (Variable) mem.get(left.variable().getText());
+        Variable retVal = (Variable) mem.get(Var.getText());
         if(retVal == null) //Dont remove this == null part here.
-            ERROR("Missing variable declaration for " + left.variable().getText() + ". [" + left.getStart().getLine() + "]");
+            ERROR("Missing variable declaration for " + Var.getText() + ". [" + Var.getStart().getLine() + "]");
 
-        if(left.indexed_expression() == null) {
             return retVal;
-        } else {
-
-            int index = ((Variable)(visit(left.indexed_expression().expression()))).getIntData();
-            Variable var = new Variable(Variable.VarType.NULL);
-            try{
-                var = retVal.getArrData().get(index);
-
-            } catch(Exception e) {
-                ERROR("Array index out of bounds " + left.indexed_expression().variable().getText() + " size is  " + var.getArrData().size() + ". [" + left.getStart().getLine() + "]");
-            }
-
-            return var;
-
-        }
-
-
     }
 }
 

@@ -57,8 +57,9 @@ for_header : FOR iterator=var_decl  IN range_exp ':';
 range_exp : start=expression ARROW stop=expression;
 //---------------------------------------//
 
-assign_statement : left=variable_expression '=' right=expression
-                 | left=indexed_expression '=' right=expression;
+assign_statement : left=variable_expression '=' right=expression #AssignVar
+                 | left=indexed_expression '=' right=expression #AssignIdx
+                 ;
 decl_statement : var_decl;
 
 return_statement : RETURN expression? ;
@@ -93,7 +94,7 @@ un_op : HASH|NOT|MINUS;
 
 variable_expression : variable;
 
-indexed_expression : variable '[' expression ']';
+indexed_expression : variable '[' index=expression ']';
 
 literal_expression : string_literal
                    | numeric_literal

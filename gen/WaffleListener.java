@@ -18,16 +18,6 @@ public interface WaffleListener extends ParseTreeListener {
 	 */
 	void exitCall_statement(@NotNull WaffleParser.Call_statementContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link WaffleParser#string}.
-	 * @param ctx the parse tree
-	 */
-	void enterString(@NotNull WaffleParser.StringContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link WaffleParser#string}.
-	 * @param ctx the parse tree
-	 */
-	void exitString(@NotNull WaffleParser.StringContext ctx);
-	/**
 	 * Enter a parse tree produced by {@link WaffleParser#buulean}.
 	 * @param ctx the parse tree
 	 */
@@ -38,15 +28,17 @@ public interface WaffleListener extends ParseTreeListener {
 	 */
 	void exitBuulean(@NotNull WaffleParser.BuuleanContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link WaffleParser#boolean_literal}.
+	 * Enter a parse tree produced by the {@code expIndexed}
+	 * labeled alternative in {@link WaffleParser#expression}.
 	 * @param ctx the parse tree
 	 */
-	void enterBoolean_literal(@NotNull WaffleParser.Boolean_literalContext ctx);
+	void enterExpIndexed(@NotNull WaffleParser.ExpIndexedContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link WaffleParser#boolean_literal}.
+	 * Exit a parse tree produced by the {@code expIndexed}
+	 * labeled alternative in {@link WaffleParser#expression}.
 	 * @param ctx the parse tree
 	 */
-	void exitBoolean_literal(@NotNull WaffleParser.Boolean_literalContext ctx);
+	void exitExpIndexed(@NotNull WaffleParser.ExpIndexedContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link WaffleParser#program}.
 	 * @param ctx the parse tree
@@ -97,60 +89,6 @@ public interface WaffleListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitType(@NotNull WaffleParser.TypeContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link WaffleParser#routine_name}.
-	 * @param ctx the parse tree
-	 */
-	void enterRoutine_name(@NotNull WaffleParser.Routine_nameContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link WaffleParser#routine_name}.
-	 * @param ctx the parse tree
-	 */
-	void exitRoutine_name(@NotNull WaffleParser.Routine_nameContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code expVariable}
-	 * labeled alternative in {@link WaffleParser#expression}.
-	 * @param ctx the parse tree
-	 */
-	void enterExpVariable(@NotNull WaffleParser.ExpVariableContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code expVariable}
-	 * labeled alternative in {@link WaffleParser#expression}.
-	 * @param ctx the parse tree
-	 */
-	void exitExpVariable(@NotNull WaffleParser.ExpVariableContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code expUnary}
-	 * labeled alternative in {@link WaffleParser#expression}.
-	 * @param ctx the parse tree
-	 */
-	void enterExpUnary(@NotNull WaffleParser.ExpUnaryContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code expUnary}
-	 * labeled alternative in {@link WaffleParser#expression}.
-	 * @param ctx the parse tree
-	 */
-	void exitExpUnary(@NotNull WaffleParser.ExpUnaryContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link WaffleParser#param}.
-	 * @param ctx the parse tree
-	 */
-	void enterParam(@NotNull WaffleParser.ParamContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link WaffleParser#param}.
-	 * @param ctx the parse tree
-	 */
-	void exitParam(@NotNull WaffleParser.ParamContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link WaffleParser#statement}.
-	 * @param ctx the parse tree
-	 */
-	void enterStatement(@NotNull WaffleParser.StatementContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link WaffleParser#statement}.
-	 * @param ctx the parse tree
-	 */
-	void exitStatement(@NotNull WaffleParser.StatementContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link WaffleParser#for_header}.
 	 * @param ctx the parse tree
@@ -204,6 +142,204 @@ public interface WaffleListener extends ParseTreeListener {
 	 */
 	void exitNumeric_literal(@NotNull WaffleParser.Numeric_literalContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link WaffleParser#range_exp}.
+	 * @param ctx the parse tree
+	 */
+	void enterRange_exp(@NotNull WaffleParser.Range_expContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link WaffleParser#range_exp}.
+	 * @param ctx the parse tree
+	 */
+	void exitRange_exp(@NotNull WaffleParser.Range_expContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link WaffleParser#code_block}.
+	 * @param ctx the parse tree
+	 */
+	void enterCode_block(@NotNull WaffleParser.Code_blockContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link WaffleParser#code_block}.
+	 * @param ctx the parse tree
+	 */
+	void exitCode_block(@NotNull WaffleParser.Code_blockContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link WaffleParser#elif}.
+	 * @param ctx the parse tree
+	 */
+	void enterElif(@NotNull WaffleParser.ElifContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link WaffleParser#elif}.
+	 * @param ctx the parse tree
+	 */
+	void exitElif(@NotNull WaffleParser.ElifContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link WaffleParser#bin_op}.
+	 * @param ctx the parse tree
+	 */
+	void enterBin_op(@NotNull WaffleParser.Bin_opContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link WaffleParser#bin_op}.
+	 * @param ctx the parse tree
+	 */
+	void exitBin_op(@NotNull WaffleParser.Bin_opContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link WaffleParser#condition}.
+	 * @param ctx the parse tree
+	 */
+	void enterCondition(@NotNull WaffleParser.ConditionContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link WaffleParser#condition}.
+	 * @param ctx the parse tree
+	 */
+	void exitCondition(@NotNull WaffleParser.ConditionContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code expList}
+	 * labeled alternative in {@link WaffleParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void enterExpList(@NotNull WaffleParser.ExpListContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code expList}
+	 * labeled alternative in {@link WaffleParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void exitExpList(@NotNull WaffleParser.ExpListContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link WaffleParser#variable_expression}.
+	 * @param ctx the parse tree
+	 */
+	void enterVariable_expression(@NotNull WaffleParser.Variable_expressionContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link WaffleParser#variable_expression}.
+	 * @param ctx the parse tree
+	 */
+	void exitVariable_expression(@NotNull WaffleParser.Variable_expressionContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link WaffleParser#if_statement}.
+	 * @param ctx the parse tree
+	 */
+	void enterIf_statement(@NotNull WaffleParser.If_statementContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link WaffleParser#if_statement}.
+	 * @param ctx the parse tree
+	 */
+	void exitIf_statement(@NotNull WaffleParser.If_statementContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link WaffleParser#var_decl}.
+	 * @param ctx the parse tree
+	 */
+	void enterVar_decl(@NotNull WaffleParser.Var_declContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link WaffleParser#var_decl}.
+	 * @param ctx the parse tree
+	 */
+	void exitVar_decl(@NotNull WaffleParser.Var_declContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link WaffleParser#ifer}.
+	 * @param ctx the parse tree
+	 */
+	void enterIfer(@NotNull WaffleParser.IferContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link WaffleParser#ifer}.
+	 * @param ctx the parse tree
+	 */
+	void exitIfer(@NotNull WaffleParser.IferContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link WaffleParser#literal_expression}.
+	 * @param ctx the parse tree
+	 */
+	void enterLiteral_expression(@NotNull WaffleParser.Literal_expressionContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link WaffleParser#literal_expression}.
+	 * @param ctx the parse tree
+	 */
+	void exitLiteral_expression(@NotNull WaffleParser.Literal_expressionContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link WaffleParser#string}.
+	 * @param ctx the parse tree
+	 */
+	void enterString(@NotNull WaffleParser.StringContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link WaffleParser#string}.
+	 * @param ctx the parse tree
+	 */
+	void exitString(@NotNull WaffleParser.StringContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link WaffleParser#boolean_literal}.
+	 * @param ctx the parse tree
+	 */
+	void enterBoolean_literal(@NotNull WaffleParser.Boolean_literalContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link WaffleParser#boolean_literal}.
+	 * @param ctx the parse tree
+	 */
+	void exitBoolean_literal(@NotNull WaffleParser.Boolean_literalContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link WaffleParser#routine_name}.
+	 * @param ctx the parse tree
+	 */
+	void enterRoutine_name(@NotNull WaffleParser.Routine_nameContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link WaffleParser#routine_name}.
+	 * @param ctx the parse tree
+	 */
+	void exitRoutine_name(@NotNull WaffleParser.Routine_nameContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code expVariable}
+	 * labeled alternative in {@link WaffleParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void enterExpVariable(@NotNull WaffleParser.ExpVariableContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code expVariable}
+	 * labeled alternative in {@link WaffleParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void exitExpVariable(@NotNull WaffleParser.ExpVariableContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code expUnary}
+	 * labeled alternative in {@link WaffleParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void enterExpUnary(@NotNull WaffleParser.ExpUnaryContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code expUnary}
+	 * labeled alternative in {@link WaffleParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void exitExpUnary(@NotNull WaffleParser.ExpUnaryContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code AssignIdx}
+	 * labeled alternative in {@link WaffleParser#assign_statement}.
+	 * @param ctx the parse tree
+	 */
+	void enterAssignIdx(@NotNull WaffleParser.AssignIdxContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code AssignIdx}
+	 * labeled alternative in {@link WaffleParser#assign_statement}.
+	 * @param ctx the parse tree
+	 */
+	void exitAssignIdx(@NotNull WaffleParser.AssignIdxContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link WaffleParser#param}.
+	 * @param ctx the parse tree
+	 */
+	void enterParam(@NotNull WaffleParser.ParamContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link WaffleParser#param}.
+	 * @param ctx the parse tree
+	 */
+	void exitParam(@NotNull WaffleParser.ParamContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link WaffleParser#statement}.
+	 * @param ctx the parse tree
+	 */
+	void enterStatement(@NotNull WaffleParser.StatementContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link WaffleParser#statement}.
+	 * @param ctx the parse tree
+	 */
+	void exitStatement(@NotNull WaffleParser.StatementContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link WaffleParser#decl_statement}.
 	 * @param ctx the parse tree
 	 */
@@ -223,16 +359,6 @@ public interface WaffleListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitType_decl(@NotNull WaffleParser.Type_declContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link WaffleParser#range_exp}.
-	 * @param ctx the parse tree
-	 */
-	void enterRange_exp(@NotNull WaffleParser.Range_expContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link WaffleParser#range_exp}.
-	 * @param ctx the parse tree
-	 */
-	void exitRange_exp(@NotNull WaffleParser.Range_expContext ctx);
 	/**
 	 * Enter a parse tree produced by the {@code NOTIMPLEMENTED1}
 	 * labeled alternative in {@link WaffleParser#expression}.
@@ -286,15 +412,17 @@ public interface WaffleListener extends ParseTreeListener {
 	 */
 	void exitList_expression(@NotNull WaffleParser.List_expressionContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link WaffleParser#code_block}.
+	 * Enter a parse tree produced by the {@code AssignVar}
+	 * labeled alternative in {@link WaffleParser#assign_statement}.
 	 * @param ctx the parse tree
 	 */
-	void enterCode_block(@NotNull WaffleParser.Code_blockContext ctx);
+	void enterAssignVar(@NotNull WaffleParser.AssignVarContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link WaffleParser#code_block}.
+	 * Exit a parse tree produced by the {@code AssignVar}
+	 * labeled alternative in {@link WaffleParser#assign_statement}.
 	 * @param ctx the parse tree
 	 */
-	void exitCode_block(@NotNull WaffleParser.Code_blockContext ctx);
+	void exitAssignVar(@NotNull WaffleParser.AssignVarContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link WaffleParser#scalar_type}.
 	 * @param ctx the parse tree
@@ -305,26 +433,6 @@ public interface WaffleListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitScalar_type(@NotNull WaffleParser.Scalar_typeContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link WaffleParser#elif}.
-	 * @param ctx the parse tree
-	 */
-	void enterElif(@NotNull WaffleParser.ElifContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link WaffleParser#elif}.
-	 * @param ctx the parse tree
-	 */
-	void exitElif(@NotNull WaffleParser.ElifContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link WaffleParser#bin_op}.
-	 * @param ctx the parse tree
-	 */
-	void enterBin_op(@NotNull WaffleParser.Bin_opContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link WaffleParser#bin_op}.
-	 * @param ctx the parse tree
-	 */
-	void exitBin_op(@NotNull WaffleParser.Bin_opContext ctx);
 	/**
 	 * Enter a parse tree produced by the {@code expParenthesis}
 	 * labeled alternative in {@link WaffleParser#expression}.
@@ -348,16 +456,6 @@ public interface WaffleListener extends ParseTreeListener {
 	 */
 	void exitString_literal(@NotNull WaffleParser.String_literalContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link WaffleParser#condition}.
-	 * @param ctx the parse tree
-	 */
-	void enterCondition(@NotNull WaffleParser.ConditionContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link WaffleParser#condition}.
-	 * @param ctx the parse tree
-	 */
-	void exitCondition(@NotNull WaffleParser.ConditionContext ctx);
-	/**
 	 * Enter a parse tree produced by {@link WaffleParser#for_statement}.
 	 * @param ctx the parse tree
 	 */
@@ -367,38 +465,6 @@ public interface WaffleListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitFor_statement(@NotNull WaffleParser.For_statementContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code expList}
-	 * labeled alternative in {@link WaffleParser#expression}.
-	 * @param ctx the parse tree
-	 */
-	void enterExpList(@NotNull WaffleParser.ExpListContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code expList}
-	 * labeled alternative in {@link WaffleParser#expression}.
-	 * @param ctx the parse tree
-	 */
-	void exitExpList(@NotNull WaffleParser.ExpListContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link WaffleParser#variable_expression}.
-	 * @param ctx the parse tree
-	 */
-	void enterVariable_expression(@NotNull WaffleParser.Variable_expressionContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link WaffleParser#variable_expression}.
-	 * @param ctx the parse tree
-	 */
-	void exitVariable_expression(@NotNull WaffleParser.Variable_expressionContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link WaffleParser#assign_statement}.
-	 * @param ctx the parse tree
-	 */
-	void enterAssign_statement(@NotNull WaffleParser.Assign_statementContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link WaffleParser#assign_statement}.
-	 * @param ctx the parse tree
-	 */
-	void exitAssign_statement(@NotNull WaffleParser.Assign_statementContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link WaffleParser#subroutine_header}.
 	 * @param ctx the parse tree
@@ -432,36 +498,6 @@ public interface WaffleListener extends ParseTreeListener {
 	 */
 	void exitVariable(@NotNull WaffleParser.VariableContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link WaffleParser#if_statement}.
-	 * @param ctx the parse tree
-	 */
-	void enterIf_statement(@NotNull WaffleParser.If_statementContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link WaffleParser#if_statement}.
-	 * @param ctx the parse tree
-	 */
-	void exitIf_statement(@NotNull WaffleParser.If_statementContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link WaffleParser#var_decl}.
-	 * @param ctx the parse tree
-	 */
-	void enterVar_decl(@NotNull WaffleParser.Var_declContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link WaffleParser#var_decl}.
-	 * @param ctx the parse tree
-	 */
-	void exitVar_decl(@NotNull WaffleParser.Var_declContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link WaffleParser#ifer}.
-	 * @param ctx the parse tree
-	 */
-	void enterIfer(@NotNull WaffleParser.IferContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link WaffleParser#ifer}.
-	 * @param ctx the parse tree
-	 */
-	void exitIfer(@NotNull WaffleParser.IferContext ctx);
-	/**
 	 * Enter a parse tree produced by {@link WaffleParser#break_statement}.
 	 * @param ctx the parse tree
 	 */
@@ -471,16 +507,6 @@ public interface WaffleListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitBreak_statement(@NotNull WaffleParser.Break_statementContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link WaffleParser#literal_expression}.
-	 * @param ctx the parse tree
-	 */
-	void enterLiteral_expression(@NotNull WaffleParser.Literal_expressionContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link WaffleParser#literal_expression}.
-	 * @param ctx the parse tree
-	 */
-	void exitLiteral_expression(@NotNull WaffleParser.Literal_expressionContext ctx);
 	/**
 	 * Enter a parse tree produced by the {@code expCall}
 	 * labeled alternative in {@link WaffleParser#call_expression}.

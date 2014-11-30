@@ -69,45 +69,13 @@ public class LoopWaffleStation extends WaffleStation{
         return new Variable(Variable.VarType.BREAK);
     }
 
-    public Object visitVariable_expression(@NotNull WaffleParser.Variable_expressionContext ctx) {
+    @Override
+    public Object visitVariable(@NotNull WaffleParser.VariableContext ctx) {
         Variable var = getVarByName(ctx);
-
-        if (var.getType() == Variable.VarType.NULL)
-            return parent.visitVariable_expression(ctx);
+        if (var == null)
+            var=(Variable)parent.visitVariable(ctx);
         return var;
-}
-
-    protected Variable getVarByName(WaffleParser.Variable_expressionContext left) {
-        Variable retVal = new Variable(Variable.VarType.NULL);
-        if(left.indexed_expression() == null) {
-             retVal = (Variable) mem.get(left.variable().getText());
-        } else
-        {
-             retVal = (Variable) mem.get(left.indexed_expression().variable().getText());
-        }
-        if(retVal == null) //Dont remove this == null part here.
-            return new Variable(Variable.VarType.NULL);
-
-        if(left.indexed_expression() == null) {
-            return retVal;
-        } else {
-
-            int index = ((Variable)(visit(left.indexed_expression().expression()))).getIntData();
-            Variable var = new Variable(Variable.VarType.NULL);
-            try{
-                var = retVal.getArrData().get(index);
-
-            } catch(Exception e) {
-                ERROR("Array index out of bounds " + left.indexed_expression().variable().getText() + " size is  " + var.getArrData().size() + ". [" + left.getStart().getLine() + "]");
-            }
-
-            return var;
-
-        }
-
     }
-
-
 
 }
 
