@@ -98,7 +98,7 @@ public class WaffleStation extends WaffleBaseVisitor<Object> {
              expValue = (Variable) visit(ctx.expression());
         if(expValue != null && value.getType() == expValue.getType())
         {
-            value = expValue; //TODO. make sure this didnt break stuff new Value(expValue);
+            value.copy(expValue);
         } else if (expValue != null)
         {
             ERROR("Type mismatch while initializing " + varName + ". Expecting " + value.getTypeString() + " got " +  expValue.getTypeString()+ ". [" + ctx.getStart().getLine() + "]");

@@ -56,26 +56,39 @@
 
     sub bubbleSort(IN alist<Array<Int>>)
 
-          for passnum<Int> in len(alist)-1 -> 0:
+          for passnum<Int> in len(alist)-1 -> 1:
 
-              for i<Int> in 0 -> passnum:
-                  if(i+1) > len(alist):
-                      break;
-                   end if;
-                  if(i+1) == len(alist):
-                      break;
-                  end if;
+              for i<Int> in 0 -> passnum - 1:
+                  // println("Comparing " + alist[i] + " with " + alist[i+1]);
                   if alist[i]>alist[i+1]:
+                      //println("Switching " + alist[i] + " with " + alist[i+1]);
                       temp<Int> = alist[i];
+                      //println("temp= " + temp );
                       alist[i] = alist[i+1];
+                      //println("temp*= " + temp );
                       alist[i+1] = temp;
+
+                      //println("alist["+ i + "] = " + alist[i]);
+                      //println("alist["+ (i + 1) + "] = " + alist[i+1]);
                   end if;
               end loop;
+              //println("Fixed " + passnum + " -th value " + alist[passnum]);
           end loop;
+          //println("sorting finished " + alist);
           return alist;
       end;
 
       alist<Array<Int>> = [1 , 3 , 2 , 4, 6 ,5];
 
-      println(bubbleSort(alist));
+      /*for i<Int> in 1 -> 1:
+        for j<Int> in 1 -> 1:
+            alist[1]=alist[0];
+            alist[2]=alist[1];
+        end loop;
+      end loop;*/
+
+
+      println(alist);
+
+      println("bubblesort returned " + bubbleSort(alist));
 

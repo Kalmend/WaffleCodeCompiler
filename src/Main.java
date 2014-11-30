@@ -40,10 +40,16 @@ public class Main {
                 ParserRuleContext ruleContext = parser.program();
                 ruleContext.inspect(parser);
             } else {
-                ParseTree tree = parser.program();
-                //walk tree
-               WaffleStation stat = new WaffleStation();
-                stat.visit(tree);
+               ParseTree tree = parser.program();
+
+                //walk tree if there were no parsing errors
+                if (parser.getNumberOfSyntaxErrors()== 0){
+                    WaffleStation stat = new WaffleStation();
+                    stat.visit(tree);
+                } else{
+                    System.err.println("Parsing file " + inputFile + " failed!");
+                    return;
+                }
             }
         } catch (IOException e)
         {
