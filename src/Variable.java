@@ -238,6 +238,7 @@ public class Variable  {
         }
     }
 
+
     public Variable NEQ(Variable rh)
     {
         switch(type)

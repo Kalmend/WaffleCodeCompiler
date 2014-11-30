@@ -3,7 +3,44 @@
   <component name="ChangeListManager">
     <list default="true" id="2affb46d-a77f-48d6-9da5-b172019c1cf2" name="Default" comment="">
       <change type="DELETED" beforePath="C:\Users\Oliver\Documents\Java\IdeaProjects\WaffleCodeCompiler\out\production\Wafflecode\com\company\Main.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/LoopWaffleStation.java" afterPath="$PROJECT_DIR$/src/LoopWaffleStation.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Wafflecode/LoopWaffleStation.class" afterPath="$PROJECT_DIR$/out/production/Wafflecode/LoopWaffleStation.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Wafflecode/WaffleBaseListener.class" afterPath="$PROJECT_DIR$/out/production/Wafflecode/WaffleBaseListener.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Wafflecode/WaffleBaseVisitor.class" afterPath="$PROJECT_DIR$/out/production/Wafflecode/WaffleBaseVisitor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Wafflecode/WaffleListener.class" afterPath="$PROJECT_DIR$/out/production/Wafflecode/WaffleListener.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$Assign_statementContext.class" afterPath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$Assign_statementContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$Bin_opContext.class" afterPath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$Bin_opContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$Boolean_literalContext.class" afterPath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$Boolean_literalContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$Break_statementContext.class" afterPath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$Break_statementContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$BuuleanContext.class" afterPath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$BuuleanContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$Call_expressionContext.class" afterPath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$Call_expressionContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$Call_statementContext.class" afterPath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$Call_statementContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$Decl_statementContext.class" afterPath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$Decl_statementContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$DoobleContext.class" afterPath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$DoobleContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$ExpBinaryContext.class" afterPath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$ExpBinaryContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$ExpCallContext.class" afterPath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$ExpCallContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$ExpListContext.class" afterPath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$ExpListContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$ExpLiteralContext.class" afterPath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$ExpLiteralContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$ExpParenthesisContext.class" afterPath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$ExpParenthesisContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$ExpUnaryContext.class" afterPath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$ExpUnaryContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$ExpVariableContext.class" afterPath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$ExpVariableContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$ExpressionContext.class" afterPath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$ExpressionContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$Indexed_expressionContext.class" afterPath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$Indexed_expressionContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$IntegerContext.class" afterPath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$IntegerContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$List_expressionContext.class" afterPath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$List_expressionContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$Literal_expressionContext.class" afterPath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$Literal_expressionContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$NOTIMPLEMENTED1Context.class" afterPath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$NOTIMPLEMENTED1Context.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$Numeric_literalContext.class" afterPath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$Numeric_literalContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$Return_statementContext.class" afterPath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$Return_statementContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$StringContext.class" afterPath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$StringContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$String_literalContext.class" afterPath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$String_literalContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$Un_opContext.class" afterPath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$Un_opContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$VariableContext.class" afterPath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$VariableContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$Variable_expressionContext.class" afterPath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser$Variable_expressionContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser.class" afterPath="$PROJECT_DIR$/out/production/Wafflecode/WaffleParser.class" />
+      <change type="MODIFICATION" beforePath="C:\Users\Oliver\Documents\Java\IdeaProjects\WaffleCodeCompiler\out\production\Wafflecode\WaffleStation.class" afterPath="C:\Users\Oliver\Documents\Java\IdeaProjects\WaffleCodeCompiler\out\production\Wafflecode\WaffleStation.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Wafflecode/WaffleVisitor.class" afterPath="$PROJECT_DIR$/out/production/Wafflecode/WaffleVisitor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Variable.java" afterPath="$PROJECT_DIR$/src/Variable.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Wafflecode/Waffle.g4" afterPath="$PROJECT_DIR$/out/production/Wafflecode/Waffle.g4" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Waffle.g4" afterPath="$PROJECT_DIR$/src/Waffle.g4" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/WaffleBaseListener.java" afterPath="$PROJECT_DIR$/gen/WaffleBaseListener.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/WaffleBaseVisitor.java" afterPath="$PROJECT_DIR$/gen/WaffleBaseVisitor.java" />
@@ -11,6 +48,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/WaffleParser.java" afterPath="$PROJECT_DIR$/gen/WaffleParser.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/WaffleStation.java" afterPath="$PROJECT_DIR$/src/WaffleStation.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/WaffleVisitor.java" afterPath="$PROJECT_DIR$/gen/WaffleVisitor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/simpleprogram.waf" afterPath="$PROJECT_DIR$/src/simpleprogram.waf" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Wafflecode.iws" />
@@ -36,18 +74,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="WaffleStation.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="WaffleStation.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/WaffleStation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.33169532" vertical-offset="5254" max-vertical-offset="6511">
-              <caret line="319" column="4" selection-start-line="319" selection-start-column="4" selection-end-line="319" selection-end-column="4" />
+            <state vertical-scroll-proportion="-5.1698112" vertical-offset="2786" max-vertical-offset="6596">
+              <caret line="180" column="8" selection-start-line="180" selection-start-column="8" selection-end-line="180" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#452#470#0" expanded="true" />
                 <element signature="e#560#600#0" expanded="true" />
-                <element signature="e#5717#5718#0" expanded="true" />
-                <element signature="e#5757#5758#0" expanded="true" />
-                <element signature="e#7678#7688#0" expanded="true" />
+                <element signature="e#7878#7888#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -56,8 +92,8 @@
       <file leaf-file-name="LoopWaffleStation.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/LoopWaffleStation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="719" max-vertical-offset="1479">
-              <caret line="50" column="5" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="946" max-vertical-offset="1479">
+              <caret line="76" column="19" selection-start-line="73" selection-start-column="7" selection-end-line="76" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -66,7 +102,7 @@
       <file leaf-file-name="SubWaffleStation.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/SubWaffleStation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="971" max-vertical-offset="1547">
+            <state vertical-scroll-proportion="0.0" vertical-offset="818" max-vertical-offset="1547">
               <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -79,17 +115,17 @@
         <entry file="file://$PROJECT_DIR$/src/Waffle.g4">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="776" max-vertical-offset="2771">
-              <caret line="54" column="42" selection-start-line="54" selection-start-column="42" selection-end-line="54" selection-end-column="42" />
+              <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="simpleprogram.waf" pinned="false" current-in-tab="false">
+      <file leaf-file-name="simpleprogram.waf" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/simpleprogram.waf">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="502" max-vertical-offset="1207">
-              <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.13883677" vertical-offset="946" max-vertical-offset="1479">
+              <caret line="60" column="40" selection-start-line="60" selection-start-column="40" selection-end-line="60" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -98,7 +134,7 @@
       <file leaf-file-name="WaffleBaseVisitor.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gen/WaffleBaseVisitor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="2926" max-vertical-offset="6137">
+            <state vertical-scroll-proportion="0.0" vertical-offset="2926" max-vertical-offset="6018">
               <caret line="181" column="0" selection-start-line="181" selection-start-column="0" selection-end-line="181" selection-end-column="0" />
               <folding />
             </state>
@@ -123,12 +159,12 @@
         <option value="$PROJECT_DIR$/src/com/company/generalWaffleStation.java" />
         <option value="$PROJECT_DIR$/src/GeneralWaffleStation.java" />
         <option value="$PROJECT_DIR$/src/SubWaffleStation.java" />
-        <option value="$PROJECT_DIR$/src/Variable.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
-        <option value="$PROJECT_DIR$/src/simpleprogram.waf" />
-        <option value="$PROJECT_DIR$/src/WaffleStation.java" />
         <option value="$PROJECT_DIR$/src/LoopWaffleStation.java" />
         <option value="$PROJECT_DIR$/src/Waffle.g4" />
+        <option value="$PROJECT_DIR$/src/WaffleStation.java" />
+        <option value="$PROJECT_DIR$/src/Variable.java" />
+        <option value="$PROJECT_DIR$/src/simpleprogram.waf" />
       </list>
     </option>
   </component>
@@ -564,7 +600,7 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Tool Output" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32742155" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.35061392" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35061392" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23548046" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -572,7 +608,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23465212" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23465212" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20117188" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -626,18 +662,6 @@
           <option name="timeStamp" value="122" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/WaffleStation.java</url>
-          <line>271</line>
-          <properties />
-          <option name="timeStamp" value="125" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/WaffleStation.java</url>
-          <line>270</line>
-          <properties />
-          <option name="timeStamp" value="126" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/LoopWaffleStation.java</url>
           <line>14</line>
           <properties />
@@ -645,15 +669,15 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/WaffleStation.java</url>
-          <line>47</line>
-          <properties />
-          <option name="timeStamp" value="137" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/WaffleStation.java</url>
-          <line>347</line>
+          <line>355</line>
           <properties />
           <option name="timeStamp" value="139" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/LoopWaffleStation.java</url>
+          <line>73</line>
+          <properties />
+          <option name="timeStamp" value="150" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>jar://$PROJECT_DIR$/lib/antlr-4.4.1-dev-complete.jar!/org/antlr/v4/runtime/tree/AbstractParseTreeVisitor.class</url>
@@ -668,7 +692,7 @@
           <option name="timeStamp" value="27" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="150" />
+      <option name="time" value="151" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -701,9 +725,7 @@
             <element signature="imports" expanded="true" />
             <element signature="e#452#470#0" expanded="true" />
             <element signature="e#560#600#0" expanded="true" />
-            <element signature="e#5717#5718#0" expanded="true" />
-            <element signature="e#5757#5758#0" expanded="true" />
-            <element signature="e#7678#7688#0" expanded="true" />
+            <element signature="e#7878#7888#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -766,9 +788,7 @@
             <element signature="imports" expanded="true" />
             <element signature="e#452#470#0" expanded="true" />
             <element signature="e#560#600#0" expanded="true" />
-            <element signature="e#5717#5718#0" expanded="true" />
-            <element signature="e#5757#5758#0" expanded="true" />
-            <element signature="e#7678#7688#0" expanded="true" />
+            <element signature="e#7878#7888#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1001,14 +1021,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Variable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1180" max-vertical-offset="6273">
-          <caret line="122" column="52" selection-start-line="122" selection-start-column="52" selection-end-line="122" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/program.waf">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.41463414" vertical-offset="0" max-vertical-offset="1105">
@@ -1029,14 +1041,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="2926" max-vertical-offset="6018">
           <caret line="181" column="0" selection-start-line="181" selection-start-column="0" selection-end-line="181" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/simpleprogram.waf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="502" max-vertical-offset="1207">
-          <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1062,6 +1066,160 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/gen/WaffleParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334" vertical-offset="19405" max-vertical-offset="43146">
+          <caret line="1281" column="96" selection-start-line="1281" selection-start-column="96" selection-end-line="1281" selection-end-column="96" />
+          <folding>
+            <element signature="e#39255#39256#0" expanded="false" />
+            <element signature="e#39321#39322#0" expanded="false" />
+            <element signature="e#39486#39487#0" expanded="true" />
+            <element signature="e#39543#39544#0" expanded="true" />
+            <element signature="e#39623#39624#0" expanded="true" />
+            <element signature="e#39660#39661#0" expanded="true" />
+            <element signature="e#41293#41294#0" expanded="true" />
+            <element signature="e#41348#41349#0" expanded="true" />
+            <element signature="e#41426#41427#0" expanded="true" />
+            <element signature="e#41463#41464#0" expanded="true" />
+            <element signature="e#42795#42796#0" expanded="true" />
+            <element signature="e#42852#42853#0" expanded="true" />
+            <element signature="e#42932#42933#0" expanded="true" />
+            <element signature="e#42969#42970#0" expanded="true" />
+            <element signature="e#44663#44664#0" expanded="true" />
+            <element signature="e#44700#44701#0" expanded="true" />
+            <element signature="e#45975#45976#0" expanded="true" />
+            <element signature="e#46037#46038#0" expanded="true" />
+            <element signature="e#46115#46116#0" expanded="true" />
+            <element signature="e#46152#46153#0" expanded="true" />
+            <element signature="e#47441#47442#0" expanded="true" />
+            <element signature="e#47478#47479#0" expanded="true" />
+            <element signature="e#47628#47629#0" expanded="true" />
+            <element signature="e#47656#47657#0" expanded="true" />
+            <element signature="e#47788#47789#0" expanded="true" />
+            <element signature="e#47840#47841#0" expanded="true" />
+            <element signature="e#47882#47883#0" expanded="true" />
+            <element signature="e#47939#47940#0" expanded="true" />
+            <element signature="e#48678#48679#0" expanded="true" />
+            <element signature="e#48735#48736#0" expanded="true" />
+            <element signature="e#49501#49502#0" expanded="true" />
+            <element signature="e#49563#49564#0" expanded="true" />
+            <element signature="e#50309#50310#0" expanded="true" />
+            <element signature="e#50371#50372#0" expanded="true" />
+            <element signature="e#51150#51151#0" expanded="true" />
+            <element signature="e#51215#51216#0" expanded="true" />
+            <element signature="e#51974#51975#0" expanded="true" />
+            <element signature="e#52039#52040#0" expanded="true" />
+            <element signature="e#52801#52802#0" expanded="true" />
+            <element signature="e#52867#52868#0" expanded="true" />
+            <element signature="e#53705#53706#0" expanded="true" />
+            <element signature="e#53758#53759#0" expanded="true" />
+            <element signature="e#53805#53806#0" expanded="true" />
+            <element signature="e#53862#53863#0" expanded="true" />
+            <element signature="e#53910#53911#0" expanded="true" />
+            <element signature="e#53966#53967#0" expanded="true" />
+            <element signature="e#57842#57843#0" expanded="true" />
+            <element signature="e#57879#57880#0" expanded="true" />
+            <element signature="e#58044#58045#0" expanded="true" />
+            <element signature="e#58072#58073#0" expanded="true" />
+            <element signature="e#58191#58192#0" expanded="true" />
+            <element signature="e#58248#58249#0" expanded="true" />
+            <element signature="e#58296#58297#0" expanded="true" />
+            <element signature="e#58352#58353#0" expanded="true" />
+            <element signature="e#58390#58391#0" expanded="true" />
+            <element signature="e#58445#58446#0" expanded="true" />
+            <element signature="e#61076#61077#0" expanded="true" />
+            <element signature="e#61113#61114#0" expanded="true" />
+            <element signature="e#62808#62809#0" expanded="true" />
+            <element signature="e#62845#62846#0" expanded="true" />
+            <element signature="e#64203#64204#0" expanded="true" />
+            <element signature="e#64258#64259#0" expanded="true" />
+            <element signature="e#64341#64342#0" expanded="true" />
+            <element signature="e#64378#64379#0" expanded="true" />
+            <element signature="e#65715#65716#0" expanded="true" />
+            <element signature="e#65772#65773#0" expanded="true" />
+            <element signature="e#65810#65811#0" expanded="true" />
+            <element signature="e#65865#65866#0" expanded="true" />
+            <element signature="e#65947#65948#0" expanded="true" />
+            <element signature="e#65984#65985#0" expanded="true" />
+            <element signature="e#67430#67431#0" expanded="true" />
+            <element signature="e#67492#67493#0" expanded="true" />
+            <element signature="e#67542#67543#0" expanded="true" />
+            <element signature="e#67603#67604#0" expanded="true" />
+            <element signature="e#67655#67656#0" expanded="true" />
+            <element signature="e#67717#67718#0" expanded="true" />
+            <element signature="e#67799#67800#0" expanded="true" />
+            <element signature="e#67836#67837#0" expanded="true" />
+            <element signature="e#69498#69499#0" expanded="true" />
+            <element signature="e#69555#69556#0" expanded="true" />
+            <element signature="e#69603#69604#0" expanded="true" />
+            <element signature="e#69659#69660#0" expanded="true" />
+            <element signature="e#69738#69739#0" expanded="true" />
+            <element signature="e#69775#69776#0" expanded="true" />
+            <element signature="e#71640#71641#0" expanded="true" />
+            <element signature="e#71693#71694#0" expanded="true" />
+            <element signature="e#71771#71772#0" expanded="true" />
+            <element signature="e#71808#71809#0" expanded="true" />
+            <element signature="e#73055#73056#0" expanded="true" />
+            <element signature="e#73109#73110#0" expanded="true" />
+            <element signature="e#73143#73144#0" expanded="true" />
+            <element signature="e#73196#73197#0" expanded="true" />
+            <element signature="e#73275#73276#0" expanded="true" />
+            <element signature="e#73312#73313#0" expanded="true" />
+            <element signature="e#74799#74800#0" expanded="true" />
+            <element signature="e#74853#74854#0" expanded="true" />
+            <element signature="e#74932#74933#0" expanded="true" />
+            <element signature="e#74969#74970#0" expanded="true" />
+            <element signature="e#76325#76326#0" expanded="true" />
+            <element signature="e#76362#76363#0" expanded="true" />
+            <element signature="e#77654#77655#0" expanded="true" />
+            <element signature="e#77691#77692#0" expanded="true" />
+            <element signature="e#78972#78973#0" expanded="true" />
+            <element signature="e#79009#79010#0" expanded="true" />
+            <element signature="e#80281#80282#0" expanded="true" />
+            <element signature="e#80318#80319#0" expanded="true" />
+            <element signature="e#81594#81595#0" expanded="true" />
+            <element signature="e#81631#81632#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Waffle.g4">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="776" max-vertical-offset="2771">
+          <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/WaffleStation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.1698112" vertical-offset="2786" max-vertical-offset="6596">
+          <caret line="180" column="8" selection-start-line="180" selection-start-column="8" selection-end-line="180" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#452#470#0" expanded="true" />
+            <element signature="e#560#600#0" expanded="true" />
+            <element signature="e#7878#7888#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LoopWaffleStation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1012" max-vertical-offset="1479">
+          <caret line="76" column="19" selection-start-line="73" selection-start-column="7" selection-end-line="76" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Variable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.58536583" vertical-offset="3105" max-vertical-offset="6290">
+          <caret line="228" column="13" selection-start-line="228" selection-start-column="13" selection-end-line="228" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/SubWaffleStation.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="971" max-vertical-offset="1547">
@@ -1072,149 +1230,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gen/WaffleParser.java">
+    <entry file="file://$PROJECT_DIR$/src/simpleprogram.waf">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334" vertical-offset="19405" max-vertical-offset="43146">
-          <caret line="1281" column="96" selection-start-line="1281" selection-start-column="96" selection-end-line="1281" selection-end-column="96" />
-          <folding>
-            <element signature="e#40724#40725#0" expanded="true" />
-            <element signature="e#40790#40791#0" expanded="true" />
-            <element signature="e#40832#40833#0" expanded="true" />
-            <element signature="e#40889#40890#0" expanded="true" />
-            <element signature="e#42751#42752#0" expanded="true" />
-            <element signature="e#42806#42807#0" expanded="true" />
-            <element signature="e#42884#42885#0" expanded="true" />
-            <element signature="e#42921#42922#0" expanded="true" />
-            <element signature="e#44253#44254#0" expanded="true" />
-            <element signature="e#44310#44311#0" expanded="true" />
-            <element signature="e#44390#44391#0" expanded="true" />
-            <element signature="e#44427#44428#0" expanded="true" />
-            <element signature="e#46121#46122#0" expanded="true" />
-            <element signature="e#46158#46159#0" expanded="true" />
-            <element signature="e#47433#47434#0" expanded="true" />
-            <element signature="e#47495#47496#0" expanded="true" />
-            <element signature="e#47573#47574#0" expanded="true" />
-            <element signature="e#47610#47611#0" expanded="true" />
-            <element signature="e#48899#48900#0" expanded="true" />
-            <element signature="e#48936#48937#0" expanded="true" />
-            <element signature="e#49086#49087#0" expanded="true" />
-            <element signature="e#49114#49115#0" expanded="true" />
-            <element signature="e#49246#49247#0" expanded="true" />
-            <element signature="e#49298#49299#0" expanded="true" />
-            <element signature="e#49340#49341#0" expanded="true" />
-            <element signature="e#49397#49398#0" expanded="true" />
-            <element signature="e#50136#50137#0" expanded="true" />
-            <element signature="e#50193#50194#0" expanded="true" />
-            <element signature="e#50959#50960#0" expanded="true" />
-            <element signature="e#51021#51022#0" expanded="true" />
-            <element signature="e#51767#51768#0" expanded="true" />
-            <element signature="e#51829#51830#0" expanded="true" />
-            <element signature="e#52608#52609#0" expanded="true" />
-            <element signature="e#52673#52674#0" expanded="true" />
-            <element signature="e#53432#53433#0" expanded="true" />
-            <element signature="e#53497#53498#0" expanded="true" />
-            <element signature="e#54259#54260#0" expanded="true" />
-            <element signature="e#54325#54326#0" expanded="true" />
-            <element signature="e#55163#55164#0" expanded="true" />
-            <element signature="e#55216#55217#0" expanded="true" />
-            <element signature="e#55263#55264#0" expanded="true" />
-            <element signature="e#55320#55321#0" expanded="true" />
-            <element signature="e#55368#55369#0" expanded="true" />
-            <element signature="e#55424#55425#0" expanded="true" />
-            <element signature="e#59300#59301#0" expanded="true" />
-            <element signature="e#59337#59338#0" expanded="true" />
-            <element signature="e#59502#59503#0" expanded="true" />
-            <element signature="e#59530#59531#0" expanded="true" />
-            <element signature="e#59649#59650#0" expanded="true" />
-            <element signature="e#59706#59707#0" expanded="true" />
-            <element signature="e#59754#59755#0" expanded="true" />
-            <element signature="e#59810#59811#0" expanded="true" />
-            <element signature="e#59848#59849#0" expanded="true" />
-            <element signature="e#59903#59904#0" expanded="true" />
-            <element signature="e#62534#62535#0" expanded="true" />
-            <element signature="e#62571#62572#0" expanded="true" />
-            <element signature="e#64266#64267#0" expanded="true" />
-            <element signature="e#64303#64304#0" expanded="true" />
-            <element signature="e#65661#65662#0" expanded="true" />
-            <element signature="e#65716#65717#0" expanded="true" />
-            <element signature="e#65799#65800#0" expanded="true" />
-            <element signature="e#65836#65837#0" expanded="true" />
-            <element signature="e#67173#67174#0" expanded="true" />
-            <element signature="e#67230#67231#0" expanded="true" />
-            <element signature="e#67268#67269#0" expanded="true" />
-            <element signature="e#67323#67324#0" expanded="true" />
-            <element signature="e#67405#67406#0" expanded="true" />
-            <element signature="e#67442#67443#0" expanded="true" />
-            <element signature="e#68888#68889#0" expanded="true" />
-            <element signature="e#68950#68951#0" expanded="true" />
-            <element signature="e#69000#69001#0" expanded="true" />
-            <element signature="e#69061#69062#0" expanded="true" />
-            <element signature="e#69113#69114#0" expanded="true" />
-            <element signature="e#69175#69176#0" expanded="true" />
-            <element signature="e#69257#69258#0" expanded="true" />
-            <element signature="e#69294#69295#0" expanded="true" />
-            <element signature="e#70956#70957#0" expanded="true" />
-            <element signature="e#71013#71014#0" expanded="true" />
-            <element signature="e#71061#71062#0" expanded="true" />
-            <element signature="e#71117#71118#0" expanded="true" />
-            <element signature="e#71196#71197#0" expanded="true" />
-            <element signature="e#71233#71234#0" expanded="true" />
-            <element signature="e#73098#73099#0" expanded="true" />
-            <element signature="e#73151#73152#0" expanded="true" />
-            <element signature="e#73229#73230#0" expanded="true" />
-            <element signature="e#73266#73267#0" expanded="true" />
-            <element signature="e#74513#74514#0" expanded="true" />
-            <element signature="e#74567#74568#0" expanded="true" />
-            <element signature="e#74601#74602#0" expanded="true" />
-            <element signature="e#74654#74655#0" expanded="true" />
-            <element signature="e#74733#74734#0" expanded="true" />
-            <element signature="e#74770#74771#0" expanded="true" />
-            <element signature="e#76257#76258#0" expanded="true" />
-            <element signature="e#76311#76312#0" expanded="true" />
-            <element signature="e#76390#76391#0" expanded="true" />
-            <element signature="e#76427#76428#0" expanded="true" />
-            <element signature="e#77783#77784#0" expanded="true" />
-            <element signature="e#77820#77821#0" expanded="true" />
-            <element signature="e#79112#79113#0" expanded="true" />
-            <element signature="e#79149#79150#0" expanded="true" />
-            <element signature="e#80430#80431#0" expanded="true" />
-            <element signature="e#80467#80468#0" expanded="true" />
-            <element signature="e#81739#81740#0" expanded="true" />
-            <element signature="e#81776#81777#0" expanded="true" />
-            <element signature="e#83052#83053#0" expanded="true" />
-            <element signature="e#83089#83090#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/LoopWaffleStation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="617" max-vertical-offset="1479">
-          <caret line="50" column="5" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.13883677" vertical-offset="946" max-vertical-offset="1479">
+          <caret line="60" column="40" selection-start-line="60" selection-start-column="40" selection-end-line="60" selection-end-column="40" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Waffle.g4">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="776" max-vertical-offset="2771">
-          <caret line="54" column="42" selection-start-line="54" selection-start-column="42" selection-end-line="54" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/WaffleStation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33169532" vertical-offset="5254" max-vertical-offset="6511">
-          <caret line="319" column="4" selection-start-line="319" selection-start-column="4" selection-end-line="319" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#452#470#0" expanded="true" />
-            <element signature="e#560#600#0" expanded="true" />
-            <element signature="e#5717#5718#0" expanded="true" />
-            <element signature="e#5757#5758#0" expanded="true" />
-            <element signature="e#7678#7688#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>

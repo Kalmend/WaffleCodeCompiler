@@ -161,7 +161,10 @@ public class WaffleStation extends WaffleBaseVisitor<Object> {
 
     @Override
     public Object visitVariable(@NotNull WaffleParser.VariableContext ctx) {
-        return getVarByName(ctx);
+        Variable var = getVarByName(ctx);
+        if(var == null) //Dont remove this == null part here.
+            ERROR("Missing variable declaration for " + ctx.getText() + ". [" + ctx.getStart().getLine() + "]");
+        return var;
     }
 
     @Override
@@ -174,7 +177,7 @@ public class WaffleStation extends WaffleBaseVisitor<Object> {
             returnVal =Var.getArrData().get(Idx.getIntData());
 
         } catch(Exception e) {
-            ERROR("Array index out of bounds " + ctx.index.getText() + " size is  " + Var.getArrData().size() + ". [" + ctx.getStart().getLine() + "]");
+            ERROR("Array index out of bounds " + Idx.getIntData() + " size is  " + Var.getArrData().size() + ". [" + ctx.getStart().getLine() + "]");
         }
         return returnVal;
     }
@@ -320,8 +323,13 @@ public class WaffleStation extends WaffleBaseVisitor<Object> {
     @Override
     public Object visitAssign_statement(@NotNull WaffleParser.Assign_statementContext ctx) {
 
-        Variable rightside = (Variable) visit(ctx.right);
-        Variable leftside =  (Variable) visit(ctx.left);
+        Variable rightside = (Variable) visit(ctx.expression());
+
+        Variable leftside =  null;
+        if(ctx.indexed_expression() != null)
+            leftside = (Variable) visit(ctx.indexed_expression());
+        else
+            leftside = (Variable) visit(ctx.variable_expression());
 
         if(leftside.getType() == rightside.getType())
         {
@@ -370,10 +378,7 @@ public class WaffleStation extends WaffleBaseVisitor<Object> {
     protected Variable getVarByName(WaffleParser.VariableContext Var) {
 
         Variable retVal = (Variable) mem.get(Var.getText());
-        if(retVal == null) //Dont remove this == null part here.
-            ERROR("Missing variable declaration for " + Var.getText() + ". [" + Var.getStart().getLine() + "]");
-
-            return retVal;
+        return retVal;
     }
 }
 

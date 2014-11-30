@@ -1232,61 +1232,30 @@ public class WaffleParser extends Parser {
 	}
 
 	public static class Assign_statementContext extends ParserRuleContext {
-		public Assign_statementContext(ParserRuleContext parent, int invokingState) {
-			super(parent, invokingState);
+		public Variable_expressionContext variable_expression() {
+			return getRuleContext(Variable_expressionContext.class,0);
 		}
-		@Override public int getRuleIndex() { return RULE_assign_statement; }
-	 
-		public Assign_statementContext() { }
-		public void copyFrom(Assign_statementContext ctx) {
-			super.copyFrom(ctx);
-		}
-	}
-	public static class AssignIdxContext extends Assign_statementContext {
-		public Indexed_expressionContext left;
-		public ExpressionContext right;
 		public Indexed_expressionContext indexed_expression() {
 			return getRuleContext(Indexed_expressionContext.class,0);
 		}
 		public ExpressionContext expression() {
 			return getRuleContext(ExpressionContext.class,0);
 		}
-		public AssignIdxContext(Assign_statementContext ctx) { copyFrom(ctx); }
+		public Assign_statementContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_assign_statement; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof WaffleListener ) ((WaffleListener)listener).enterAssignIdx(this);
+			if ( listener instanceof WaffleListener ) ((WaffleListener)listener).enterAssign_statement(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof WaffleListener ) ((WaffleListener)listener).exitAssignIdx(this);
+			if ( listener instanceof WaffleListener ) ((WaffleListener)listener).exitAssign_statement(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof WaffleVisitor ) return ((WaffleVisitor<? extends T>)visitor).visitAssignIdx(this);
-			else return visitor.visitChildren(this);
-		}
-	}
-	public static class AssignVarContext extends Assign_statementContext {
-		public Variable_expressionContext left;
-		public ExpressionContext right;
-		public Variable_expressionContext variable_expression() {
-			return getRuleContext(Variable_expressionContext.class,0);
-		}
-		public ExpressionContext expression() {
-			return getRuleContext(ExpressionContext.class,0);
-		}
-		public AssignVarContext(Assign_statementContext ctx) { copyFrom(ctx); }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof WaffleListener ) ((WaffleListener)listener).enterAssignVar(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof WaffleListener ) ((WaffleListener)listener).exitAssignVar(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof WaffleVisitor ) return ((WaffleVisitor<? extends T>)visitor).visitAssignVar(this);
+			if ( visitor instanceof WaffleVisitor ) return ((WaffleVisitor<? extends T>)visitor).visitAssign_statement(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -1298,21 +1267,19 @@ public class WaffleParser extends Parser {
 			setState(214);
 			switch ( getInterpreter().adaptivePredict(_input,11,_ctx) ) {
 			case 1:
-				_localctx = new AssignVarContext(_localctx);
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(206); ((AssignVarContext)_localctx).left = variable_expression();
+				setState(206); variable_expression();
 				setState(207); match(T__0);
-				setState(208); ((AssignVarContext)_localctx).right = expression(0);
+				setState(208); expression(0);
 				}
 				break;
 			case 2:
-				_localctx = new AssignIdxContext(_localctx);
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(210); ((AssignIdxContext)_localctx).left = indexed_expression();
+				setState(210); indexed_expression();
 				setState(211); match(T__0);
-				setState(212); ((AssignIdxContext)_localctx).right = expression(0);
+				setState(212); expression(0);
 				}
 				break;
 			}

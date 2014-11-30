@@ -57,8 +57,8 @@ for_header : FOR iterator=var_decl  IN range_exp ':';
 range_exp : start=expression ARROW stop=expression;
 //---------------------------------------//
 
-assign_statement : left=variable_expression '=' right=expression #AssignVar
-                 | left=indexed_expression '=' right=expression #AssignIdx
+assign_statement : variable_expression '=' expression
+                 | indexed_expression '=' expression
                  ;
 decl_statement : var_decl;
 
