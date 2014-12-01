@@ -18,14 +18,14 @@ public class WaffleParser extends Parser {
 	public static final int
 		T__8=1, T__7=2, T__6=3, T__5=4, T__4=5, T__3=6, T__2=7, T__1=8, T__0=9, 
 		INT=10, DBL=11, BOOL=12, STR=13, COMMENT=14, WS=15, GT=16, GTE=17, LT=18, 
-		LTE=19, EQ=20, NEQ=21, PLUS=22, MINUS=23, MUL=24, DIV=25, NOT=26, HASH=27, 
+		LTE=19, EQ=20, NEQ=21, PLUS=22, MINUS=23, MUL=24, MOD=25, DIV=26, NOT=27, 
 		ARROW=28, INT_TYPE=29, DBL_TYPE=30, STR_TYPE=31, BOOL_TYPE=32, END=33, 
 		LOOP=34, FOR=35, IN=36, OUT=37, SUB=38, IF=39, ELIF=40, ELSE=41, RANGE=42, 
 		RETURN=43, BREAK=44, VAR=45;
 	public static final String[] tokenNames = {
 		"<INVALID>", "'Array'", "'('", "')'", "':'", "'['", "';'", "','", "']'", 
 		"'='", "INT", "DBL", "BOOL", "STR", "COMMENT", "WS", "'>'", "'>='", "'<'", 
-		"'<='", "'=='", "'!='", "'+'", "'-'", "'*'", "'/'", "'!'", "'#'", "'->'", 
+		"'<='", "'=='", "'!='", "'+'", "'-'", "'*'", "'%'", "'/'", "'!'", "'->'", 
 		"'Int'", "'Double'", "'String'", "'Boolean'", "END", "LOOP", "FOR", "IN", 
 		"OUT", "SUB", "IF", "ELIF", "ELSE", "RANGE", "RETURN", "BREAK", "VAR"
 	};
@@ -37,20 +37,22 @@ public class WaffleParser extends Parser {
 		RULE_elser = 15, RULE_condition = 16, RULE_for_statement = 17, RULE_for_header = 18, 
 		RULE_range_exp = 19, RULE_assign_statement = 20, RULE_decl_statement = 21, 
 		RULE_return_statement = 22, RULE_break_statement = 23, RULE_call_statement = 24, 
-		RULE_expression = 25, RULE_call_expression = 26, RULE_bin_op = 27, RULE_un_op = 28, 
-		RULE_variable_expression = 29, RULE_indexed_expression = 30, RULE_literal_expression = 31, 
-		RULE_list_expression = 32, RULE_string_literal = 33, RULE_numeric_literal = 34, 
-		RULE_boolean_literal = 35, RULE_variable = 36, RULE_integer = 37, RULE_dooble = 38, 
-		RULE_string = 39, RULE_buulean = 40;
+		RULE_expression = 25, RULE_call_expression = 26, RULE_bin_op = 27, RULE_adds = 28, 
+		RULE_multis = 29, RULE_equalities = 30, RULE_un_op = 31, RULE_variable_expression = 32, 
+		RULE_indexed_expression = 33, RULE_literal_expression = 34, RULE_list_expression = 35, 
+		RULE_string_literal = 36, RULE_numeric_literal = 37, RULE_boolean_literal = 38, 
+		RULE_variable = 39, RULE_integer = 40, RULE_dooble = 41, RULE_string = 42, 
+		RULE_buulean = 43;
 	public static final String[] ruleNames = {
 		"program", "body", "code_block", "subroutine", "subroutine_header", "routine_name", 
 		"type_decl", "type", "scalar_type", "param", "var_decl", "statement", 
 		"if_statement", "ifer", "elif", "elser", "condition", "for_statement", 
 		"for_header", "range_exp", "assign_statement", "decl_statement", "return_statement", 
 		"break_statement", "call_statement", "expression", "call_expression", 
-		"bin_op", "un_op", "variable_expression", "indexed_expression", "literal_expression", 
-		"list_expression", "string_literal", "numeric_literal", "boolean_literal", 
-		"variable", "integer", "dooble", "string", "buulean"
+		"bin_op", "adds", "multis", "equalities", "un_op", "variable_expression", 
+		"indexed_expression", "literal_expression", "list_expression", "string_literal", 
+		"numeric_literal", "boolean_literal", "variable", "integer", "dooble", 
+		"string", "buulean"
 	};
 
 	@Override
@@ -105,16 +107,16 @@ public class WaffleParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(85);
+			setState(91);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
-			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << FOR) | (1L << SUB) | (1L << IF) | (1L << RETURN) | (1L << BREAK) | (1L << VAR))) != 0)) {
+			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__3) | (1L << FOR) | (1L << SUB) | (1L << IF) | (1L << RETURN) | (1L << BREAK) | (1L << VAR))) != 0)) {
 				{
 				{
-				setState(82); code_block();
+				setState(88); code_block();
 				}
 				}
-				setState(87);
+				setState(93);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
@@ -164,20 +166,20 @@ public class WaffleParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(91); 
+			setState(97); 
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			do {
 				{
 				{
-				setState(88); statement();
-				setState(89); match(T__3);
+				setState(94); statement();
+				setState(95); match(T__3);
 				}
 				}
-				setState(93); 
+				setState(99); 
 				_errHandler.sync(this);
 				_la = _input.LA(1);
-			} while ( (((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << FOR) | (1L << IF) | (1L << RETURN) | (1L << BREAK) | (1L << VAR))) != 0) );
+			} while ( (((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__3) | (1L << FOR) | (1L << IF) | (1L << RETURN) | (1L << BREAK) | (1L << VAR))) != 0) );
 			}
 		}
 		catch (RecognitionException re) {
@@ -221,8 +223,9 @@ public class WaffleParser extends Parser {
 		Code_blockContext _localctx = new Code_blockContext(_ctx, getState());
 		enterRule(_localctx, 4, RULE_code_block);
 		try {
-			setState(101);
+			setState(107);
 			switch (_input.LA(1)) {
+			case T__3:
 			case FOR:
 			case IF:
 			case RETURN:
@@ -231,16 +234,16 @@ public class WaffleParser extends Parser {
 				enterOuterAlt(_localctx, 1);
 				{
 				{
-				setState(95); statement();
-				setState(96); match(T__3);
+				setState(101); statement();
+				setState(102); match(T__3);
 				}
 				}
 				break;
 			case SUB:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(98); subroutine();
-				setState(99); match(T__3);
+				setState(104); subroutine();
+				setState(105); match(T__3);
 				}
 				break;
 			default:
@@ -291,9 +294,9 @@ public class WaffleParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(103); subroutine_header();
-			setState(104); body();
-			setState(105); match(END);
+			setState(109); subroutine_header();
+			setState(110); body();
+			setState(111); match(END);
 			}
 		}
 		catch (RecognitionException re) {
@@ -344,32 +347,33 @@ public class WaffleParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(107); match(SUB);
-			setState(108); routine_name();
-			setState(109); match(T__7);
-			setState(111);
+			setState(113); match(SUB);
+			setState(114); routine_name();
+			setState(115); match(T__7);
+			setState(117);
 			_la = _input.LA(1);
 			if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << IN) | (1L << OUT) | (1L << VAR))) != 0)) {
 				{
-				setState(110); param();
+				setState(116); param();
 				}
 			}
 
-			setState(117);
+			setState(123);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			while (_la==T__2) {
 				{
 				{
-				setState(113); match(T__2);
-				setState(114); param();
+				setState(119); match(T__2);
+				setState(120); param();
 				}
 				}
-				setState(119);
+				setState(125);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
-			setState(120); match(T__6);
+			setState(126); match(T__6);
+			setState(127); match(T__5);
 			}
 		}
 		catch (RecognitionException re) {
@@ -410,7 +414,7 @@ public class WaffleParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(122); match(VAR);
+			setState(129); match(VAR);
 			}
 		}
 		catch (RecognitionException re) {
@@ -453,9 +457,9 @@ public class WaffleParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(124); match(LT);
-			setState(125); type();
-			setState(126); match(GT);
+			setState(131); match(LT);
+			setState(132); type();
+			setState(133); match(GT);
 			}
 		}
 		catch (RecognitionException re) {
@@ -472,9 +476,6 @@ public class WaffleParser extends Parser {
 	public static class TypeContext extends ParserRuleContext {
 		public Scalar_typeContext scalar_type() {
 			return getRuleContext(Scalar_typeContext.class,0);
-		}
-		public TypeContext type() {
-			return getRuleContext(TypeContext.class,0);
 		}
 		public TypeContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -499,7 +500,7 @@ public class WaffleParser extends Parser {
 		TypeContext _localctx = new TypeContext(_ctx, getState());
 		enterRule(_localctx, 14, RULE_type);
 		try {
-			setState(134);
+			setState(137);
 			switch (_input.LA(1)) {
 			case INT_TYPE:
 			case DBL_TYPE:
@@ -507,16 +508,13 @@ public class WaffleParser extends Parser {
 			case BOOL_TYPE:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(128); scalar_type();
+				setState(135); scalar_type();
 				}
 				break;
 			case T__8:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(129); match(T__8);
-				setState(130); match(LT);
-				setState(131); type();
-				setState(132); match(GT);
+				setState(136); match(T__8);
 				}
 				break;
 			default:
@@ -565,7 +563,7 @@ public class WaffleParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(136);
+			setState(139);
 			_la = _input.LA(1);
 			if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << INT_TYPE) | (1L << DBL_TYPE) | (1L << STR_TYPE) | (1L << BOOL_TYPE))) != 0)) ) {
 			_errHandler.recoverInline(this);
@@ -616,11 +614,11 @@ public class WaffleParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(139);
+			setState(142);
 			_la = _input.LA(1);
 			if (_la==IN || _la==OUT) {
 				{
-				setState(138);
+				setState(141);
 				_la = _input.LA(1);
 				if ( !(_la==IN || _la==OUT) ) {
 				_errHandler.recoverInline(this);
@@ -629,7 +627,7 @@ public class WaffleParser extends Parser {
 				}
 			}
 
-			setState(141); var_decl();
+			setState(144); var_decl();
 			}
 		}
 		catch (RecognitionException re) {
@@ -676,22 +674,22 @@ public class WaffleParser extends Parser {
 		Var_declContext _localctx = new Var_declContext(_ctx, getState());
 		enterRule(_localctx, 20, RULE_var_decl);
 		try {
-			setState(151);
+			setState(154);
 			switch ( getInterpreter().adaptivePredict(_input,7,_ctx) ) {
 			case 1:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(143); variable();
-				setState(144); type_decl();
+				setState(146); variable();
+				setState(147); type_decl();
 				}
 				break;
 			case 2:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(146); variable();
-				setState(147); type_decl();
-				setState(148); match(T__0);
-				setState(149); expression(0);
+				setState(149); variable();
+				setState(150); type_decl();
+				setState(151); match(T__0);
+				setState(152); expression(0);
 				}
 				break;
 			}
@@ -752,48 +750,53 @@ public class WaffleParser extends Parser {
 		StatementContext _localctx = new StatementContext(_ctx, getState());
 		enterRule(_localctx, 22, RULE_statement);
 		try {
-			setState(160);
+			setState(164);
 			switch ( getInterpreter().adaptivePredict(_input,8,_ctx) ) {
 			case 1:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(153); assign_statement();
+				setState(156); assign_statement();
 				}
 				break;
 			case 2:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(154); for_statement();
+				setState(157); for_statement();
 				}
 				break;
 			case 3:
 				enterOuterAlt(_localctx, 3);
 				{
-				setState(155); if_statement();
+				setState(158); if_statement();
 				}
 				break;
 			case 4:
 				enterOuterAlt(_localctx, 4);
 				{
-				setState(156); return_statement();
+				setState(159); return_statement();
 				}
 				break;
 			case 5:
 				enterOuterAlt(_localctx, 5);
 				{
-				setState(157); break_statement();
+				setState(160); break_statement();
 				}
 				break;
 			case 6:
 				enterOuterAlt(_localctx, 6);
 				{
-				setState(158); call_statement();
+				setState(161); call_statement();
 				}
 				break;
 			case 7:
 				enterOuterAlt(_localctx, 7);
 				{
-				setState(159); decl_statement();
+				setState(162); decl_statement();
+				}
+				break;
+			case 8:
+				enterOuterAlt(_localctx, 8);
+				{
 				}
 				break;
 			}
@@ -850,30 +853,30 @@ public class WaffleParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(162); ifer();
-			setState(166);
+			setState(166); ifer();
+			setState(170);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			while (_la==ELIF) {
 				{
 				{
-				setState(163); elif();
+				setState(167); elif();
 				}
 				}
-				setState(168);
+				setState(172);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
-			setState(170);
+			setState(174);
 			_la = _input.LA(1);
 			if (_la==ELSE) {
 				{
-				setState(169); elser();
+				setState(173); elser();
 				}
 			}
 
-			setState(172); match(END);
-			setState(173); match(IF);
+			setState(176); match(END);
+			setState(177); match(IF);
 			}
 		}
 		catch (RecognitionException re) {
@@ -920,10 +923,10 @@ public class WaffleParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(175); match(IF);
-			setState(176); condition();
-			setState(177); match(T__5);
-			setState(178); body();
+			setState(179); match(IF);
+			setState(180); condition();
+			setState(181); match(T__5);
+			setState(182); body();
 			}
 		}
 		catch (RecognitionException re) {
@@ -970,10 +973,10 @@ public class WaffleParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(180); match(ELIF);
-			setState(181); condition();
-			setState(182); match(T__5);
-			setState(183); body();
+			setState(184); match(ELIF);
+			setState(185); condition();
+			setState(186); match(T__5);
+			setState(187); body();
 			}
 		}
 		catch (RecognitionException re) {
@@ -1017,9 +1020,9 @@ public class WaffleParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(185); match(ELSE);
-			setState(186); match(T__5);
-			setState(187); body();
+			setState(189); match(ELSE);
+			setState(190); match(T__5);
+			setState(191); body();
 			}
 		}
 		catch (RecognitionException re) {
@@ -1062,7 +1065,7 @@ public class WaffleParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(189); expression(0);
+			setState(193); expression(0);
 			}
 		}
 		catch (RecognitionException re) {
@@ -1110,10 +1113,10 @@ public class WaffleParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(191); for_header();
-			setState(192); body();
-			setState(193); match(END);
-			setState(194); match(LOOP);
+			setState(195); for_header();
+			setState(196); body();
+			setState(197); match(END);
+			setState(198); match(LOOP);
 			}
 		}
 		catch (RecognitionException re) {
@@ -1162,11 +1165,11 @@ public class WaffleParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(196); match(FOR);
-			setState(197); ((For_headerContext)_localctx).iterator = var_decl();
-			setState(198); match(IN);
-			setState(199); range_exp();
-			setState(200); match(T__5);
+			setState(200); match(FOR);
+			setState(201); ((For_headerContext)_localctx).iterator = var_decl();
+			setState(202); match(IN);
+			setState(203); range_exp();
+			setState(204); match(T__5);
 			}
 		}
 		catch (RecognitionException re) {
@@ -1215,9 +1218,9 @@ public class WaffleParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(202); ((Range_expContext)_localctx).start = expression(0);
-			setState(203); match(ARROW);
-			setState(204); ((Range_expContext)_localctx).stop = expression(0);
+			setState(206); ((Range_expContext)_localctx).start = expression(0);
+			setState(207); match(ARROW);
+			setState(208); ((Range_expContext)_localctx).stop = expression(0);
 			}
 		}
 		catch (RecognitionException re) {
@@ -1264,22 +1267,22 @@ public class WaffleParser extends Parser {
 		Assign_statementContext _localctx = new Assign_statementContext(_ctx, getState());
 		enterRule(_localctx, 40, RULE_assign_statement);
 		try {
-			setState(214);
+			setState(218);
 			switch ( getInterpreter().adaptivePredict(_input,11,_ctx) ) {
 			case 1:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(206); variable_expression();
-				setState(207); match(T__0);
-				setState(208); expression(0);
+				setState(210); variable_expression();
+				setState(211); match(T__0);
+				setState(212); expression(0);
 				}
 				break;
 			case 2:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(210); indexed_expression();
-				setState(211); match(T__0);
-				setState(212); expression(0);
+				setState(214); indexed_expression();
+				setState(215); match(T__0);
+				setState(216); expression(0);
 				}
 				break;
 			}
@@ -1324,7 +1327,7 @@ public class WaffleParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(216); var_decl();
+			setState(220); var_decl();
 			}
 		}
 		catch (RecognitionException re) {
@@ -1369,12 +1372,12 @@ public class WaffleParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(218); match(RETURN);
-			setState(220);
+			setState(222); match(RETURN);
+			setState(224);
 			_la = _input.LA(1);
-			if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__7) | (1L << T__4) | (1L << INT) | (1L << DBL) | (1L << BOOL) | (1L << STR) | (1L << MINUS) | (1L << NOT) | (1L << HASH) | (1L << VAR))) != 0)) {
+			if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__7) | (1L << T__4) | (1L << INT) | (1L << DBL) | (1L << BOOL) | (1L << STR) | (1L << MINUS) | (1L << NOT) | (1L << VAR))) != 0)) {
 				{
-				setState(219); expression(0);
+				setState(223); expression(0);
 				}
 			}
 
@@ -1418,7 +1421,7 @@ public class WaffleParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(222); match(BREAK);
+			setState(226); match(BREAK);
 			}
 		}
 		catch (RecognitionException re) {
@@ -1461,7 +1464,7 @@ public class WaffleParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(224); call_expression();
+			setState(228); call_expression();
 			}
 		}
 		catch (RecognitionException re) {
@@ -1625,13 +1628,18 @@ public class WaffleParser extends Parser {
 	}
 	public static class ExpBinaryContext extends ExpressionContext {
 		public ExpressionContext left;
-		public Bin_opContext operator;
 		public ExpressionContext right;
-		public Bin_opContext bin_op() {
-			return getRuleContext(Bin_opContext.class,0);
+		public MultisContext multis() {
+			return getRuleContext(MultisContext.class,0);
+		}
+		public AddsContext adds() {
+			return getRuleContext(AddsContext.class,0);
 		}
 		public ExpressionContext expression(int i) {
 			return getRuleContext(ExpressionContext.class,i);
+		}
+		public EqualitiesContext equalities() {
+			return getRuleContext(EqualitiesContext.class,0);
 		}
 		public List<ExpressionContext> expression() {
 			return getRuleContexts(ExpressionContext.class);
@@ -1667,7 +1675,7 @@ public class WaffleParser extends Parser {
 			int _alt;
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(239);
+			setState(243);
 			switch ( getInterpreter().adaptivePredict(_input,13,_ctx) ) {
 			case 1:
 				{
@@ -1675,8 +1683,8 @@ public class WaffleParser extends Parser {
 				_ctx = _localctx;
 				_prevctx = _localctx;
 
-				setState(227); ((ExpUnaryContext)_localctx).operator = un_op();
-				setState(228); expression(3);
+				setState(231); ((ExpUnaryContext)_localctx).operator = un_op();
+				setState(232); expression(3);
 				}
 				break;
 			case 2:
@@ -1684,9 +1692,9 @@ public class WaffleParser extends Parser {
 				_localctx = new ExpParenthesisContext(_localctx);
 				_ctx = _localctx;
 				_prevctx = _localctx;
-				setState(230); match(T__7);
-				setState(231); expression(0);
-				setState(232); match(T__6);
+				setState(234); match(T__7);
+				setState(235); expression(0);
+				setState(236); match(T__6);
 				}
 				break;
 			case 3:
@@ -1694,7 +1702,7 @@ public class WaffleParser extends Parser {
 				_localctx = new ExpLiteralContext(_localctx);
 				_ctx = _localctx;
 				_prevctx = _localctx;
-				setState(234); literal_expression();
+				setState(238); literal_expression();
 				}
 				break;
 			case 4:
@@ -1702,7 +1710,7 @@ public class WaffleParser extends Parser {
 				_localctx = new ExpVariableContext(_localctx);
 				_ctx = _localctx;
 				_prevctx = _localctx;
-				setState(235); variable_expression();
+				setState(239); variable_expression();
 				}
 				break;
 			case 5:
@@ -1710,7 +1718,7 @@ public class WaffleParser extends Parser {
 				_localctx = new ExpIndexedContext(_localctx);
 				_ctx = _localctx;
 				_prevctx = _localctx;
-				setState(236); indexed_expression();
+				setState(240); indexed_expression();
 				}
 				break;
 			case 6:
@@ -1718,7 +1726,7 @@ public class WaffleParser extends Parser {
 				_localctx = new NOTIMPLEMENTED1Context(_localctx);
 				_ctx = _localctx;
 				_prevctx = _localctx;
-				setState(237); call_expression();
+				setState(241); call_expression();
 				}
 				break;
 			case 7:
@@ -1726,33 +1734,60 @@ public class WaffleParser extends Parser {
 				_localctx = new ExpListContext(_localctx);
 				_ctx = _localctx;
 				_prevctx = _localctx;
-				setState(238); list_expression();
+				setState(242); list_expression();
 				}
 				break;
 			}
 			_ctx.stop = _input.LT(-1);
-			setState(247);
+			setState(259);
 			_errHandler.sync(this);
-			_alt = getInterpreter().adaptivePredict(_input,14,_ctx);
+			_alt = getInterpreter().adaptivePredict(_input,15,_ctx);
 			while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
 				if ( _alt==1 ) {
 					if ( _parseListeners!=null ) triggerExitRuleEvent();
 					_prevctx = _localctx;
 					{
-					{
-					_localctx = new ExpBinaryContext(new ExpressionContext(_parentctx, _parentState));
-					((ExpBinaryContext)_localctx).left = _prevctx;
-					pushNewRecursionContext(_localctx, _startState, RULE_expression);
-					setState(241);
-					if (!(precpred(_ctx, 7))) throw new FailedPredicateException(this, "precpred(_ctx, 7)");
-					setState(242); ((ExpBinaryContext)_localctx).operator = bin_op();
-					setState(243); ((ExpBinaryContext)_localctx).right = expression(8);
+					setState(257);
+					switch ( getInterpreter().adaptivePredict(_input,14,_ctx) ) {
+					case 1:
+						{
+						_localctx = new ExpBinaryContext(new ExpressionContext(_parentctx, _parentState));
+						((ExpBinaryContext)_localctx).left = _prevctx;
+						pushNewRecursionContext(_localctx, _startState, RULE_expression);
+						setState(245);
+						if (!(precpred(_ctx, 9))) throw new FailedPredicateException(this, "precpred(_ctx, 9)");
+						setState(246); multis();
+						setState(247); ((ExpBinaryContext)_localctx).right = expression(10);
+						}
+						break;
+					case 2:
+						{
+						_localctx = new ExpBinaryContext(new ExpressionContext(_parentctx, _parentState));
+						((ExpBinaryContext)_localctx).left = _prevctx;
+						pushNewRecursionContext(_localctx, _startState, RULE_expression);
+						setState(249);
+						if (!(precpred(_ctx, 8))) throw new FailedPredicateException(this, "precpred(_ctx, 8)");
+						setState(250); adds();
+						setState(251); ((ExpBinaryContext)_localctx).right = expression(9);
+						}
+						break;
+					case 3:
+						{
+						_localctx = new ExpBinaryContext(new ExpressionContext(_parentctx, _parentState));
+						((ExpBinaryContext)_localctx).left = _prevctx;
+						pushNewRecursionContext(_localctx, _startState, RULE_expression);
+						setState(253);
+						if (!(precpred(_ctx, 7))) throw new FailedPredicateException(this, "precpred(_ctx, 7)");
+						setState(254); equalities();
+						setState(255); ((ExpBinaryContext)_localctx).right = expression(8);
+						}
+						break;
 					}
 					} 
 				}
-				setState(249);
+				setState(261);
 				_errHandler.sync(this);
-				_alt = getInterpreter().adaptivePredict(_input,14,_ctx);
+				_alt = getInterpreter().adaptivePredict(_input,15,_ctx);
 			}
 			}
 		}
@@ -1812,31 +1847,31 @@ public class WaffleParser extends Parser {
 			_localctx = new ExpCallContext(_localctx);
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(250); variable();
-			setState(251); match(T__7);
-			setState(253);
+			setState(262); variable();
+			setState(263); match(T__7);
+			setState(265);
 			_la = _input.LA(1);
-			if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__7) | (1L << T__4) | (1L << INT) | (1L << DBL) | (1L << BOOL) | (1L << STR) | (1L << MINUS) | (1L << NOT) | (1L << HASH) | (1L << VAR))) != 0)) {
+			if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__7) | (1L << T__4) | (1L << INT) | (1L << DBL) | (1L << BOOL) | (1L << STR) | (1L << MINUS) | (1L << NOT) | (1L << VAR))) != 0)) {
 				{
-				setState(252); expression(0);
+				setState(264); expression(0);
 				}
 			}
 
-			setState(259);
+			setState(271);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			while (_la==T__2) {
 				{
 				{
-				setState(255); match(T__2);
-				setState(256); expression(0);
+				setState(267); match(T__2);
+				setState(268); expression(0);
 				}
 				}
-				setState(261);
+				setState(273);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
-			setState(262); match(T__6);
+			setState(274); match(T__6);
 			}
 		}
 		catch (RecognitionException re) {
@@ -1851,16 +1886,15 @@ public class WaffleParser extends Parser {
 	}
 
 	public static class Bin_opContext extends ParserRuleContext {
-		public TerminalNode NEQ() { return getToken(WaffleParser.NEQ, 0); }
-		public TerminalNode GTE() { return getToken(WaffleParser.GTE, 0); }
-		public TerminalNode LT() { return getToken(WaffleParser.LT, 0); }
-		public TerminalNode GT() { return getToken(WaffleParser.GT, 0); }
-		public TerminalNode PLUS() { return getToken(WaffleParser.PLUS, 0); }
-		public TerminalNode MINUS() { return getToken(WaffleParser.MINUS, 0); }
-		public TerminalNode EQ() { return getToken(WaffleParser.EQ, 0); }
-		public TerminalNode LTE() { return getToken(WaffleParser.LTE, 0); }
-		public TerminalNode DIV() { return getToken(WaffleParser.DIV, 0); }
-		public TerminalNode MUL() { return getToken(WaffleParser.MUL, 0); }
+		public MultisContext multis() {
+			return getRuleContext(MultisContext.class,0);
+		}
+		public AddsContext adds() {
+			return getRuleContext(AddsContext.class,0);
+		}
+		public EqualitiesContext equalities() {
+			return getRuleContext(EqualitiesContext.class,0);
+		}
 		public Bin_opContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
@@ -1883,13 +1917,183 @@ public class WaffleParser extends Parser {
 	public final Bin_opContext bin_op() throws RecognitionException {
 		Bin_opContext _localctx = new Bin_opContext(_ctx, getState());
 		enterRule(_localctx, 54, RULE_bin_op);
+		try {
+			setState(279);
+			switch (_input.LA(1)) {
+			case MUL:
+			case MOD:
+			case DIV:
+				enterOuterAlt(_localctx, 1);
+				{
+				setState(276); multis();
+				}
+				break;
+			case PLUS:
+			case MINUS:
+				enterOuterAlt(_localctx, 2);
+				{
+				setState(277); adds();
+				}
+				break;
+			case GT:
+			case GTE:
+			case LT:
+			case LTE:
+			case EQ:
+			case NEQ:
+				enterOuterAlt(_localctx, 3);
+				{
+				setState(278); equalities();
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	public static class AddsContext extends ParserRuleContext {
+		public TerminalNode PLUS() { return getToken(WaffleParser.PLUS, 0); }
+		public TerminalNode MINUS() { return getToken(WaffleParser.MINUS, 0); }
+		public AddsContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_adds; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof WaffleListener ) ((WaffleListener)listener).enterAdds(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof WaffleListener ) ((WaffleListener)listener).exitAdds(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof WaffleVisitor ) return ((WaffleVisitor<? extends T>)visitor).visitAdds(this);
+			else return visitor.visitChildren(this);
+		}
+	}
+
+	public final AddsContext adds() throws RecognitionException {
+		AddsContext _localctx = new AddsContext(_ctx, getState());
+		enterRule(_localctx, 56, RULE_adds);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(264);
+			setState(281);
 			_la = _input.LA(1);
-			if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << GT) | (1L << GTE) | (1L << LT) | (1L << LTE) | (1L << EQ) | (1L << NEQ) | (1L << PLUS) | (1L << MINUS) | (1L << MUL) | (1L << DIV))) != 0)) ) {
+			if ( !(_la==PLUS || _la==MINUS) ) {
+			_errHandler.recoverInline(this);
+			}
+			consume();
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	public static class MultisContext extends ParserRuleContext {
+		public TerminalNode MOD() { return getToken(WaffleParser.MOD, 0); }
+		public TerminalNode DIV() { return getToken(WaffleParser.DIV, 0); }
+		public TerminalNode MUL() { return getToken(WaffleParser.MUL, 0); }
+		public MultisContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_multis; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof WaffleListener ) ((WaffleListener)listener).enterMultis(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof WaffleListener ) ((WaffleListener)listener).exitMultis(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof WaffleVisitor ) return ((WaffleVisitor<? extends T>)visitor).visitMultis(this);
+			else return visitor.visitChildren(this);
+		}
+	}
+
+	public final MultisContext multis() throws RecognitionException {
+		MultisContext _localctx = new MultisContext(_ctx, getState());
+		enterRule(_localctx, 58, RULE_multis);
+		int _la;
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(283);
+			_la = _input.LA(1);
+			if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << MUL) | (1L << MOD) | (1L << DIV))) != 0)) ) {
+			_errHandler.recoverInline(this);
+			}
+			consume();
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	public static class EqualitiesContext extends ParserRuleContext {
+		public TerminalNode NEQ() { return getToken(WaffleParser.NEQ, 0); }
+		public TerminalNode GTE() { return getToken(WaffleParser.GTE, 0); }
+		public TerminalNode LT() { return getToken(WaffleParser.LT, 0); }
+		public TerminalNode GT() { return getToken(WaffleParser.GT, 0); }
+		public TerminalNode EQ() { return getToken(WaffleParser.EQ, 0); }
+		public TerminalNode LTE() { return getToken(WaffleParser.LTE, 0); }
+		public EqualitiesContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_equalities; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof WaffleListener ) ((WaffleListener)listener).enterEqualities(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof WaffleListener ) ((WaffleListener)listener).exitEqualities(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof WaffleVisitor ) return ((WaffleVisitor<? extends T>)visitor).visitEqualities(this);
+			else return visitor.visitChildren(this);
+		}
+	}
+
+	public final EqualitiesContext equalities() throws RecognitionException {
+		EqualitiesContext _localctx = new EqualitiesContext(_ctx, getState());
+		enterRule(_localctx, 60, RULE_equalities);
+		int _la;
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(285);
+			_la = _input.LA(1);
+			if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << GT) | (1L << GTE) | (1L << LT) | (1L << LTE) | (1L << EQ) | (1L << NEQ))) != 0)) ) {
 			_errHandler.recoverInline(this);
 			}
 			consume();
@@ -1909,7 +2113,6 @@ public class WaffleParser extends Parser {
 	public static class Un_opContext extends ParserRuleContext {
 		public TerminalNode NOT() { return getToken(WaffleParser.NOT, 0); }
 		public TerminalNode MINUS() { return getToken(WaffleParser.MINUS, 0); }
-		public TerminalNode HASH() { return getToken(WaffleParser.HASH, 0); }
 		public Un_opContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
@@ -1931,14 +2134,14 @@ public class WaffleParser extends Parser {
 
 	public final Un_opContext un_op() throws RecognitionException {
 		Un_opContext _localctx = new Un_opContext(_ctx, getState());
-		enterRule(_localctx, 56, RULE_un_op);
+		enterRule(_localctx, 62, RULE_un_op);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(266);
+			setState(287);
 			_la = _input.LA(1);
-			if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << MINUS) | (1L << NOT) | (1L << HASH))) != 0)) ) {
+			if ( !(_la==MINUS || _la==NOT) ) {
 			_errHandler.recoverInline(this);
 			}
 			consume();
@@ -1980,11 +2183,11 @@ public class WaffleParser extends Parser {
 
 	public final Variable_expressionContext variable_expression() throws RecognitionException {
 		Variable_expressionContext _localctx = new Variable_expressionContext(_ctx, getState());
-		enterRule(_localctx, 58, RULE_variable_expression);
+		enterRule(_localctx, 64, RULE_variable_expression);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(268); variable();
+			setState(289); variable();
 			}
 		}
 		catch (RecognitionException re) {
@@ -2000,8 +2203,11 @@ public class WaffleParser extends Parser {
 
 	public static class Indexed_expressionContext extends ParserRuleContext {
 		public ExpressionContext index;
-		public ExpressionContext expression() {
-			return getRuleContext(ExpressionContext.class,0);
+		public ExpressionContext expression(int i) {
+			return getRuleContext(ExpressionContext.class,i);
+		}
+		public List<ExpressionContext> expression() {
+			return getRuleContexts(ExpressionContext.class);
 		}
 		public VariableContext variable() {
 			return getRuleContext(VariableContext.class,0);
@@ -2027,14 +2233,33 @@ public class WaffleParser extends Parser {
 
 	public final Indexed_expressionContext indexed_expression() throws RecognitionException {
 		Indexed_expressionContext _localctx = new Indexed_expressionContext(_ctx, getState());
-		enterRule(_localctx, 60, RULE_indexed_expression);
+		enterRule(_localctx, 66, RULE_indexed_expression);
 		try {
+			int _alt;
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(270); variable();
-			setState(271); match(T__4);
-			setState(272); ((Indexed_expressionContext)_localctx).index = expression(0);
-			setState(273); match(T__1);
+			setState(291); variable();
+			setState(296); 
+			_errHandler.sync(this);
+			_alt = 1;
+			do {
+				switch (_alt) {
+				case 1:
+					{
+					{
+					setState(292); match(T__4);
+					setState(293); ((Indexed_expressionContext)_localctx).index = expression(0);
+					setState(294); match(T__1);
+					}
+					}
+					break;
+				default:
+					throw new NoViableAltException(this);
+				}
+				setState(298); 
+				_errHandler.sync(this);
+				_alt = getInterpreter().adaptivePredict(_input,19,_ctx);
+			} while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER );
 			}
 		}
 		catch (RecognitionException re) {
@@ -2079,27 +2304,27 @@ public class WaffleParser extends Parser {
 
 	public final Literal_expressionContext literal_expression() throws RecognitionException {
 		Literal_expressionContext _localctx = new Literal_expressionContext(_ctx, getState());
-		enterRule(_localctx, 62, RULE_literal_expression);
+		enterRule(_localctx, 68, RULE_literal_expression);
 		try {
-			setState(278);
+			setState(303);
 			switch (_input.LA(1)) {
 			case STR:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(275); string_literal();
+				setState(300); string_literal();
 				}
 				break;
 			case INT:
 			case DBL:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(276); numeric_literal();
+				setState(301); numeric_literal();
 				}
 				break;
 			case BOOL:
 				enterOuterAlt(_localctx, 3);
 				{
-				setState(277); boolean_literal();
+				setState(302); boolean_literal();
 				}
 				break;
 			default:
@@ -2145,35 +2370,35 @@ public class WaffleParser extends Parser {
 
 	public final List_expressionContext list_expression() throws RecognitionException {
 		List_expressionContext _localctx = new List_expressionContext(_ctx, getState());
-		enterRule(_localctx, 64, RULE_list_expression);
+		enterRule(_localctx, 70, RULE_list_expression);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(280); match(T__4);
-			setState(289);
+			setState(305); match(T__4);
+			setState(314);
 			_la = _input.LA(1);
-			if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__7) | (1L << T__4) | (1L << INT) | (1L << DBL) | (1L << BOOL) | (1L << STR) | (1L << MINUS) | (1L << NOT) | (1L << HASH) | (1L << VAR))) != 0)) {
+			if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__7) | (1L << T__4) | (1L << INT) | (1L << DBL) | (1L << BOOL) | (1L << STR) | (1L << MINUS) | (1L << NOT) | (1L << VAR))) != 0)) {
 				{
-				setState(281); expression(0);
-				setState(286);
+				setState(306); expression(0);
+				setState(311);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 				while (_la==T__2) {
 					{
 					{
-					setState(282); match(T__2);
-					setState(283); expression(0);
+					setState(307); match(T__2);
+					setState(308); expression(0);
 					}
 					}
-					setState(288);
+					setState(313);
 					_errHandler.sync(this);
 					_la = _input.LA(1);
 				}
 				}
 			}
 
-			setState(291); match(T__1);
+			setState(316); match(T__1);
 			}
 		}
 		catch (RecognitionException re) {
@@ -2212,11 +2437,11 @@ public class WaffleParser extends Parser {
 
 	public final String_literalContext string_literal() throws RecognitionException {
 		String_literalContext _localctx = new String_literalContext(_ctx, getState());
-		enterRule(_localctx, 66, RULE_string_literal);
+		enterRule(_localctx, 72, RULE_string_literal);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(293); string();
+			setState(318); string();
 			}
 		}
 		catch (RecognitionException re) {
@@ -2258,20 +2483,20 @@ public class WaffleParser extends Parser {
 
 	public final Numeric_literalContext numeric_literal() throws RecognitionException {
 		Numeric_literalContext _localctx = new Numeric_literalContext(_ctx, getState());
-		enterRule(_localctx, 68, RULE_numeric_literal);
+		enterRule(_localctx, 74, RULE_numeric_literal);
 		try {
-			setState(297);
+			setState(322);
 			switch (_input.LA(1)) {
 			case INT:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(295); integer();
+				setState(320); integer();
 				}
 				break;
 			case DBL:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(296); dooble();
+				setState(321); dooble();
 				}
 				break;
 			default:
@@ -2314,11 +2539,11 @@ public class WaffleParser extends Parser {
 
 	public final Boolean_literalContext boolean_literal() throws RecognitionException {
 		Boolean_literalContext _localctx = new Boolean_literalContext(_ctx, getState());
-		enterRule(_localctx, 70, RULE_boolean_literal);
+		enterRule(_localctx, 76, RULE_boolean_literal);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(299); buulean();
+			setState(324); buulean();
 			}
 		}
 		catch (RecognitionException re) {
@@ -2355,11 +2580,11 @@ public class WaffleParser extends Parser {
 
 	public final VariableContext variable() throws RecognitionException {
 		VariableContext _localctx = new VariableContext(_ctx, getState());
-		enterRule(_localctx, 72, RULE_variable);
+		enterRule(_localctx, 78, RULE_variable);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(301); match(VAR);
+			setState(326); match(VAR);
 			}
 		}
 		catch (RecognitionException re) {
@@ -2396,11 +2621,11 @@ public class WaffleParser extends Parser {
 
 	public final IntegerContext integer() throws RecognitionException {
 		IntegerContext _localctx = new IntegerContext(_ctx, getState());
-		enterRule(_localctx, 74, RULE_integer);
+		enterRule(_localctx, 80, RULE_integer);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(303); match(INT);
+			setState(328); match(INT);
 			}
 		}
 		catch (RecognitionException re) {
@@ -2437,11 +2662,11 @@ public class WaffleParser extends Parser {
 
 	public final DoobleContext dooble() throws RecognitionException {
 		DoobleContext _localctx = new DoobleContext(_ctx, getState());
-		enterRule(_localctx, 76, RULE_dooble);
+		enterRule(_localctx, 82, RULE_dooble);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(305); match(DBL);
+			setState(330); match(DBL);
 			}
 		}
 		catch (RecognitionException re) {
@@ -2478,11 +2703,11 @@ public class WaffleParser extends Parser {
 
 	public final StringContext string() throws RecognitionException {
 		StringContext _localctx = new StringContext(_ctx, getState());
-		enterRule(_localctx, 78, RULE_string);
+		enterRule(_localctx, 84, RULE_string);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(307); match(STR);
+			setState(332); match(STR);
 			}
 		}
 		catch (RecognitionException re) {
@@ -2519,11 +2744,11 @@ public class WaffleParser extends Parser {
 
 	public final BuuleanContext buulean() throws RecognitionException {
 		BuuleanContext _localctx = new BuuleanContext(_ctx, getState());
-		enterRule(_localctx, 80, RULE_buulean);
+		enterRule(_localctx, 86, RULE_buulean);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(309); match(BOOL);
+			setState(334); match(BOOL);
 			}
 		}
 		catch (RecognitionException re) {
@@ -2545,112 +2770,125 @@ public class WaffleParser extends Parser {
 	}
 	private boolean expression_sempred(ExpressionContext _localctx, int predIndex) {
 		switch (predIndex) {
-		case 0: return precpred(_ctx, 7);
+		case 0: return precpred(_ctx, 9);
+		case 1: return precpred(_ctx, 8);
+		case 2: return precpred(_ctx, 7);
 		}
 		return true;
 	}
 
 	public static final String _serializedATN =
-		"\3\u0430\ud6d1\u8206\uad2d\u4417\uaef1\u8d80\uaadd\3/\u013a\4\2\t\2\4"+
+		"\3\u0430\ud6d1\u8206\uad2d\u4417\uaef1\u8d80\uaadd\3/\u0153\4\2\t\2\4"+
 		"\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7\4\b\t\b\4\t\t\t\4\n\t\n\4\13\t"+
 		"\13\4\f\t\f\4\r\t\r\4\16\t\16\4\17\t\17\4\20\t\20\4\21\t\21\4\22\t\22"+
 		"\4\23\t\23\4\24\t\24\4\25\t\25\4\26\t\26\4\27\t\27\4\30\t\30\4\31\t\31"+
 		"\4\32\t\32\4\33\t\33\4\34\t\34\4\35\t\35\4\36\t\36\4\37\t\37\4 \t \4!"+
-		"\t!\4\"\t\"\4#\t#\4$\t$\4%\t%\4&\t&\4\'\t\'\4(\t(\4)\t)\4*\t*\3\2\7\2"+
-		"V\n\2\f\2\16\2Y\13\2\3\3\3\3\3\3\6\3^\n\3\r\3\16\3_\3\4\3\4\3\4\3\4\3"+
-		"\4\3\4\5\4h\n\4\3\5\3\5\3\5\3\5\3\6\3\6\3\6\3\6\5\6r\n\6\3\6\3\6\7\6v"+
-		"\n\6\f\6\16\6y\13\6\3\6\3\6\3\7\3\7\3\b\3\b\3\b\3\b\3\t\3\t\3\t\3\t\3"+
-		"\t\3\t\5\t\u0089\n\t\3\n\3\n\3\13\5\13\u008e\n\13\3\13\3\13\3\f\3\f\3"+
-		"\f\3\f\3\f\3\f\3\f\3\f\5\f\u009a\n\f\3\r\3\r\3\r\3\r\3\r\3\r\3\r\5\r\u00a3"+
-		"\n\r\3\16\3\16\7\16\u00a7\n\16\f\16\16\16\u00aa\13\16\3\16\5\16\u00ad"+
-		"\n\16\3\16\3\16\3\16\3\17\3\17\3\17\3\17\3\17\3\20\3\20\3\20\3\20\3\20"+
-		"\3\21\3\21\3\21\3\21\3\22\3\22\3\23\3\23\3\23\3\23\3\23\3\24\3\24\3\24"+
-		"\3\24\3\24\3\24\3\25\3\25\3\25\3\25\3\26\3\26\3\26\3\26\3\26\3\26\3\26"+
-		"\3\26\5\26\u00d9\n\26\3\27\3\27\3\30\3\30\5\30\u00df\n\30\3\31\3\31\3"+
-		"\32\3\32\3\33\3\33\3\33\3\33\3\33\3\33\3\33\3\33\3\33\3\33\3\33\3\33\3"+
-		"\33\5\33\u00f2\n\33\3\33\3\33\3\33\3\33\7\33\u00f8\n\33\f\33\16\33\u00fb"+
-		"\13\33\3\34\3\34\3\34\5\34\u0100\n\34\3\34\3\34\7\34\u0104\n\34\f\34\16"+
-		"\34\u0107\13\34\3\34\3\34\3\35\3\35\3\36\3\36\3\37\3\37\3 \3 \3 \3 \3"+
-		" \3!\3!\3!\5!\u0119\n!\3\"\3\"\3\"\3\"\7\"\u011f\n\"\f\"\16\"\u0122\13"+
-		"\"\5\"\u0124\n\"\3\"\3\"\3#\3#\3$\3$\5$\u012c\n$\3%\3%\3&\3&\3\'\3\'\3"+
-		"(\3(\3)\3)\3*\3*\3*\2\3\64+\2\4\6\b\n\f\16\20\22\24\26\30\32\34\36 \""+
-		"$&(*,.\60\62\64\668:<>@BDFHJLNPR\2\6\3\2\37\"\3\2&\'\3\2\22\33\4\2\31"+
-		"\31\34\35\u0130\2W\3\2\2\2\4]\3\2\2\2\6g\3\2\2\2\bi\3\2\2\2\nm\3\2\2\2"+
-		"\f|\3\2\2\2\16~\3\2\2\2\20\u0088\3\2\2\2\22\u008a\3\2\2\2\24\u008d\3\2"+
-		"\2\2\26\u0099\3\2\2\2\30\u00a2\3\2\2\2\32\u00a4\3\2\2\2\34\u00b1\3\2\2"+
-		"\2\36\u00b6\3\2\2\2 \u00bb\3\2\2\2\"\u00bf\3\2\2\2$\u00c1\3\2\2\2&\u00c6"+
-		"\3\2\2\2(\u00cc\3\2\2\2*\u00d8\3\2\2\2,\u00da\3\2\2\2.\u00dc\3\2\2\2\60"+
-		"\u00e0\3\2\2\2\62\u00e2\3\2\2\2\64\u00f1\3\2\2\2\66\u00fc\3\2\2\28\u010a"+
-		"\3\2\2\2:\u010c\3\2\2\2<\u010e\3\2\2\2>\u0110\3\2\2\2@\u0118\3\2\2\2B"+
-		"\u011a\3\2\2\2D\u0127\3\2\2\2F\u012b\3\2\2\2H\u012d\3\2\2\2J\u012f\3\2"+
-		"\2\2L\u0131\3\2\2\2N\u0133\3\2\2\2P\u0135\3\2\2\2R\u0137\3\2\2\2TV\5\6"+
-		"\4\2UT\3\2\2\2VY\3\2\2\2WU\3\2\2\2WX\3\2\2\2X\3\3\2\2\2YW\3\2\2\2Z[\5"+
-		"\30\r\2[\\\7\b\2\2\\^\3\2\2\2]Z\3\2\2\2^_\3\2\2\2_]\3\2\2\2_`\3\2\2\2"+
-		"`\5\3\2\2\2ab\5\30\r\2bc\7\b\2\2ch\3\2\2\2de\5\b\5\2ef\7\b\2\2fh\3\2\2"+
-		"\2ga\3\2\2\2gd\3\2\2\2h\7\3\2\2\2ij\5\n\6\2jk\5\4\3\2kl\7#\2\2l\t\3\2"+
-		"\2\2mn\7(\2\2no\5\f\7\2oq\7\4\2\2pr\5\24\13\2qp\3\2\2\2qr\3\2\2\2rw\3"+
-		"\2\2\2st\7\t\2\2tv\5\24\13\2us\3\2\2\2vy\3\2\2\2wu\3\2\2\2wx\3\2\2\2x"+
-		"z\3\2\2\2yw\3\2\2\2z{\7\5\2\2{\13\3\2\2\2|}\7/\2\2}\r\3\2\2\2~\177\7\24"+
-		"\2\2\177\u0080\5\20\t\2\u0080\u0081\7\22\2\2\u0081\17\3\2\2\2\u0082\u0089"+
-		"\5\22\n\2\u0083\u0084\7\3\2\2\u0084\u0085\7\24\2\2\u0085\u0086\5\20\t"+
-		"\2\u0086\u0087\7\22\2\2\u0087\u0089\3\2\2\2\u0088\u0082\3\2\2\2\u0088"+
-		"\u0083\3\2\2\2\u0089\21\3\2\2\2\u008a\u008b\t\2\2\2\u008b\23\3\2\2\2\u008c"+
-		"\u008e\t\3\2\2\u008d\u008c\3\2\2\2\u008d\u008e\3\2\2\2\u008e\u008f\3\2"+
-		"\2\2\u008f\u0090\5\26\f\2\u0090\25\3\2\2\2\u0091\u0092\5J&\2\u0092\u0093"+
-		"\5\16\b\2\u0093\u009a\3\2\2\2\u0094\u0095\5J&\2\u0095\u0096\5\16\b\2\u0096"+
-		"\u0097\7\13\2\2\u0097\u0098\5\64\33\2\u0098\u009a\3\2\2\2\u0099\u0091"+
-		"\3\2\2\2\u0099\u0094\3\2\2\2\u009a\27\3\2\2\2\u009b\u00a3\5*\26\2\u009c"+
-		"\u00a3\5$\23\2\u009d\u00a3\5\32\16\2\u009e\u00a3\5.\30\2\u009f\u00a3\5"+
-		"\60\31\2\u00a0\u00a3\5\62\32\2\u00a1\u00a3\5,\27\2\u00a2\u009b\3\2\2\2"+
-		"\u00a2\u009c\3\2\2\2\u00a2\u009d\3\2\2\2\u00a2\u009e\3\2\2\2\u00a2\u009f"+
-		"\3\2\2\2\u00a2\u00a0\3\2\2\2\u00a2\u00a1\3\2\2\2\u00a3\31\3\2\2\2\u00a4"+
-		"\u00a8\5\34\17\2\u00a5\u00a7\5\36\20\2\u00a6\u00a5\3\2\2\2\u00a7\u00aa"+
-		"\3\2\2\2\u00a8\u00a6\3\2\2\2\u00a8\u00a9\3\2\2\2\u00a9\u00ac\3\2\2\2\u00aa"+
-		"\u00a8\3\2\2\2\u00ab\u00ad\5 \21\2\u00ac\u00ab\3\2\2\2\u00ac\u00ad\3\2"+
-		"\2\2\u00ad\u00ae\3\2\2\2\u00ae\u00af\7#\2\2\u00af\u00b0\7)\2\2\u00b0\33"+
-		"\3\2\2\2\u00b1\u00b2\7)\2\2\u00b2\u00b3\5\"\22\2\u00b3\u00b4\7\6\2\2\u00b4"+
-		"\u00b5\5\4\3\2\u00b5\35\3\2\2\2\u00b6\u00b7\7*\2\2\u00b7\u00b8\5\"\22"+
-		"\2\u00b8\u00b9\7\6\2\2\u00b9\u00ba\5\4\3\2\u00ba\37\3\2\2\2\u00bb\u00bc"+
-		"\7+\2\2\u00bc\u00bd\7\6\2\2\u00bd\u00be\5\4\3\2\u00be!\3\2\2\2\u00bf\u00c0"+
-		"\5\64\33\2\u00c0#\3\2\2\2\u00c1\u00c2\5&\24\2\u00c2\u00c3\5\4\3\2\u00c3"+
-		"\u00c4\7#\2\2\u00c4\u00c5\7$\2\2\u00c5%\3\2\2\2\u00c6\u00c7\7%\2\2\u00c7"+
-		"\u00c8\5\26\f\2\u00c8\u00c9\7&\2\2\u00c9\u00ca\5(\25\2\u00ca\u00cb\7\6"+
-		"\2\2\u00cb\'\3\2\2\2\u00cc\u00cd\5\64\33\2\u00cd\u00ce\7\36\2\2\u00ce"+
-		"\u00cf\5\64\33\2\u00cf)\3\2\2\2\u00d0\u00d1\5<\37\2\u00d1\u00d2\7\13\2"+
-		"\2\u00d2\u00d3\5\64\33\2\u00d3\u00d9\3\2\2\2\u00d4\u00d5\5> \2\u00d5\u00d6"+
-		"\7\13\2\2\u00d6\u00d7\5\64\33\2\u00d7\u00d9\3\2\2\2\u00d8\u00d0\3\2\2"+
-		"\2\u00d8\u00d4\3\2\2\2\u00d9+\3\2\2\2\u00da\u00db\5\26\f\2\u00db-\3\2"+
-		"\2\2\u00dc\u00de\7-\2\2\u00dd\u00df\5\64\33\2\u00de\u00dd\3\2\2\2\u00de"+
-		"\u00df\3\2\2\2\u00df/\3\2\2\2\u00e0\u00e1\7.\2\2\u00e1\61\3\2\2\2\u00e2"+
-		"\u00e3\5\66\34\2\u00e3\63\3\2\2\2\u00e4\u00e5\b\33\1\2\u00e5\u00e6\5:"+
-		"\36\2\u00e6\u00e7\5\64\33\5\u00e7\u00f2\3\2\2\2\u00e8\u00e9\7\4\2\2\u00e9"+
-		"\u00ea\5\64\33\2\u00ea\u00eb\7\5\2\2\u00eb\u00f2\3\2\2\2\u00ec\u00f2\5"+
-		"@!\2\u00ed\u00f2\5<\37\2\u00ee\u00f2\5> \2\u00ef\u00f2\5\66\34\2\u00f0"+
-		"\u00f2\5B\"\2\u00f1\u00e4\3\2\2\2\u00f1\u00e8\3\2\2\2\u00f1\u00ec\3\2"+
-		"\2\2\u00f1\u00ed\3\2\2\2\u00f1\u00ee\3\2\2\2\u00f1\u00ef\3\2\2\2\u00f1"+
-		"\u00f0\3\2\2\2\u00f2\u00f9\3\2\2\2\u00f3\u00f4\f\t\2\2\u00f4\u00f5\58"+
-		"\35\2\u00f5\u00f6\5\64\33\n\u00f6\u00f8\3\2\2\2\u00f7\u00f3\3\2\2\2\u00f8"+
-		"\u00fb\3\2\2\2\u00f9\u00f7\3\2\2\2\u00f9\u00fa\3\2\2\2\u00fa\65\3\2\2"+
-		"\2\u00fb\u00f9\3\2\2\2\u00fc\u00fd\5J&\2\u00fd\u00ff\7\4\2\2\u00fe\u0100"+
-		"\5\64\33\2\u00ff\u00fe\3\2\2\2\u00ff\u0100\3\2\2\2\u0100\u0105\3\2\2\2"+
-		"\u0101\u0102\7\t\2\2\u0102\u0104\5\64\33\2\u0103\u0101\3\2\2\2\u0104\u0107"+
-		"\3\2\2\2\u0105\u0103\3\2\2\2\u0105\u0106\3\2\2\2\u0106\u0108\3\2\2\2\u0107"+
-		"\u0105\3\2\2\2\u0108\u0109\7\5\2\2\u0109\67\3\2\2\2\u010a\u010b\t\4\2"+
-		"\2\u010b9\3\2\2\2\u010c\u010d\t\5\2\2\u010d;\3\2\2\2\u010e\u010f\5J&\2"+
-		"\u010f=\3\2\2\2\u0110\u0111\5J&\2\u0111\u0112\7\7\2\2\u0112\u0113\5\64"+
-		"\33\2\u0113\u0114\7\n\2\2\u0114?\3\2\2\2\u0115\u0119\5D#\2\u0116\u0119"+
-		"\5F$\2\u0117\u0119\5H%\2\u0118\u0115\3\2\2\2\u0118\u0116\3\2\2\2\u0118"+
-		"\u0117\3\2\2\2\u0119A\3\2\2\2\u011a\u0123\7\7\2\2\u011b\u0120\5\64\33"+
-		"\2\u011c\u011d\7\t\2\2\u011d\u011f\5\64\33\2\u011e\u011c\3\2\2\2\u011f"+
-		"\u0122\3\2\2\2\u0120\u011e\3\2\2\2\u0120\u0121\3\2\2\2\u0121\u0124\3\2"+
-		"\2\2\u0122\u0120\3\2\2\2\u0123\u011b\3\2\2\2\u0123\u0124\3\2\2\2\u0124"+
-		"\u0125\3\2\2\2\u0125\u0126\7\n\2\2\u0126C\3\2\2\2\u0127\u0128\5P)\2\u0128"+
-		"E\3\2\2\2\u0129\u012c\5L\'\2\u012a\u012c\5N(\2\u012b\u0129\3\2\2\2\u012b"+
-		"\u012a\3\2\2\2\u012cG\3\2\2\2\u012d\u012e\5R*\2\u012eI\3\2\2\2\u012f\u0130"+
-		"\7/\2\2\u0130K\3\2\2\2\u0131\u0132\7\f\2\2\u0132M\3\2\2\2\u0133\u0134"+
-		"\7\r\2\2\u0134O\3\2\2\2\u0135\u0136\7\17\2\2\u0136Q\3\2\2\2\u0137\u0138"+
-		"\7\16\2\2\u0138S\3\2\2\2\27W_gqw\u0088\u008d\u0099\u00a2\u00a8\u00ac\u00d8"+
-		"\u00de\u00f1\u00f9\u00ff\u0105\u0118\u0120\u0123\u012b";
+		"\t!\4\"\t\"\4#\t#\4$\t$\4%\t%\4&\t&\4\'\t\'\4(\t(\4)\t)\4*\t*\4+\t+\4"+
+		",\t,\4-\t-\3\2\7\2\\\n\2\f\2\16\2_\13\2\3\3\3\3\3\3\6\3d\n\3\r\3\16\3"+
+		"e\3\4\3\4\3\4\3\4\3\4\3\4\5\4n\n\4\3\5\3\5\3\5\3\5\3\6\3\6\3\6\3\6\5\6"+
+		"x\n\6\3\6\3\6\7\6|\n\6\f\6\16\6\177\13\6\3\6\3\6\3\6\3\7\3\7\3\b\3\b\3"+
+		"\b\3\b\3\t\3\t\5\t\u008c\n\t\3\n\3\n\3\13\5\13\u0091\n\13\3\13\3\13\3"+
+		"\f\3\f\3\f\3\f\3\f\3\f\3\f\3\f\5\f\u009d\n\f\3\r\3\r\3\r\3\r\3\r\3\r\3"+
+		"\r\3\r\5\r\u00a7\n\r\3\16\3\16\7\16\u00ab\n\16\f\16\16\16\u00ae\13\16"+
+		"\3\16\5\16\u00b1\n\16\3\16\3\16\3\16\3\17\3\17\3\17\3\17\3\17\3\20\3\20"+
+		"\3\20\3\20\3\20\3\21\3\21\3\21\3\21\3\22\3\22\3\23\3\23\3\23\3\23\3\23"+
+		"\3\24\3\24\3\24\3\24\3\24\3\24\3\25\3\25\3\25\3\25\3\26\3\26\3\26\3\26"+
+		"\3\26\3\26\3\26\3\26\5\26\u00dd\n\26\3\27\3\27\3\30\3\30\5\30\u00e3\n"+
+		"\30\3\31\3\31\3\32\3\32\3\33\3\33\3\33\3\33\3\33\3\33\3\33\3\33\3\33\3"+
+		"\33\3\33\3\33\3\33\5\33\u00f6\n\33\3\33\3\33\3\33\3\33\3\33\3\33\3\33"+
+		"\3\33\3\33\3\33\3\33\3\33\7\33\u0104\n\33\f\33\16\33\u0107\13\33\3\34"+
+		"\3\34\3\34\5\34\u010c\n\34\3\34\3\34\7\34\u0110\n\34\f\34\16\34\u0113"+
+		"\13\34\3\34\3\34\3\35\3\35\3\35\5\35\u011a\n\35\3\36\3\36\3\37\3\37\3"+
+		" \3 \3!\3!\3\"\3\"\3#\3#\3#\3#\3#\6#\u012b\n#\r#\16#\u012c\3$\3$\3$\5"+
+		"$\u0132\n$\3%\3%\3%\3%\7%\u0138\n%\f%\16%\u013b\13%\5%\u013d\n%\3%\3%"+
+		"\3&\3&\3\'\3\'\5\'\u0145\n\'\3(\3(\3)\3)\3*\3*\3+\3+\3,\3,\3-\3-\3-\2"+
+		"\3\64.\2\4\6\b\n\f\16\20\22\24\26\30\32\34\36 \"$&(*,.\60\62\64\668:<"+
+		">@BDFHJLNPRTVX\2\b\3\2\37\"\3\2&\'\3\2\30\31\3\2\32\34\3\2\22\27\4\2\31"+
+		"\31\35\35\u014c\2]\3\2\2\2\4c\3\2\2\2\6m\3\2\2\2\bo\3\2\2\2\ns\3\2\2\2"+
+		"\f\u0083\3\2\2\2\16\u0085\3\2\2\2\20\u008b\3\2\2\2\22\u008d\3\2\2\2\24"+
+		"\u0090\3\2\2\2\26\u009c\3\2\2\2\30\u00a6\3\2\2\2\32\u00a8\3\2\2\2\34\u00b5"+
+		"\3\2\2\2\36\u00ba\3\2\2\2 \u00bf\3\2\2\2\"\u00c3\3\2\2\2$\u00c5\3\2\2"+
+		"\2&\u00ca\3\2\2\2(\u00d0\3\2\2\2*\u00dc\3\2\2\2,\u00de\3\2\2\2.\u00e0"+
+		"\3\2\2\2\60\u00e4\3\2\2\2\62\u00e6\3\2\2\2\64\u00f5\3\2\2\2\66\u0108\3"+
+		"\2\2\28\u0119\3\2\2\2:\u011b\3\2\2\2<\u011d\3\2\2\2>\u011f\3\2\2\2@\u0121"+
+		"\3\2\2\2B\u0123\3\2\2\2D\u0125\3\2\2\2F\u0131\3\2\2\2H\u0133\3\2\2\2J"+
+		"\u0140\3\2\2\2L\u0144\3\2\2\2N\u0146\3\2\2\2P\u0148\3\2\2\2R\u014a\3\2"+
+		"\2\2T\u014c\3\2\2\2V\u014e\3\2\2\2X\u0150\3\2\2\2Z\\\5\6\4\2[Z\3\2\2\2"+
+		"\\_\3\2\2\2][\3\2\2\2]^\3\2\2\2^\3\3\2\2\2_]\3\2\2\2`a\5\30\r\2ab\7\b"+
+		"\2\2bd\3\2\2\2c`\3\2\2\2de\3\2\2\2ec\3\2\2\2ef\3\2\2\2f\5\3\2\2\2gh\5"+
+		"\30\r\2hi\7\b\2\2in\3\2\2\2jk\5\b\5\2kl\7\b\2\2ln\3\2\2\2mg\3\2\2\2mj"+
+		"\3\2\2\2n\7\3\2\2\2op\5\n\6\2pq\5\4\3\2qr\7#\2\2r\t\3\2\2\2st\7(\2\2t"+
+		"u\5\f\7\2uw\7\4\2\2vx\5\24\13\2wv\3\2\2\2wx\3\2\2\2x}\3\2\2\2yz\7\t\2"+
+		"\2z|\5\24\13\2{y\3\2\2\2|\177\3\2\2\2}{\3\2\2\2}~\3\2\2\2~\u0080\3\2\2"+
+		"\2\177}\3\2\2\2\u0080\u0081\7\5\2\2\u0081\u0082\7\6\2\2\u0082\13\3\2\2"+
+		"\2\u0083\u0084\7/\2\2\u0084\r\3\2\2\2\u0085\u0086\7\24\2\2\u0086\u0087"+
+		"\5\20\t\2\u0087\u0088\7\22\2\2\u0088\17\3\2\2\2\u0089\u008c\5\22\n\2\u008a"+
+		"\u008c\7\3\2\2\u008b\u0089\3\2\2\2\u008b\u008a\3\2\2\2\u008c\21\3\2\2"+
+		"\2\u008d\u008e\t\2\2\2\u008e\23\3\2\2\2\u008f\u0091\t\3\2\2\u0090\u008f"+
+		"\3\2\2\2\u0090\u0091\3\2\2\2\u0091\u0092\3\2\2\2\u0092\u0093\5\26\f\2"+
+		"\u0093\25\3\2\2\2\u0094\u0095\5P)\2\u0095\u0096\5\16\b\2\u0096\u009d\3"+
+		"\2\2\2\u0097\u0098\5P)\2\u0098\u0099\5\16\b\2\u0099\u009a\7\13\2\2\u009a"+
+		"\u009b\5\64\33\2\u009b\u009d\3\2\2\2\u009c\u0094\3\2\2\2\u009c\u0097\3"+
+		"\2\2\2\u009d\27\3\2\2\2\u009e\u00a7\5*\26\2\u009f\u00a7\5$\23\2\u00a0"+
+		"\u00a7\5\32\16\2\u00a1\u00a7\5.\30\2\u00a2\u00a7\5\60\31\2\u00a3\u00a7"+
+		"\5\62\32\2\u00a4\u00a7\5,\27\2\u00a5\u00a7\3\2\2\2\u00a6\u009e\3\2\2\2"+
+		"\u00a6\u009f\3\2\2\2\u00a6\u00a0\3\2\2\2\u00a6\u00a1\3\2\2\2\u00a6\u00a2"+
+		"\3\2\2\2\u00a6\u00a3\3\2\2\2\u00a6\u00a4\3\2\2\2\u00a6\u00a5\3\2\2\2\u00a7"+
+		"\31\3\2\2\2\u00a8\u00ac\5\34\17\2\u00a9\u00ab\5\36\20\2\u00aa\u00a9\3"+
+		"\2\2\2\u00ab\u00ae\3\2\2\2\u00ac\u00aa\3\2\2\2\u00ac\u00ad\3\2\2\2\u00ad"+
+		"\u00b0\3\2\2\2\u00ae\u00ac\3\2\2\2\u00af\u00b1\5 \21\2\u00b0\u00af\3\2"+
+		"\2\2\u00b0\u00b1\3\2\2\2\u00b1\u00b2\3\2\2\2\u00b2\u00b3\7#\2\2\u00b3"+
+		"\u00b4\7)\2\2\u00b4\33\3\2\2\2\u00b5\u00b6\7)\2\2\u00b6\u00b7\5\"\22\2"+
+		"\u00b7\u00b8\7\6\2\2\u00b8\u00b9\5\4\3\2\u00b9\35\3\2\2\2\u00ba\u00bb"+
+		"\7*\2\2\u00bb\u00bc\5\"\22\2\u00bc\u00bd\7\6\2\2\u00bd\u00be\5\4\3\2\u00be"+
+		"\37\3\2\2\2\u00bf\u00c0\7+\2\2\u00c0\u00c1\7\6\2\2\u00c1\u00c2\5\4\3\2"+
+		"\u00c2!\3\2\2\2\u00c3\u00c4\5\64\33\2\u00c4#\3\2\2\2\u00c5\u00c6\5&\24"+
+		"\2\u00c6\u00c7\5\4\3\2\u00c7\u00c8\7#\2\2\u00c8\u00c9\7$\2\2\u00c9%\3"+
+		"\2\2\2\u00ca\u00cb\7%\2\2\u00cb\u00cc\5\26\f\2\u00cc\u00cd\7&\2\2\u00cd"+
+		"\u00ce\5(\25\2\u00ce\u00cf\7\6\2\2\u00cf\'\3\2\2\2\u00d0\u00d1\5\64\33"+
+		"\2\u00d1\u00d2\7\36\2\2\u00d2\u00d3\5\64\33\2\u00d3)\3\2\2\2\u00d4\u00d5"+
+		"\5B\"\2\u00d5\u00d6\7\13\2\2\u00d6\u00d7\5\64\33\2\u00d7\u00dd\3\2\2\2"+
+		"\u00d8\u00d9\5D#\2\u00d9\u00da\7\13\2\2\u00da\u00db\5\64\33\2\u00db\u00dd"+
+		"\3\2\2\2\u00dc\u00d4\3\2\2\2\u00dc\u00d8\3\2\2\2\u00dd+\3\2\2\2\u00de"+
+		"\u00df\5\26\f\2\u00df-\3\2\2\2\u00e0\u00e2\7-\2\2\u00e1\u00e3\5\64\33"+
+		"\2\u00e2\u00e1\3\2\2\2\u00e2\u00e3\3\2\2\2\u00e3/\3\2\2\2\u00e4\u00e5"+
+		"\7.\2\2\u00e5\61\3\2\2\2\u00e6\u00e7\5\66\34\2\u00e7\63\3\2\2\2\u00e8"+
+		"\u00e9\b\33\1\2\u00e9\u00ea\5@!\2\u00ea\u00eb\5\64\33\5\u00eb\u00f6\3"+
+		"\2\2\2\u00ec\u00ed\7\4\2\2\u00ed\u00ee\5\64\33\2\u00ee\u00ef\7\5\2\2\u00ef"+
+		"\u00f6\3\2\2\2\u00f0\u00f6\5F$\2\u00f1\u00f6\5B\"\2\u00f2\u00f6\5D#\2"+
+		"\u00f3\u00f6\5\66\34\2\u00f4\u00f6\5H%\2\u00f5\u00e8\3\2\2\2\u00f5\u00ec"+
+		"\3\2\2\2\u00f5\u00f0\3\2\2\2\u00f5\u00f1\3\2\2\2\u00f5\u00f2\3\2\2\2\u00f5"+
+		"\u00f3\3\2\2\2\u00f5\u00f4\3\2\2\2\u00f6\u0105\3\2\2\2\u00f7\u00f8\f\13"+
+		"\2\2\u00f8\u00f9\5<\37\2\u00f9\u00fa\5\64\33\f\u00fa\u0104\3\2\2\2\u00fb"+
+		"\u00fc\f\n\2\2\u00fc\u00fd\5:\36\2\u00fd\u00fe\5\64\33\13\u00fe\u0104"+
+		"\3\2\2\2\u00ff\u0100\f\t\2\2\u0100\u0101\5> \2\u0101\u0102\5\64\33\n\u0102"+
+		"\u0104\3\2\2\2\u0103\u00f7\3\2\2\2\u0103\u00fb\3\2\2\2\u0103\u00ff\3\2"+
+		"\2\2\u0104\u0107\3\2\2\2\u0105\u0103\3\2\2\2\u0105\u0106\3\2\2\2\u0106"+
+		"\65\3\2\2\2\u0107\u0105\3\2\2\2\u0108\u0109\5P)\2\u0109\u010b\7\4\2\2"+
+		"\u010a\u010c\5\64\33\2\u010b\u010a\3\2\2\2\u010b\u010c\3\2\2\2\u010c\u0111"+
+		"\3\2\2\2\u010d\u010e\7\t\2\2\u010e\u0110\5\64\33\2\u010f\u010d\3\2\2\2"+
+		"\u0110\u0113\3\2\2\2\u0111\u010f\3\2\2\2\u0111\u0112\3\2\2\2\u0112\u0114"+
+		"\3\2\2\2\u0113\u0111\3\2\2\2\u0114\u0115\7\5\2\2\u0115\67\3\2\2\2\u0116"+
+		"\u011a\5<\37\2\u0117\u011a\5:\36\2\u0118\u011a\5> \2\u0119\u0116\3\2\2"+
+		"\2\u0119\u0117\3\2\2\2\u0119\u0118\3\2\2\2\u011a9\3\2\2\2\u011b\u011c"+
+		"\t\4\2\2\u011c;\3\2\2\2\u011d\u011e\t\5\2\2\u011e=\3\2\2\2\u011f\u0120"+
+		"\t\6\2\2\u0120?\3\2\2\2\u0121\u0122\t\7\2\2\u0122A\3\2\2\2\u0123\u0124"+
+		"\5P)\2\u0124C\3\2\2\2\u0125\u012a\5P)\2\u0126\u0127\7\7\2\2\u0127\u0128"+
+		"\5\64\33\2\u0128\u0129\7\n\2\2\u0129\u012b\3\2\2\2\u012a\u0126\3\2\2\2"+
+		"\u012b\u012c\3\2\2\2\u012c\u012a\3\2\2\2\u012c\u012d\3\2\2\2\u012dE\3"+
+		"\2\2\2\u012e\u0132\5J&\2\u012f\u0132\5L\'\2\u0130\u0132\5N(\2\u0131\u012e"+
+		"\3\2\2\2\u0131\u012f\3\2\2\2\u0131\u0130\3\2\2\2\u0132G\3\2\2\2\u0133"+
+		"\u013c\7\7\2\2\u0134\u0139\5\64\33\2\u0135\u0136\7\t\2\2\u0136\u0138\5"+
+		"\64\33\2\u0137\u0135\3\2\2\2\u0138\u013b\3\2\2\2\u0139\u0137\3\2\2\2\u0139"+
+		"\u013a\3\2\2\2\u013a\u013d\3\2\2\2\u013b\u0139\3\2\2\2\u013c\u0134\3\2"+
+		"\2\2\u013c\u013d\3\2\2\2\u013d\u013e\3\2\2\2\u013e\u013f\7\n\2\2\u013f"+
+		"I\3\2\2\2\u0140\u0141\5V,\2\u0141K\3\2\2\2\u0142\u0145\5R*\2\u0143\u0145"+
+		"\5T+\2\u0144\u0142\3\2\2\2\u0144\u0143\3\2\2\2\u0145M\3\2\2\2\u0146\u0147"+
+		"\5X-\2\u0147O\3\2\2\2\u0148\u0149\7/\2\2\u0149Q\3\2\2\2\u014a\u014b\7"+
+		"\f\2\2\u014bS\3\2\2\2\u014c\u014d\7\r\2\2\u014dU\3\2\2\2\u014e\u014f\7"+
+		"\17\2\2\u014fW\3\2\2\2\u0150\u0151\7\16\2\2\u0151Y\3\2\2\2\32]emw}\u008b"+
+		"\u0090\u009c\u00a6\u00ac\u00b0\u00dc\u00e2\u00f5\u0103\u0105\u010b\u0111"+
+		"\u0119\u012c\u0131\u0139\u013c\u0144";
 	public static final ATN _ATN =
 		new ATNDeserializer().deserialize(_serializedATN.toCharArray());
 	static {

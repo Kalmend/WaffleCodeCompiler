@@ -10,13 +10,13 @@ code_block : (statement ';')
 
 
 subroutine : subroutine_header body END;
-subroutine_header : SUB routine_name '(' param? (',' param)* ')';
+subroutine_header : SUB routine_name '(' param? (',' param)* ')' ':';
 routine_name : VAR;
 
 type_decl : '<' type '>';
 
 type :  scalar_type
-     | 'Array''<'type'>'
+     | 'Array'
      ;
 
 scalar_type : INT_TYPE
@@ -40,7 +40,7 @@ statement  : assign_statement
            | break_statement
            | call_statement
            | decl_statement
-           //TODO: | null_statement
+           |
            ;
 
 //conditional statements
@@ -69,7 +69,10 @@ call_statement : call_expression;
 
 //--------------------------------------Expressions----------------------//
 expression:   '(' expression ')'                                            #expParenthesis
-    |  left=expression operator=bin_op right=expression                     #expBinary
+    //| expBinary                     #expWhatever
+    |left=expression multis right=expression                                #expBinary
+    | left=expression adds right=expression                                 #expBinary
+    | left=expression equalities right=expression                           #expBinary
     |  literal_expression                                                   #expLiteral
     |  variable_expression                                                  #expVariable
     |  indexed_expression                                                   #expIndexed
@@ -88,13 +91,20 @@ expression:   '(' expression ')'                                            #exp
 ;
 
 call_expression : variable '(' expression? (',' expression)* ')'             #expCall;
+/*expBinary: left=expression multis right=expression
+    | left=expression adds right=expression
+    | left=expression equalities right=expression
+    ;*/
+bin_op : multis|adds|equalities;
+adds: PLUS|MINUS;
+multis : MUL|DIV|MOD;
+equalities : EQ|NEQ|GT|GTE|LT|LTE;
 
-bin_op : MUL|DIV|PLUS|MINUS|EQ|NEQ|GT|GTE|LT|LTE;
-un_op : HASH|NOT|MINUS;
+un_op : NOT|MINUS;
 
 variable_expression : variable;
 
-indexed_expression : variable '[' index=expression ']';
+indexed_expression : variable ('[' index=expression ']')+;
 
 literal_expression : string_literal
                    | numeric_literal
@@ -134,9 +144,9 @@ NEQ : '!=';
 PLUS: '+';
 MINUS: '-';
 MUL: '*';
+MOD: '%';
 DIV: '/';
 NOT: '!';
-HASH: '#';
 ARROW: '->';
 INT_TYPE: 'Int';
 DBL_TYPE: 'Double';

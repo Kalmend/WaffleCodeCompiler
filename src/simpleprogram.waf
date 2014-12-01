@@ -30,8 +30,8 @@
   x<Int> = 3;
   countdown();*/
 
-/*
-  sub bottles99()
+
+  sub bottles99():
         for quant<Int> in 99 -> 1:
            suffix<String>;
            if quant > 1:
@@ -52,9 +52,10 @@
         end loop;
     end;
 
-    bottles99();*/
+    bottles99();
 
-    sub bubbleSort(IN alist<Array<Int>>)
+
+    sub bubbleSort(IN alist<Array>):
 
           for passnum<Int> in len(alist)-1 -> 1:
 
@@ -78,7 +79,7 @@
           return alist;
       end;
 
-      alist<Array<Int>> = [1 , 3 , 2 , 4, 6 ,5];
+      alist<Array> = [1 , 3 , 2 , 4, 6 ,5];
 
       /*for i<Int> in 1 -> 1:
         for j<Int> in 1 -> 1:
@@ -88,7 +89,19 @@
       end loop;*/
 
 
-      println(alist);
+      //println(alist);
 
       println("bubblesort returned " + bubbleSort(alist));
+
+     sub factorial(IN val<Int>):
+        println(val);
+        if val <= 1:
+            return 1;
+        end if;
+        return val*factorial(val-1);
+
+     end;
+
+    println(factorial(4));
+
 

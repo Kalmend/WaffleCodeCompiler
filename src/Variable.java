@@ -48,6 +48,7 @@ public class Variable  {
     }
 
 
+
     public enum VarType {NULL,tInt, tDouble, tBoolean, tString, tArray, RETURN, BREAK};
 
     public String getStrData() {
@@ -104,7 +105,13 @@ public class Variable  {
         switch(type)
         {
             case NULL: return new Variable(VarType.NULL);
-            case tArray: return new Variable(this.arrData.addAll(rh.getArrData()));
+            case tArray: {
+                if(rh.getType() == VarType.tArray) {
+                    this.arrData.addAll(rh.getArrData());
+                    return new Variable(arrData);
+                }
+                return new Variable(VarType.NULL);
+            }
             case tInt:{
                 if(rh.getType() == VarType.tInt)
                     return new Variable(this.intData + rh.getIntData());
@@ -138,7 +145,13 @@ public class Variable  {
         switch(type)
         {
             case NULL: return new Variable(VarType.NULL);
-            case tArray: return new Variable(VarType.NULL);
+            case tArray: {
+                if(rh.getType() == VarType.tInt) {
+                    this.arrData.remove(rh.getIntData().intValue());
+                    return new Variable(arrData);
+                }
+                return new Variable(VarType.NULL);
+            }
             case tInt:{
                 if(rh.getType() == VarType.tInt)
                     return new Variable(this.intData - rh.getIntData());
@@ -159,6 +172,126 @@ public class Variable  {
 
         }
     }
+
+    public Variable mul(Variable rh) {
+        switch(type)
+        {
+            case tInt:{
+                if(rh.getType() == VarType.tInt)
+                    return new Variable(this.intData * rh.getIntData());
+                if ( rh.getType() == VarType.tDouble)
+                    return new Variable((this.intData * rh.getDblData().intValue()));
+                return new Variable(VarType.NULL);
+            }
+            case tDouble:{
+                if(rh.getType() == VarType.tInt)
+                    return new Variable(this.dblData * rh.getIntData());
+                if ( rh.getType() == VarType.tDouble)
+                    return new Variable(this.dblData * rh.getDblData());
+                return new Variable(VarType.NULL);
+            }
+            default: return new Variable(VarType.NULL);
+
+        }
+    }
+
+    public Variable div(Variable rh) {
+        switch(type)
+        {
+            case tInt:{
+                if(rh.getType() == VarType.tInt)
+                    return new Variable(this.intData / rh.getIntData());
+                if ( rh.getType() == VarType.tDouble)
+                    return new Variable((this.intData / rh.getDblData().intValue()));
+                return new Variable(VarType.NULL);
+            }
+            case tDouble:{
+                if(rh.getType() == VarType.tInt)
+                    return new Variable(this.dblData / rh.getIntData());
+                if ( rh.getType() == VarType.tDouble)
+                    return new Variable(this.dblData / rh.getDblData());
+                return new Variable(VarType.NULL);
+            }
+            default: return new Variable(VarType.NULL);
+
+        }
+
+    }
+
+    public Variable mod(Variable rh) {
+        switch(type)
+        {
+            case tInt:{
+                if(rh.getType() == VarType.tInt)
+                    return new Variable(this.intData % rh.getIntData());
+                if ( rh.getType() == VarType.tDouble)
+                    return new Variable((this.intData % rh.getDblData().intValue()));
+                return new Variable(VarType.NULL);
+            }
+            case tDouble:{
+                if(rh.getType() == VarType.tInt)
+                    return new Variable(this.dblData % rh.getIntData());
+                if ( rh.getType() == VarType.tDouble)
+                    return new Variable(this.dblData % rh.getDblData());
+                return new Variable(VarType.NULL);
+            }
+            default: return new Variable(VarType.NULL);
+
+        }
+    }
+
+    public Variable GTE(Variable rh) {
+        switch(type)
+        {
+            case NULL: return new Variable(VarType.NULL);
+            case tArray: return new Variable(VarType.NULL);
+            case tInt:{
+                if(rh.getType() == VarType.tInt)
+                    return new Variable(this.intData >= rh.getIntData());
+                if ( rh.getType() == VarType.tDouble)
+                    return new Variable((this.intData >= rh.getDblData().intValue()));
+                return new Variable(VarType.NULL);
+            }
+            case tDouble:{
+                if(rh.getType() == VarType.tInt)
+                    return new Variable(this.dblData >= rh.getIntData());
+                if ( rh.getType() == VarType.tDouble)
+                    return new Variable(this.dblData >= rh.getDblData());
+                return new Variable(VarType.NULL);
+            }
+            case tBoolean: return new Variable(VarType.NULL);
+            case tString: return new Variable(VarType.NULL);
+            default: return new Variable(VarType.NULL);
+
+        }
+    }
+
+    public Variable LTE(Variable rh) {
+        switch(type)
+        {
+            case NULL: return new Variable(VarType.NULL);
+            case tArray: return new Variable(VarType.NULL);
+            case tInt:{
+                if(rh.getType() == VarType.tInt)
+                    return new Variable(this.intData <= rh.getIntData());
+                if ( rh.getType() == VarType.tDouble)
+                    return new Variable((this.intData <= rh.getDblData().intValue()));
+                return new Variable(VarType.NULL);
+            }
+            case tDouble:{
+                if(rh.getType() == VarType.tInt)
+                    return new Variable(this.dblData <= rh.getIntData());
+                if ( rh.getType() == VarType.tDouble)
+                    return new Variable(this.dblData <= rh.getDblData());
+                return new Variable(VarType.NULL);
+            }
+            case tBoolean: return new Variable(VarType.NULL);
+            case tString: return new Variable(VarType.NULL);
+            default: return new Variable(VarType.NULL);
+
+        }
+    }
+
 
     public Variable GT(Variable rh)
     {
@@ -348,6 +481,17 @@ public class Variable  {
             case tBoolean: return boolData.toString();
             case tString: return strData.toString();
             default: return "ERROR";
+
+        }
+    }
+
+
+    public Variable not() {
+        switch(type)
+        {
+
+            case tBoolean:return new Variable(!this.boolData);
+            default: return new Variable(VarType.NULL);
 
         }
     }

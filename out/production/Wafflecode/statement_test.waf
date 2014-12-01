@@ -16,13 +16,11 @@
   println("a + b = " + (a + b));
 
   println("\nTesting array init with declaration");
-  list<Array<Int>> = [1,2,3,4,5,"tiger","cat",true,false];
+  list<Array> = [1,2,3,4,5,"tiger","cat",true,false];
   println("Initialized array: " + list);
   println("\nTesting array assignment");
 
   list = [11,22,33,44,55,"Wolf","dog",false,true];
-  //list.add(69) //BROKEN
-  //list.remove("Wolf") //BROKEN
   println("assigned array: " + list);
 
   println("\nTesting array element access");
@@ -30,8 +28,33 @@
   list[0] = 1000 + list[1];
   println("array: " + list);
 
+ println("\nTesting array add");
+  arrg<Array> = [1,2,3];
+  dog<String> = "dog";
+  arrg = arrg + [dog];
+  println(arrg);
+  arrg = arrg - 3;
+  println(arrg);
+
   println("\nTesting multidimensional array");
-  mult<Array<Array<Int>>> = [[1,1],[2,2]];
-  //mult[0][0] = 900; //BROKEN
-  //mult[0].add("test"); //BROKEN
-  println("Multidim array: " + mult);
+    mult<Array> = [[1,1],[2,2]];
+    mult[0][0] = 900;
+    println("Multidim array: " + mult);
+    mult[0] = mult[0] + ["cat"];
+    println("Multidim array: " + mult);
+    mult = mult + ["dog"];
+    println("Multidim array: " + mult);
+    mult[1][0] = 800;
+    println("Multidim array: " + mult[1][1]);
+
+  println("\nTesting precedence");
+  println("3 + 1*7 = " + (3 + 1*7));
+  println("2.5 + 2.5*3 = " + (2.5 + 2.5*3));
+
+
+  println("\nTesting unary expressions");
+  println("5 + (-1) = " +  (5 + (-1))  );
+  println("5 + -1  = " + (5 +-1) );
+  println("!true = " + !true);
+  println("!!true = " + !!true);
+

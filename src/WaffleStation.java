@@ -96,7 +96,7 @@ public class WaffleStation extends WaffleBaseVisitor<Object> {
         Variable expValue = null;
         if(ctx.expression() != null)
              expValue = (Variable) visit(ctx.expression());
-        if(expValue != null && value.getType() == expValue.getType())
+        if(expValue != null && value.getType() == expValue.getType() )
         {
             value.copy(expValue);
         } else if (expValue != null)
@@ -171,20 +171,60 @@ public class WaffleStation extends WaffleBaseVisitor<Object> {
     public Object visitIndexed_expression(@NotNull WaffleParser.Indexed_expressionContext ctx) {
 
         Variable Var= (Variable)visit(ctx.variable());
-        Variable Idx= (Variable)visit(ctx.index);
+
+        List<Integer> indexes =  new ArrayList<Integer>();
+
+        for(WaffleParser.ExpressionContext con : ctx.expression())
+        {
+            indexes.add(((Variable)visit(con)).getIntData().intValue());
+        }
+
         Variable returnVal = new Variable(Variable.VarType.NULL);
+
+        int check = 0;
         try{
-            returnVal =Var.getArrData().get(Idx.getIntData());
+
+            returnVal = Var.getArrData().get(indexes.get(0));
+
+            check++;
+            for(int i : indexes.subList( 1, indexes.size() )) {
+
+                returnVal = returnVal.getArrData().get(i);
+
+                check++;
+            }
 
         } catch(Exception e) {
-            ERROR("Array index out of bounds " + Idx.getIntData() + " size is  " + Var.getArrData().size() + ". [" + ctx.getStart().getLine() + "]");
+            ERROR("Array index out of bounds " + indexes.get(check) + " size is  " + returnVal.getArrData().size() + ". [" + ctx.getStart().getLine() + "]");
         }
         return returnVal;
     }
 
     @Override
     public Object visitExpUnary(@NotNull WaffleParser.ExpUnaryContext ctx) {
-        return super.visitExpUnary(ctx);
+        String op = ctx.un_op().getText();
+
+        if(op.equals("-")) {
+            Variable a = new Variable(0);
+            Variable b = (Variable) visit(ctx.expression());
+            a = a.sub(b);
+            if(a.getType() == Variable.VarType.NULL)
+            {
+                ERROR("Unary operation '-' not supported for type : " + b.getType().toString() + "  [" + ctx.getStart().getLine() + "]");
+            }
+            return a;
+        } else if (op.equals("!"))
+        {
+            Variable a = new Variable(0);
+            Variable b = (Variable) visit(ctx.expression());
+            a = b.not();
+            if(a.getType() == Variable.VarType.NULL)
+            {
+                ERROR("Unary operation '!' not supported for type : " + b.getType().toString() + "  [" + ctx.getStart().getLine() + "]");
+            }
+            return a;
+        }
+        return new Variable(Variable.VarType.NULL);
     }
 
 
@@ -194,22 +234,47 @@ public class WaffleStation extends WaffleBaseVisitor<Object> {
         Variable leftside = (Variable) visit(ctx.left);
         Variable rightside =(Variable) visit(ctx.right);
         Variable result = null;
+        String operator = "";
+        if(ctx.adds() != null)
+            operator = ctx.adds().getText();
 
-        //TODO: Use tokens instead
-        if (ctx.operator.getText().equals("+")) {
-            result = leftside.add(rightside);
-        }else if (ctx.operator.getText().equals("-")) {
-            result = leftside.sub(rightside);
-        }else if (ctx.operator.getText().equals("==")) {
-            result = leftside.EQ(rightside);
-        }else if (ctx.operator.getText().equals(">")) {
-            result = leftside.GT(rightside);
-        }else if (ctx.operator.getText().equals(">")) {
-            result = leftside.LT(rightside);
+        if(ctx.multis() != null)
+            operator = ctx.multis().getText();
+
+        if(ctx.equalities() != null)
+            operator = ctx.equalities().getText();
+
+        try
+        {
+            if (operator.equals("+")) {
+                result = leftside.add(rightside);
+            }else if (operator.equals("-")) {
+                    result = leftside.sub(rightside);
+            }else if (operator.equals("==")) {
+                result = leftside.EQ(rightside);
+            }else if (operator.equals(">")) {
+                result = leftside.GT(rightside);
+            }else if (operator.equals("<")) {
+                result = leftside.LT(rightside);
+            }else if (operator.equals("*")) {
+                result = leftside.mul(rightside);
+            }else if (operator.equals("/")) {
+                result = leftside.div(rightside);
+            }else if (operator.equals(">=")) {
+                result = leftside.GTE(rightside);
+            }else if (operator.equals("<=")) {
+                result = leftside.LTE(rightside);
+            }else if (operator.equals("%")) {
+                result = leftside.mod(rightside);
+            }
+
+        }catch (IndexOutOfBoundsException e)
+        {
+            ERROR("Array index out of bounds : size: " +leftside.getArrData().size() + "  index:" + rightside.getIntData() + " [" + ctx.getStart().getLine() + "]");
         }
 
         if(result.getType() == Variable.VarType.NULL) {
-            ERROR("Ivalid operation : " + leftside.getType() + " " + ctx.operator.getText() +  " " + rightside.getType()+ " [" + ctx.getStart().getLine() + "]");
+            ERROR("Ivalid operation : " + leftside.getType() + " " + operator +  " " + rightside.getType()+ " [" + ctx.getStart().getLine() + "]");
         }
         return result;
 

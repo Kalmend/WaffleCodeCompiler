@@ -54,7 +54,7 @@ public class SubWaffleStation  extends WaffleStation {
 
         for (Map.Entry<String, Variable> entry : mem.entrySet())
         {
-            if(entry.getValue().getType() != parent.mem.get(callExps.get(i).getText()).getType())
+            if(entry.getValue().getType() != ((Variable)parent.visit(callExps.get(i))).getType())
                 return false;
             i++;
         }

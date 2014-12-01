@@ -18,7 +18,7 @@ public class WaffleLexer extends Lexer {
 	public static final int
 		T__8=1, T__7=2, T__6=3, T__5=4, T__4=5, T__3=6, T__2=7, T__1=8, T__0=9, 
 		INT=10, DBL=11, BOOL=12, STR=13, COMMENT=14, WS=15, GT=16, GTE=17, LT=18, 
-		LTE=19, EQ=20, NEQ=21, PLUS=22, MINUS=23, MUL=24, DIV=25, NOT=26, HASH=27, 
+		LTE=19, EQ=20, NEQ=21, PLUS=22, MINUS=23, MUL=24, MOD=25, DIV=26, NOT=27, 
 		ARROW=28, INT_TYPE=29, DBL_TYPE=30, STR_TYPE=31, BOOL_TYPE=32, END=33, 
 		LOOP=34, FOR=35, IN=36, OUT=37, SUB=38, IF=39, ELIF=40, ELSE=41, RANGE=42, 
 		RETURN=43, BREAK=44, VAR=45;
@@ -38,7 +38,7 @@ public class WaffleLexer extends Lexer {
 	public static final String[] ruleNames = {
 		"T__8", "T__7", "T__6", "T__5", "T__4", "T__3", "T__2", "T__1", "T__0", 
 		"INT", "DBL", "BOOL", "STR", "COMMENT", "WS", "GT", "GTE", "LT", "LTE", 
-		"EQ", "NEQ", "PLUS", "MINUS", "MUL", "DIV", "NOT", "HASH", "ARROW", "INT_TYPE", 
+		"EQ", "NEQ", "PLUS", "MINUS", "MUL", "MOD", "DIV", "NOT", "ARROW", "INT_TYPE", 
 		"DBL_TYPE", "STR_TYPE", "BOOL_TYPE", "END", "LOOP", "FOR", "IN", "OUT", 
 		"SUB", "IF", "ELIF", "ELSE", "RANGE", "RETURN", "BREAK", "VAR"
 	};
@@ -141,8 +141,8 @@ public class WaffleLexer extends Lexer {
 		"\2\u00c2(\3\2\2\2\u00c3\u00c4\7?\2\2\u00c4\u00c5\7?\2\2\u00c5*\3\2\2\2"+
 		"\u00c6\u00c7\7#\2\2\u00c7\u00c8\7?\2\2\u00c8,\3\2\2\2\u00c9\u00ca\7-\2"+
 		"\2\u00ca.\3\2\2\2\u00cb\u00cc\7/\2\2\u00cc\60\3\2\2\2\u00cd\u00ce\7,\2"+
-		"\2\u00ce\62\3\2\2\2\u00cf\u00d0\7\61\2\2\u00d0\64\3\2\2\2\u00d1\u00d2"+
-		"\7#\2\2\u00d2\66\3\2\2\2\u00d3\u00d4\7%\2\2\u00d48\3\2\2\2\u00d5\u00d6"+
+		"\2\u00ce\62\3\2\2\2\u00cf\u00d0\7\'\2\2\u00d0\64\3\2\2\2\u00d1\u00d2\7"+
+		"\61\2\2\u00d2\66\3\2\2\2\u00d3\u00d4\7#\2\2\u00d48\3\2\2\2\u00d5\u00d6"+
 		"\7/\2\2\u00d6\u00d7\7@\2\2\u00d7:\3\2\2\2\u00d8\u00d9\7K\2\2\u00d9\u00da"+
 		"\7p\2\2\u00da\u00db\7v\2\2\u00db<\3\2\2\2\u00dc\u00dd\7F\2\2\u00dd\u00de"+
 		"\7q\2\2\u00de\u00df\7w\2\2\u00df\u00e0\7d\2\2\u00e0\u00e1\7n\2\2\u00e1"+

@@ -17,23 +17,17 @@ public interface WaffleVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitCall_statement(@NotNull WaffleParser.Call_statementContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link WaffleParser#string}.
+	 * Visit a parse tree produced by {@link WaffleParser#equalities}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitString(@NotNull WaffleParser.StringContext ctx);
+	T visitEqualities(@NotNull WaffleParser.EqualitiesContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link WaffleParser#buulean}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
 	T visitBuulean(@NotNull WaffleParser.BuuleanContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link WaffleParser#boolean_literal}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitBoolean_literal(@NotNull WaffleParser.Boolean_literalContext ctx);
 	/**
 	 * Visit a parse tree produced by the {@code expIndexed}
 	 * labeled alternative in {@link WaffleParser#expression}.
@@ -72,6 +66,116 @@ public interface WaffleVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitType(@NotNull WaffleParser.TypeContext ctx);
 	/**
+	 * Visit a parse tree produced by {@link WaffleParser#for_header}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitFor_header(@NotNull WaffleParser.For_headerContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link WaffleParser#elser}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitElser(@NotNull WaffleParser.ElserContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link WaffleParser#return_statement}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitReturn_statement(@NotNull WaffleParser.Return_statementContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code expBinary}
+	 * labeled alternative in {@link WaffleParser#expression}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitExpBinary(@NotNull WaffleParser.ExpBinaryContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link WaffleParser#numeric_literal}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitNumeric_literal(@NotNull WaffleParser.Numeric_literalContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link WaffleParser#range_exp}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitRange_exp(@NotNull WaffleParser.Range_expContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link WaffleParser#code_block}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitCode_block(@NotNull WaffleParser.Code_blockContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link WaffleParser#elif}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitElif(@NotNull WaffleParser.ElifContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link WaffleParser#bin_op}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitBin_op(@NotNull WaffleParser.Bin_opContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link WaffleParser#condition}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitCondition(@NotNull WaffleParser.ConditionContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code expList}
+	 * labeled alternative in {@link WaffleParser#expression}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitExpList(@NotNull WaffleParser.ExpListContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link WaffleParser#variable_expression}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitVariable_expression(@NotNull WaffleParser.Variable_expressionContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link WaffleParser#if_statement}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitIf_statement(@NotNull WaffleParser.If_statementContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link WaffleParser#var_decl}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitVar_decl(@NotNull WaffleParser.Var_declContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link WaffleParser#ifer}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitIfer(@NotNull WaffleParser.IferContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link WaffleParser#literal_expression}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitLiteral_expression(@NotNull WaffleParser.Literal_expressionContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link WaffleParser#string}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitString(@NotNull WaffleParser.StringContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link WaffleParser#boolean_literal}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitBoolean_literal(@NotNull WaffleParser.Boolean_literalContext ctx);
+	/**
 	 * Visit a parse tree produced by {@link WaffleParser#routine_name}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
@@ -104,36 +208,11 @@ public interface WaffleVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitStatement(@NotNull WaffleParser.StatementContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link WaffleParser#for_header}.
+	 * Visit a parse tree produced by {@link WaffleParser#adds}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitFor_header(@NotNull WaffleParser.For_headerContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link WaffleParser#elser}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitElser(@NotNull WaffleParser.ElserContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link WaffleParser#return_statement}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitReturn_statement(@NotNull WaffleParser.Return_statementContext ctx);
-	/**
-	 * Visit a parse tree produced by the {@code expBinary}
-	 * labeled alternative in {@link WaffleParser#expression}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitExpBinary(@NotNull WaffleParser.ExpBinaryContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link WaffleParser#numeric_literal}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitNumeric_literal(@NotNull WaffleParser.Numeric_literalContext ctx);
+	T visitAdds(@NotNull WaffleParser.AddsContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link WaffleParser#decl_statement}.
 	 * @param ctx the parse tree
@@ -146,12 +225,6 @@ public interface WaffleVisitor<T> extends ParseTreeVisitor<T> {
 	 * @return the visitor result
 	 */
 	T visitType_decl(@NotNull WaffleParser.Type_declContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link WaffleParser#range_exp}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitRange_exp(@NotNull WaffleParser.Range_expContext ctx);
 	/**
 	 * Visit a parse tree produced by the {@code NOTIMPLEMENTED1}
 	 * labeled alternative in {@link WaffleParser#expression}.
@@ -184,29 +257,11 @@ public interface WaffleVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitList_expression(@NotNull WaffleParser.List_expressionContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link WaffleParser#code_block}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitCode_block(@NotNull WaffleParser.Code_blockContext ctx);
-	/**
 	 * Visit a parse tree produced by {@link WaffleParser#scalar_type}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
 	T visitScalar_type(@NotNull WaffleParser.Scalar_typeContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link WaffleParser#elif}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitElif(@NotNull WaffleParser.ElifContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link WaffleParser#bin_op}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitBin_op(@NotNull WaffleParser.Bin_opContext ctx);
 	/**
 	 * Visit a parse tree produced by the {@code expParenthesis}
 	 * labeled alternative in {@link WaffleParser#expression}.
@@ -221,30 +276,11 @@ public interface WaffleVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitString_literal(@NotNull WaffleParser.String_literalContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link WaffleParser#condition}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitCondition(@NotNull WaffleParser.ConditionContext ctx);
-	/**
 	 * Visit a parse tree produced by {@link WaffleParser#for_statement}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
 	T visitFor_statement(@NotNull WaffleParser.For_statementContext ctx);
-	/**
-	 * Visit a parse tree produced by the {@code expList}
-	 * labeled alternative in {@link WaffleParser#expression}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitExpList(@NotNull WaffleParser.ExpListContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link WaffleParser#variable_expression}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitVariable_expression(@NotNull WaffleParser.Variable_expressionContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link WaffleParser#assign_statement}.
 	 * @param ctx the parse tree
@@ -271,35 +307,17 @@ public interface WaffleVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitVariable(@NotNull WaffleParser.VariableContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link WaffleParser#if_statement}.
+	 * Visit a parse tree produced by {@link WaffleParser#multis}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitIf_statement(@NotNull WaffleParser.If_statementContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link WaffleParser#var_decl}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitVar_decl(@NotNull WaffleParser.Var_declContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link WaffleParser#ifer}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitIfer(@NotNull WaffleParser.IferContext ctx);
+	T visitMultis(@NotNull WaffleParser.MultisContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link WaffleParser#break_statement}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
 	T visitBreak_statement(@NotNull WaffleParser.Break_statementContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link WaffleParser#literal_expression}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitLiteral_expression(@NotNull WaffleParser.Literal_expressionContext ctx);
 	/**
 	 * Visit a parse tree produced by the {@code expCall}
 	 * labeled alternative in {@link WaffleParser#call_expression}.
