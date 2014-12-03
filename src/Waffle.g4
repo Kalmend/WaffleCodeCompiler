@@ -79,22 +79,10 @@ expression:   '(' expression ')'                                            #exp
     |  operator=un_op expression                                            #expUnary
     |  call_expression                                                      #NOTIMPLEMENTED1
     |  list_expression                                                      #expList
-  /*|   expr expr                                                           # concat
-    |   ID '[' index=expr ']'                                                 # array
-    |   ID                                                                    # id
-    |   '(' expr ')'                                                          # parens
-    |   NULL                                                                  # null
-    |   (TRUE | FALSE)                                                        # bool
-    |   '-'? INT                                                              # int
-    |   '-'? FLOAT                                                            # double
-    |   STRING                                                                # string*/
 ;
 
 call_expression : variable '(' expression? (',' expression)* ')'             #expCall;
-/*expBinary: left=expression multis right=expression
-    | left=expression adds right=expression
-    | left=expression equalities right=expression
-    ;*/
+
 bin_op : multis|adds|equalities;
 adds: PLUS|MINUS;
 multis : MUL|DIV|MOD;

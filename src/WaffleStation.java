@@ -252,6 +252,8 @@ public class WaffleStation extends WaffleBaseVisitor<Object> {
                     result = leftside.sub(rightside);
             }else if (operator.equals("==")) {
                 result = leftside.EQ(rightside);
+            }else if (operator.equals("!=")) {
+                result = leftside.NEQ(rightside);
             }else if (operator.equals(">")) {
                 result = leftside.GT(rightside);
             }else if (operator.equals("<")) {

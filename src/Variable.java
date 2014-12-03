@@ -365,7 +365,10 @@ public class Variable  {
                 return new Variable(VarType.NULL);
             }
             case tBoolean: return new Variable(VarType.NULL);
-            case tString: return new Variable(VarType.NULL);
+            case tString: {
+                if (rh.getType() == VarType.tString)
+                    return new Variable(this.strData.equals(rh.getStrData()));
+            }
             default: return new Variable(VarType.NULL);
 
         }
@@ -390,7 +393,10 @@ public class Variable  {
                 return new Variable(VarType.NULL);
             }
             case tBoolean: return new Variable(VarType.NULL);
-            case tString: return new Variable(VarType.NULL);
+            case tString: {
+                if (rh.getType() == VarType.tString)
+                    return new Variable(!this.strData.equals(rh.getStrData()));
+            }
             default: return new Variable(VarType.NULL);
 
         }
@@ -447,7 +453,6 @@ public class Variable  {
 
 
     }
-
 
     public void copy(Variable var)
     {

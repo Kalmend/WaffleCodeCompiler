@@ -12,7 +12,6 @@ println("a + 1.9 = " + (a + 1.9));
 println("\nTesting addition to double");
 println("b + 1 = " + (b + 1));
 println("b + 1.9 = " + (b + 1.9));
-
 println("a + b = " + (a + b));
 
 println("\nTesting array init with declaration");
@@ -59,6 +58,7 @@ println("Removing a subarray: " + twodim);
 
 println("\nTesting precedence");
 println("3 + 1*7 = " + (3 + 1*7));
+println("1*7 + 3 = " + (1 * 7 + 3));
 println("2.5 + 2.5*3 = " + (2.5 + 2.5*3));
 
 println("\nTesting unary expressions");
@@ -69,4 +69,9 @@ println("!!true = " + !!true);
 
 println("\nTabbed\ttext");
 println("More\ttabbed\ttext");
+
+println("\nString comparison");
+println("dog == dog => " + ("dog" == "dog"));
+println("dog == cat => " + ("dog" == "cat"));
+println("dog != Dog => " + ("dog" != "Dog"));
 
